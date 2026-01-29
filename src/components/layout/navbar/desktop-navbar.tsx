@@ -94,8 +94,8 @@ export const DesktopNavbar = ({ navItems, visible }: Props) => {
             </motion.div>
           )}
         </AnimatePresence>
-        <Button as={Link} href="/contact" className="hidden md:block">
-          Book a free consult
+        <Button as={Link} href="/get-quote" className="hidden md:block">
+          {t('bookConsult')}
         </Button>
       </div>
     </motion.div>

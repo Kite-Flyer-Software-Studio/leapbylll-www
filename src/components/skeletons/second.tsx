@@ -12,14 +12,17 @@ import {
   IconBuildingBank,
 } from "@tabler/icons-react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export const SkeletonTwo = () => {
+  const t = useTranslations("skeletons.second");
+
   const cardItems = [
     {
       icon: <IconFileInvoice className="size-3" />,
       iconClassName: "bg-blue-500",
-      title: "Invoice Processing",
-      description: "Processed 12 invoices for Q1 2024",
+      title: t("invoiceProcessing.title"),
+      description: t("invoiceProcessing.description"),
       badge: (
         <div className="flex gap-1 items-center px-1 py-0.5 rounded-md border border-neutral-200 dark:border-neutral-200/10 dark:bg-neutral-200/10">
           <IconClock className="size-3" />
@@ -32,30 +35,30 @@ export const SkeletonTwo = () => {
     {
       icon: <IconReceipt className="size-3" />,
       iconClassName: "bg-green-500",
-      title: "Expense Tracking",
-      description: "Categorized 45 transactions automatically",
+      title: t("expenseTracking.title"),
+      description: t("expenseTracking.description"),
       badge: (
         <div className="flex gap-1 items-center px-1 py-0.5 rounded-md bg-green-100 border border-green-200 dark:bg-green-100/10 dark:border-green-200/10">
-          <p className="text-[10px] font-bold text-green-600 dark:text-green-500">COMPLETE</p>
+          <p className="text-[10px] font-bold text-green-600 dark:text-green-500">{t("badges.complete")}</p>
         </div>
       ),
     },
     {
       icon: <IconCalculator className="size-3" />,
       iconClassName: "bg-purple-500",
-      title: "Tax Calculation",
-      description: "Estimated quarterly tax obligations",
+      title: t("taxCalculation.title"),
+      description: t("taxCalculation.description"),
       badge: (
         <div className="flex gap-1 items-center px-1 py-0.5 rounded-md bg-orange-100 border border-orange-200 dark:bg-orange-100/10 dark:border-orange-200/10">
-          <p className="text-[10px] font-bold text-orange-500">PROCESSING</p>
+          <p className="text-[10px] font-bold text-orange-500">{t("badges.processing")}</p>
         </div>
       ),
     },
     {
       icon: <IconFileCheck className="size-3" />,
       iconClassName: "bg-indigo-500",
-      title: "Audit Preparation",
-      description: "Compiled financial statements for annual audit",
+      title: t("auditPreparation.title"),
+      description: t("auditPreparation.description"),
       badge: (
         <div className="flex gap-1 items-center px-1 py-0.5 rounded-md border border-neutral-200 dark:border-neutral-200/10 dark:bg-neutral-200/10">
           <IconClock className="size-3" />
@@ -68,33 +71,33 @@ export const SkeletonTwo = () => {
     {
       icon: <IconBuildingBank className="size-3" />,
       iconClassName: "bg-cyan-500",
-      title: "Bank Reconciliation",
-      description: "Matched 98% of bank transactions",
+      title: t("bankReconciliation.title"),
+      description: t("bankReconciliation.description"),
       badge: (
         <div className="flex gap-1 items-center px-1 py-0.5 rounded-md bg-green-100 border border-green-200 dark:bg-green-100/10 dark:border-green-200/10">
-          <p className="text-[10px] font-bold text-green-600 dark:text-green-500">COMPLETE</p>
+          <p className="text-[10px] font-bold text-green-600 dark:text-green-500">{t("badges.complete")}</p>
         </div>
       ),
     },
     {
       icon: <IconAlertTriangle className="size-3" />,
       iconClassName: "bg-red-500",
-      title: "Compliance Alert",
-      description: "Flagged 2 missing receipts for review",
+      title: t("complianceAlert.title"),
+      description: t("complianceAlert.description"),
       badge: (
         <div className="flex gap-1 items-center px-1 py-0.5 rounded-md bg-red-100 border border-red-200 dark:bg-red-100/10 dark:border-red-200/10">
-          <p className="text-[10px] font-bold text-red-500">ATTENTION</p>
+          <p className="text-[10px] font-bold text-red-500">{t("badges.attention")}</p>
         </div>
       ),
     },
     {
       icon: <IconChartBar className="size-3" />,
       iconClassName: "bg-orange-500",
-      title: "Monthly Report",
-      description: "Generated financial performance report",
+      title: t("monthlyReport.title"),
+      description: t("monthlyReport.description"),
       badge: (
         <div className="flex gap-1 items-center px-1 py-0.5 rounded-md bg-orange-100 border border-orange-200 dark:bg-orange-100/10 dark:border-orange-200/10">
-          <p className="text-[10px] font-bold text-orange-500">PROCESSING</p>
+          <p className="text-[10px] font-bold text-orange-500">{t("badges.processing")}</p>
         </div>
       ),
     },
@@ -128,12 +131,14 @@ export const SkeletonTwo = () => {
 };
 
 const Card = ({ children }: { children: React.ReactNode }) => {
+  const t = useTranslations("skeletons.second");
+
   return (
     <div className="shadow-black/10 gap-4 border bg-white dark:bg-neutral-900 border-transparent ring-1 rounded-tl-[16px] ring-black/10 flex flex-col items-start flex-1">
       <div className="flex items-center gap-2 border-b w-full py-2 px-4">
         <IconCalculator className="size-4 text-blue-500" />
         <p className="text-sm font-bold text-neutral-800 dark:text-neutral-200">
-          Smart Accounting Activity
+          {t("title")}
         </p>
       </div>
 

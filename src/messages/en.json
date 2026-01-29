@@ -3,11 +3,14 @@
     "home": "Home",
     "whoWeServe": "Who We Serve",
     "features": "Why LEAP",
+    "whyLeap": "Why LEAP",
     "howItWorks": "How It Works",
     "servicesPricing": "Services & Pricing",
     "contact": "Contact Us",
+    "contactUs": "Contact Us",
     "login": "Login",
-    "signup": "Sign Up"
+    "signup": "Sign Up",
+    "bookConsult": "Book a free consult"
   },
   "hero": {
     "badge": "Backed by Legacy, Built for Starters.",
@@ -15,7 +18,605 @@
     "subtitle": "LEAP by LLL gives Hong Kong founders a dedicated CPA, smart cloud accounting, and stress‑free compliance, so you can focus on building – not chasing deadlines.",
     "getStarted": "Book a free consultation",
     "contactUs": "See services & pricing",
-    "backedBy": "Powered by LLL, an established Hong Kong CPA firm."
+    "backedBy": "Powered by LLL, an established Hong Kong CPA firm.",
+    "illustration": {
+      "cards": {
+        "smartAccounting": "Smart Accounting",
+        "compliance": "Compliance",
+        "taxAdvisory": "Tax Advisory",
+        "growthReady": "Growth Ready"
+      },
+      "growth": {
+        "title": "Business Growth",
+        "subtitle": "From Start to Scale",
+        "yoyGrowth": "YoY Growth"
+      },
+      "stats": {
+        "onTimeFiling": "On-Time Filing",
+        "clientSatisfaction": "Client Satisfaction",
+        "support": "Support"
+      },
+      "milestones": {
+        "start": "Start",
+        "growth": "Growth",
+        "scale": "Scale"
+      }
+    }
+  },
+  "whoWeServe": {
+    "badge": "Who We Serve",
+    "heading": "Built for founders who can't afford compliance mistakes",
+    "subheading": "From missed deadlines to fragmented providers, we understand the compliance chaos that founders face. LEAP by LLL transforms these pain points into predictable, manageable processes.",
+    "painPoints": {
+      "deadlineDisasters": {
+        "title": "Deadline disasters",
+        "description": "Emails ignored, questions unanswered until penalty notices arrive"
+      },
+      "fragmentedProviders": {
+        "title": "Fragmented providers",
+        "description": "No one takes ownership – your accountant, secretary, and auditor keep pointing fingers."
+      },
+      "yearEndShocks": {
+        "title": "Year-end shocks",
+        "description": "Missed deadlines, penalty letters, and messy records you have to clean up later."
+      }
+    },
+    "targets": {
+      "soloEntrepreneurs": {
+        "title": "Solo entrepreneurs",
+        "description": "Solo entrepreneurs launching their first business"
+      },
+      "startupCompanies": {
+        "title": "Start-up companies",
+        "description": "Start-up companies needing structure and investor-ready numbers"
+      },
+      "growingSMEs": {
+        "title": "Growing SMEs",
+        "description": "Growing SMEs preparing for larger teams, funding, or expansion"
+      }
+    },
+    "middleCard": {
+      "managed": "Managed",
+      "dashboard": "Dashboard",
+      "statuses": {
+        "deadlineTracked": "Deadline tracked",
+        "filingsComplete": "Filings complete",
+        "booksAuditReady": "Books audit-ready"
+      },
+      "metrics": {
+        "filingsOnTime": "Filings On-Time",
+        "clientSatisfaction": "Client Satisfaction",
+        "complianceRate": "Compliance Rate"
+      }
+    }
+  },
+  "whyLeap": {
+    "badge": "Why LEAP",
+    "heading": "Why Hong Kong founders choose LEAP",
+    "subheading": "More than just accounting – we're your compliance partner who understands startups, speaks your language, and keeps your business on track from day one.",
+    "features": {
+      "dedicatedCPA": {
+        "title": "Dedicated CPA advisor",
+        "description": "You get a named CPA who knows your business, not a rotating support inbox. Talk to someone who understands your cap table, cash flow, and plans – and stays with you as you grow."
+      },
+      "smartAccounting": {
+        "title": "Bespoke smart accounting",
+        "description": "Our cloud-based, proprietary smart accounting system captures your finances accurately and flags issues early, so there are no surprises at audit or tax time."
+      },
+      "flexiblePricing": {
+        "title": "Flexible, fair pricing",
+        "description": "Transparent benchmark pricing by revenue, plus bundles tailored to your stage, transaction volume, and complexity – so you only pay for what you really need."
+      },
+      "allInOne": {
+        "title": "All-in-one business solution",
+        "description": "From incorporation and company secretarial work to ongoing accounting, audit, and tax advisory, everything sits under one roof with one accountable partner."
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "How It Works",
+    "heading": "Four simple steps to compliant, investor-ready finances",
+    "subheading": "From your first call to ongoing monthly support, we make compliance predictable and painless – so you can stay focused on building your business.",
+    "steps": {
+      "step1": {
+        "title": "Understand your business",
+        "description": "We start with a short call to learn your business model, transaction volume, and goals – so we can recommend the right bundle."
+      },
+      "step2": {
+        "title": "Set up your LEAP stack",
+        "description": "We handle onboarding to our smart accounting system, gather initial documents, and align your compliance calendar for the year."
+      },
+      "step3": {
+        "title": "Run your business, we handle the rest",
+        "description": "Each month we keep your books up‑to‑date, track deadlines, and answer questions, while you focus on customers and product."
+      },
+      "step4": {
+        "title": "Review, refine, and grow",
+        "description": "We review your numbers with you, flag risks, and suggest improvements, so your finances stay investor‑ and bank‑ready."
+      }
+    }
+  },
+  "servicesPricing": {
+    "badge": "Services & Pricing",
+    "heading": "Transparent pricing that scales with your business",
+    "subheading": "Our listed prices are benchmarks for standard engagements. Service bundles tailored to your needs are available. Your final quote will be customized after a brief discussion about your business.",
+    "categories": {
+      "accounting": {
+        "title": "Accounting",
+        "description": "Professional bookkeeping and financial record management",
+        "services": {
+          "small": {
+            "name": "Annual Revenue < HK$500,000",
+            "description": "Ideal for solo entrepreneurs and early-stage startups"
+          },
+          "medium": {
+            "name": "Annual Revenue < HK$1,500,000",
+            "description": "Perfect for growing businesses with moderate complexity"
+          },
+          "large": {
+            "name": "Annual Revenue HK$1,500,000+",
+            "description": "For established businesses with complex operations"
+          }
+        }
+      },
+      "incorporation": {
+        "title": "Company Incorporation",
+        "description": "Complete company setup with all statutory requirements",
+        "packageName": "Company Incorporation Package",
+        "packageDescription": "Everything you need to incorporate your Hong Kong company",
+        "included": {
+          "item1": "Incorporation application to the Companies Registry",
+          "item2": "Certificate of Incorporation",
+          "item3": "Articles of Association",
+          "item4": "Business Registration with Inland Revenue Department"
+        }
+      },
+      "secretarial": {
+        "title": "Company Secretarial Services",
+        "description": "Ongoing statutory compliance and corporate secretary support",
+        "serviceName": "Annual Secretarial Services",
+        "serviceDescription": "Complete company secretarial support for the year",
+        "included": {
+          "item1": "Preparation of Annual General Meeting documents",
+          "item2": "Annual Returns Filing (NAR1)",
+          "item3": "Corporate secretary support",
+          "item4": "Compliance calendar management"
+        }
+      },
+      "audit": {
+        "title": "Audit & Profits Tax Return Filing",
+        "description": "Independent, thorough audits that meet statutory requirements",
+        "serviceName": "Audit Services",
+        "serviceDescription": "Statutory audit considering your business nature, transaction complexity, and reporting deadlines",
+        "included": {
+          "item1": "Independent audit",
+          "item2": "Statutory compliance",
+          "item3": "Auditor's report",
+          "item4": "Profits tax return filing"
+        },
+        "cta": "Schedule an audit consultation"
+      },
+      "other": {
+        "title": "Other Services",
+        "description": "Additional support services tailored to your needs",
+        "cta": "Contact us for a confidential discussion",
+        "services": {
+          "item1": "Bank account opening assistance",
+          "item2": "Individual Tax Returns",
+          "item3": "Payroll Processing",
+          "item4": "And more..."
+        },
+        "availableServices": "Available services include:"
+      }
+    },
+    "calculator": {
+      "title": "Your Investment",
+      "selectServices": "Select Services",
+      "selectServicesDescription": "Choose the services you need to see your estimated investment",
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "oneTime": "One-time",
+      "perMonth": "per month",
+      "perYear": "per year",
+      "oneTimeLabel": "one-time",
+      "disclaimer": "Final pricing customized based on your specific needs"
+    },
+    "cta": {
+      "getQuote": "Get Personalized Quote",
+      "scheduleConsultation": "Schedule Consultation",
+      "contactForQuote": "Contact us for a personalised quote",
+      "message": "We believe in fair pricing that reflects your actual needs"
+    },
+    "badges": {
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "oneTime": "One-time"
+    }
+  },
+  "cta": {
+    "heading": "Ready to signup and join the waitlist?",
+    "subheading": "Get instant access to our state of the art project and join the waitlist.",
+    "button": "Join Waitlist"
+  },
+  "skeletons": {
+    "first": {
+      "yourDedicatedAdvisor": "YOUR DEDICATED ADVISOR",
+      "cpaName": "Natalie Luk, CPA",
+      "directMessaging": "Direct messaging with your CPA",
+      "messageSubtext": "Ask about cap tables, cash flow, or tax planning",
+      "whatsapp": {
+        "leapCpaTeam": "LEAP CPA Team",
+        "online": "online",
+        "greeting": "Hi! 👋 Thanks for reaching out. Tell us about your business model",
+        "userResponse1": "We're a SaaS startup, around 50 transactions per month",
+        "question": "Great! What are your main financial goals?",
+        "userResponse2": "We need investor-ready finances and clean books for fundraising",
+        "recommendation": "Perfect! Based on your needs, I'd recommend our Starter bundle. Can we schedule a 15-min call?",
+        "typeMessage": "Type a message"
+      }
+    },
+    "second": {
+      "title": "Smart Accounting Activity",
+      "invoiceProcessing": {
+        "title": "Invoice Processing",
+        "description": "Processed 12 invoices for Q1 2024"
+      },
+      "expenseTracking": {
+        "title": "Expense Tracking",
+        "description": "Categorized 45 transactions automatically"
+      },
+      "taxCalculation": {
+        "title": "Tax Calculation",
+        "description": "Estimated quarterly tax obligations"
+      },
+      "auditPreparation": {
+        "title": "Audit Preparation",
+        "description": "Compiled financial statements for annual audit"
+      },
+      "bankReconciliation": {
+        "title": "Bank Reconciliation",
+        "description": "Matched 98% of bank transactions"
+      },
+      "complianceAlert": {
+        "title": "Compliance Alert",
+        "description": "Flagged 2 missing receipts for review"
+      },
+      "monthlyReport": {
+        "title": "Monthly Report",
+        "description": "Generated financial performance report"
+      },
+      "badges": {
+        "complete": "COMPLETE",
+        "processing": "PROCESSING",
+        "attention": "ATTENTION"
+      }
+    },
+    "third": {
+      "selectServices": "Select Services",
+      "add": "Add",
+      "services": {
+        "incorporation": "Incorporation",
+        "companySecretary": "Company Secretary",
+        "monthlyAccounting": "Monthly Accounting",
+        "annualAudit": "Annual Audit"
+      },
+      "prices": {
+        "incorporation": "HK$6,000",
+        "companySecretary": "HK$3,500/yr",
+        "monthlyAccounting": "From HK$800/mo",
+        "annualAudit": "From HK$10,000"
+      }
+    },
+    "allInOne": {
+      "incorporation": "Incorporation",
+      "companySecretarial": "Company Secretarial",
+      "accounting": "Accounting",
+      "audit": "Audit",
+      "taxAdvisory": "Tax Advisory"
+    },
+    "howItWorks": {
+      "step1": {
+        "leapSetup": "LEAP Setup",
+        "onboardingInProgress": "Onboarding in progress",
+        "complete": "Complete",
+        "smartAccountingSystem": {
+          "title": "Smart Accounting System",
+          "description": "Cloud-based system activated",
+          "day": "Day 1"
+        },
+        "documentCollection": {
+          "title": "Document Collection",
+          "description": "Initial docs gathered",
+          "day": "Day 2"
+        },
+        "complianceCalendar": {
+          "title": "Compliance Calendar",
+          "description": "Annual deadlines synced",
+          "day": "Day 3"
+        },
+        "initialOnboarding": {
+          "title": "Initial Onboarding",
+          "description": "In progress...",
+          "day": "Day 4"
+        },
+        "readyToGo": {
+          "title": "Ready to Go",
+          "description": "Almost there!",
+          "day": "Day 5"
+        },
+        "estimated": "Estimated: 1 day remaining"
+      },
+      "step2": {
+        "autoPilotMode": "Auto-Pilot Mode",
+        "monthlyTasks": "Monthly Tasks",
+        "completeStatus": "Complete",
+        "bookkeepingUpdated": {
+          "title": "Bookkeeping Updated",
+          "description": "All transactions categorized",
+          "dueDate": "Feb 5"
+        },
+        "annualReturnFiled": {
+          "title": "Annual Return Filed",
+          "description": "Companies Registry submitted",
+          "dueDate": "Feb 10"
+        },
+        "brNoticeSigned": {
+          "title": "BR Notice Signed",
+          "description": "Business registration renewal",
+          "dueDate": "Feb 12"
+        },
+        "profitTaxReturn": {
+          "title": "Profit Tax Return",
+          "description": "IRD filing in progress",
+          "dueDate": "Feb 28"
+        },
+        "mpfContributions": {
+          "title": "MPF Contributions",
+          "description": "Scheduled for next week",
+          "dueDate": "Mar 5"
+        },
+        "payrollProcessing": {
+          "title": "Payroll Processing",
+          "description": "End of month payroll",
+          "dueDate": "Mar 1"
+        },
+        "overdue": "Overdue",
+        "upcoming": "Upcoming",
+        "onTime": "On-Time"
+      },
+      "step3": {
+        "quarterlyReview": "Quarterly Review",
+        "cpaPlusClient": "CPA + Client",
+        "recording": "REC",
+        "cpa": "CPA",
+        "you": "You",
+        "cfo": "CFO",
+        "q4Report": "Q4 2025 Report",
+        "approved": "APPROVED",
+        "revenueGrowth": {
+          "label": "Revenue Growth",
+          "value": "+32%",
+          "note": "Strong quarter!"
+        },
+        "cashPosition": {
+          "label": "Cash Position",
+          "value": "$125K",
+          "note": "Healthy runway"
+        },
+        "compliance": {
+          "label": "Compliance",
+          "value": "100%",
+          "note": "All filings on time"
+        },
+        "recommendations": "Recommendations",
+        "actionItems": {
+          "high": "HIGH",
+          "medium": "MEDIUM",
+          "low": "LOW",
+          "rdTaxCredits": "Consider R&D tax credits",
+          "reviewExpenses": "Review expense categories",
+          "planForGrowth": "Plan for Q1 2026 growth"
+        },
+        "nextMeeting": "Next: Mar 15"
+      }
+    }
+  },
+  "whatsapp": {
+    "tooltip": "Contact us on WhatsApp",
+    "message": "Hello! I'm interested in learning more about LEAP's professional accounting services. I would like to inquire about:"
+  },
+  "email": {
+    "tooltip": "Email us",
+    "subject": "Inquiry about LEAP Services"
+  },
+  "footer": {
+    "description": "LEAP by LLL provides Hong Kong founders with dedicated CPA services, smart cloud accounting, and stress-free compliance.",
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "social": "Connect",
+    "copyright": "© 2026 LEAP by LLL. All rights reserved.",
+    "allRightsReserved": "All rights reserved",
+    "links": {
+      "whoWeServe": "Who We Serve",
+      "whyLeap": "Why LEAP",
+      "howItWorks": "How It Works",
+      "servicesPricing": "Services & Pricing",
+      "contactUs": "Contact Us",
+      "getQuote": "Get Quote",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "getQuote": {
+    "title": "Get a Free Quote",
+    "subtitle": "Tell us about your business",
+    "description": "Request a free, customized quote from our team of professional CPAs. We provide transparent pricing for accounting, audit, tax advisory, and company secretarial services.",
+    "form": {
+      "subtitle": "Tell us about your business",
+      "title": "Get a Free Quote",
+      "description": "Request a free, customized quote from our team of professional CPAs. We provide transparent pricing for accounting, audit, tax advisory, and company secretarial services.",
+      "section1Title": "Company Information",
+      "section2Title": "Service Requirements",
+      "section3Title": "Business Details",
+      "companyName": "Company Name",
+      "companyNameLabel": "Company Name",
+      "companyNamePlaceholder": "Enter company name",
+      "natureOfBusiness": "Nature of Business",
+      "natureOfBusinessLabel": "Nature of Business",
+      "natureOfBusinessPlaceholder": "E.g., Technology, Retail, Consulting",
+      "companyType": "Company Type",
+      "companyTypeLabel": "Company Type",
+      "companyTypePlaceholder": "Select company type",
+      "companyTypeOptions": {
+        "newlyIncorporated": "Newly incorporated company / company with minimal transactions",
+        "activeSME": "Active Small & Medium-sized Enterprise",
+        "established": "Established company"
+      },
+      "companyTypeNewly": "Newly incorporated company / company with minimal transactions",
+      "companyTypeActiveSME": "Active Small & Medium-sized Enterprise",
+      "companyTypeEstablished": "Established company",
+      "contactPerson": "Contact Person",
+      "contactPersonLabel": "Contact Person",
+      "contactPersonPlaceholder": "Full name",
+      "position": "Position",
+      "positionLabel": "Position",
+      "positionPlaceholder": "Your position",
+      "email": "Email",
+      "emailLabel": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone Number",
+      "phoneLabel": "Phone Number",
+      "phonePlaceholder": "+852 1234 5678",
+      "services": "Services Interested In",
+      "servicesLabel": "Services Interested In",
+      "servicesList": {
+        "accountingBookkeeping": "Accounting & Bookkeeping",
+        "auditServices": "Audit Services",
+        "taxComputationFiling": "Tax Computation & Filing (Profits Tax)",
+        "employerReturnFiling": "Employer's Return Filing",
+        "companySecretaryServices": "Company Secretary Services",
+        "taxEnquiryCase": "Tax Enquiry Case",
+        "other": "Other (Please specify)"
+      },
+      "serviceAccountingBookkeeping": "Accounting & Bookkeeping",
+      "serviceAuditServices": "Audit Services",
+      "serviceTaxComputation": "Tax Computation & Filing (Profits Tax)",
+      "serviceEmployerReturn": "Employer's Return Filing",
+      "serviceCompanySecretary": "Company Secretary Services",
+      "serviceTaxEnquiry": "Tax Enquiry Case",
+      "serviceOther": "Other (Please specify)",
+      "otherServiceDetails": "Other Service Details",
+      "otherServicePlaceholder": "Please specify other services needed",
+      "transactionsPerMonth": "Transactions per Month",
+      "transactionsPerMonthLabel": "Transactions per Month",
+      "transactionsPerMonthPlaceholder": "Select transaction volume",
+      "transactionsOptions": {
+        "upTo25": "Up to 25 bank transactions per month",
+        "upTo100": "Up to 100 transactions per month",
+        "moreThan100": "More than 100 transactions per month"
+      },
+      "transactionsUpTo25": "Up to 25 bank transactions per month",
+      "transactionsUpTo100": "Up to 100 transactions per month",
+      "transactionsMoreThan100": "More than 100 transactions per month",
+      "numberOfBankAccounts": "Number of Bank Accounts",
+      "bankAccountsLabel": "Number of Bank Accounts",
+      "bankAccountsPlaceholder": "Select number of accounts",
+      "bankAccountsOptions": {
+        "one": "1 bank account",
+        "upTo3": "Up to 3 bank accounts",
+        "moreThan3": "More than 3 bank accounts"
+      },
+      "bankAccounts1": "1 bank account",
+      "bankAccountsUpTo3": "Up to 3 bank accounts",
+      "bankAccountsMoreThan3": "More than 3 bank accounts",
+      "numberOfEmployees": "Number of Employees",
+      "employeesLabel": "Number of Employees",
+      "employeesPlaceholder": "Select number of employees",
+      "employees0to5": "0-5 employees",
+      "employees6to10": "6-10 employees",
+      "employees11to25": "11-25 employees",
+      "employees26to50": "26-50 employees",
+      "employees51to100": "51-100 employees",
+      "employees100plus": "100+ employees",
+      "annualTurnover": "Annual Turnover",
+      "annualTurnoverLabel": "Annual Turnover",
+      "annualTurnoverPlaceholder": "Select annual turnover",
+      "turnoverOptions": {
+        "upTo1m": "Up to HKD 1 million",
+        "1to10m": "HKD 1 - 10 million",
+        "10to50m": "HKD 10 - 50 million",
+        "50mPlus": "More than HKD 50 million"
+      },
+      "turnover1m": "Up to HKD 1 million",
+      "turnover1to10m": "HKD 1 - 10 million",
+      "turnover10to50m": "HKD 10 - 50 million",
+      "turnover50mPlus": "More than HKD 50 million",
+      "submit": "Submit Quote Request",
+      "submitButton": "Submit Quote Request",
+      "submitting": "Submitting...",
+      "selectPlaceholder": "Select...",
+      "errorRequired": "This field is required",
+      "errorInvalidEmail": "Please enter a valid email address",
+      "errorPhoneTooShort": "Phone number is too short",
+      "errorPhoneTooLong": "Phone number is too long",
+      "errorSelectService": "Please select at least one service",
+      "successTitle": "Quote Request Received!",
+      "successMessage": "Thank you for your quote request. We have received your information and will get back to you within 1 business day with a personalized quote.",
+      "successBackButton": "Back to Home",
+      "errorTitle": "Something Went Wrong",
+      "errorMessage": "We encountered an error sending your quote request. Please try again or contact us directly at leap@lll.com.hk",
+      "errorRetryButton": "Try Again",
+      "estimatedFeesTitle": "Estimated Fees",
+      "accountingFeesLabel": "Accounting & Bookkeeping",
+      "auditFeesLabel": "Audit Services",
+      "perMonth": "per month",
+      "fromAmount": "From HK${amount}",
+      "rangeAmount": "HK${min} - HK${max}"
+    }
+  },
+  "contactUs": {
+    "title": "Contact Us",
+    "subtitle": "Get in Touch",
+    "description": "We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
+    "form": {
+      "subtitle": "Get in Touch",
+      "title": "Contact Us",
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "message": "Message",
+      "servicesInterest": "Services of Interest (Optional)",
+      "servicesList": {
+        "accountingBookkeeping": "Accounting & Bookkeeping",
+        "auditAssurance": "Audit & Assurance",
+        "taxAdvisory": "Tax & Business Advisory",
+        "companySecretarial": "Company Secretarial"
+      },
+      "namePlaceholder": "Your Name",
+      "emailPlaceholder": "Your Email",
+      "messagePlaceholder": "Your Message",
+      "selectService": "Services of Interest (Optional)",
+      "accountingBookkeeping": "Accounting & Bookkeeping",
+      "auditAssurance": "Audit & Assurance",
+      "taxAdvisory": "Tax & Business Advisory",
+      "companySecretarial": "Company Secretarial",
+      "submit": "Send Message",
+      "submitButton": "Send Message",
+      "submitting": "Sending...",
+      "successTitle": "Thank You!",
+      "successSubtitle": "Message Sent Successfully",
+      "successMessage": "Thank you for contacting us. We have received your message and will get back to you as soon as possible.",
+      "successBackButton": "Send Another Message",
+      "errorTitle": "Oops!",
+      "errorSubtitle": "Something Went Wrong",
+      "errorMessage": "We encountered an error sending your message. Please try again or contact us directly.",
+      "errorRetryButton": "Try Again",
+      "errorRequired": "This field is required",
+      "errorEmailRequired": "Email is required",
+      "errorInvalidEmail": "Please enter a valid email address",
+      "errorMessageRequired": "Message is required"
+    }
   },
   "features": {
     "heading": "Packed with thousands of features",
@@ -139,21 +740,5 @@
     "submit": "Sign up",
     "haveAccount": "Already have an account?",
     "signIn": "Sign in"
-  },
-  "footer": {
-    "description": "Everything AI is a platform that provides a wide range of AI tools and services.",
-    "product": "Product",
-    "company": "Company",
-    "resources": "Resources",
-    "legal": "Legal",
-    "features": "Features",
-    "pricing": "Pricing",
-    "about": "About",
-    "careers": "Careers",
-    "blog": "Blog",
-    "documentation": "Documentation",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Service",
-    "copyright": "© 2024 Everything AI. All rights reserved."
   }
 }

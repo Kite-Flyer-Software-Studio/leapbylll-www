@@ -14,23 +14,23 @@ export function NavBar() {
   const navItems = [
     {
       title: t('whoWeServe'),
-      link: pathname === '/contact' ? "/#who-we-serve" : "#who-we-serve",
+      link: pathname === '/contact-us' || pathname === '/get-quote' ? "/#who-we-serve" : "#who-we-serve",
     },
     {
       title: t('features'),
-      link: pathname === '/contact' ? "/#why-leap" : "#why-leap",
+      link: pathname === '/contact-us' || pathname === '/get-quote' ? "/#why-leap" : "#why-leap",
     },
     {
       title: t('howItWorks'),
-      link: pathname === '/contact' ? "/#how-it-works" : "#how-it-works",
+      link: pathname === '/contact-us' || pathname === '/get-quote' ? "/#how-it-works" : "#how-it-works",
     },
     {
       title: t('servicesPricing'),
-      link: pathname === '/contact' ? "/#services-pricing" : "#services-pricing",
+      link: pathname === '/contact-us' || pathname === '/get-quote' ? "/#services-pricing" : "#services-pricing",
     },
     {
-      title: t('contact'),
-      link: "/contact",
+      title: t('contactUs'),
+      link: "/contact-us",
     },
   ];
 

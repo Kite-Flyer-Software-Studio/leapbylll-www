@@ -10,8 +10,11 @@ import {
   IconCircleCheck,
   IconBuilding,
 } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 
 export const SkeletonAllInOne = () => {
+  const t = useTranslations("skeletons.allInOne");
+
   return (
     <div
       className="flex-1 rounded-t-3xl gap-2 flex items-center justify-center w-full h-full absolute inset-x-0 p-2"
@@ -27,7 +30,7 @@ export const SkeletonAllInOne = () => {
           <SkeletonCard
             className="absolute bottom-0 left-12 max-w-[57%] z-30 bg-white dark:bg-neutral-800"
             icon={<IconBuildingBank className="size-4 text-green-600" />}
-            title="Incorporation"
+            title={t("incorporation")}
           />
         </RevolvingCard>
 
@@ -36,7 +39,7 @@ export const SkeletonAllInOne = () => {
           <SkeletonCard
             className="absolute bottom-0 left-12 max-w-[58%] z-30 bg-white dark:bg-neutral-800"
             icon={<IconFileText className="size-4 text-purple-500" />}
-            title="Company Secretarial"
+            title={t("companySecretarial")}
           />
         </RevolvingCard>
 
@@ -45,7 +48,7 @@ export const SkeletonAllInOne = () => {
           <SkeletonCard
             className="absolute bottom-0 left-12 max-w-[54%] z-30 bg-white dark:bg-neutral-800"
             icon={<IconCalculator className="size-4 text-blue-600" />}
-            title="Accounting"
+            title={t("accounting")}
           />
         </RevolvingCard>
 
@@ -54,7 +57,7 @@ export const SkeletonAllInOne = () => {
           <SkeletonCard
             className="absolute bottom-0 left-12 max-w-[40%] z-30 bg-white dark:bg-neutral-800"
             icon={<IconChecklist className="size-4 text-orange-500" />}
-            title="Audit"
+            title={t("audit")}
           />
         </RevolvingCard>
 
@@ -63,7 +66,7 @@ export const SkeletonAllInOne = () => {
           <SkeletonCard
             className="absolute bottom-0 left-12 max-w-[58%] z-30 bg-white dark:bg-neutral-800"
             icon={<IconReceiptTax className="size-4 text-red-500" />}
-            title="Tax Advisory"
+            title={t("taxAdvisory")}
           />
         </RevolvingCard>
 

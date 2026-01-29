@@ -2,20 +2,621 @@
   "nav": {
     "home": "首頁",
     "whoWeServe": "服務對象",
-    "features": "功能",
+    "features": "為何選擇LEAP",
+    "whyLeap": "為何選擇LEAP",
     "howItWorks": "運作方式",
     "servicesPricing": "服務與定價",
-    "contact": "聯繫",
+    "contact": "聯絡我們",
+    "contactUs": "聯絡我們",
     "login": "登入",
-    "signup": "註冊"
+    "signup": "註冊",
+    "bookConsult": "預約免費諮詢"
   },
   "hero": {
-    "badge": "我們已籌集6900萬美元種子資金",
-    "title": "使用人工智能生成圖像、文本和視頻",
-    "subtitle": "Everything AI 將所有現代人工智能生成工具無縫集成到一個平台中，讓您只需點擊一下即可生成內容。",
-    "getStarted": "開始使用",
-    "contactUs": "聯繫我們",
-    "backedBy": "Powered by LLL, an established Hong Kong CPA firm."
+    "badge": "承傳經驗，為初創而設",
+    "title": "由初創到成長的專業會計夥伴",
+    "subtitle": "LEAP by LLL 為香港創業者提供專屬執業會計師、智能雲端會計系統及無憂合規服務，讓您專注業務發展，無需追趕期限。",
+    "getStarted": "預約免費諮詢",
+    "contactUs": "查看服務及定價",
+    "backedBy": "由LLL（香港資深執業會計師事務所）提供支援",
+    "illustration": {
+      "cards": {
+        "smartAccounting": "智能會計",
+        "compliance": "合規",
+        "taxAdvisory": "稅務諮詢",
+        "growthReady": "成長準備"
+      },
+      "growth": {
+        "title": "業務增長",
+        "subtitle": "從起步到規模化",
+        "yoyGrowth": "年度增長"
+      },
+      "stats": {
+        "onTimeFiling": "準時申報",
+        "clientSatisfaction": "客戶滿意度",
+        "support": "支援"
+      },
+      "milestones": {
+        "start": "起步",
+        "growth": "增長",
+        "scale": "規模化"
+      }
+    }
+  },
+  "whoWeServe": {
+    "badge": "服務對象",
+    "heading": "為不容合規失誤的創業者而設",
+    "subheading": "從錯過期限到服務商各自為政，我們深明創業者面對的合規困境。LEAP by LLL 將這些痛點轉化為可預測、可管理的流程。",
+    "painPoints": {
+      "deadlineDisasters": {
+        "title": "期限災難",
+        "description": "電郵石沉大海，問題無人回應，直到收到罰款通知"
+      },
+      "fragmentedProviders": {
+        "title": "服務商各自為政",
+        "description": "沒人願意承擔責任——會計師、秘書和核數師互相推諉"
+      },
+      "yearEndShocks": {
+        "title": "年結驚魂",
+        "description": "錯過期限、收到罰款信、混亂的帳目需要事後補救"
+      }
+    },
+    "targets": {
+      "soloEntrepreneurs": {
+        "title": "獨立創業者",
+        "description": "正在創辦首家企業的獨立創業者"
+      },
+      "startupCompanies": {
+        "title": "初創企業",
+        "description": "需要規範架構及符合投資者要求的初創企業"
+      },
+      "growingSMEs": {
+        "title": "成長中的中小企",
+        "description": "準備擴充團隊、融資或拓展的成長中的中小企"
+      }
+    },
+    "middleCard": {
+      "managed": "已管理",
+      "dashboard": "控制台",
+      "statuses": {
+        "deadlineTracked": "期限已追蹤",
+        "filingsComplete": "申報已完成",
+        "booksAuditReady": "帳目準備就緒"
+      },
+      "metrics": {
+        "filingsOnTime": "準時申報",
+        "clientSatisfaction": "客戶滿意度",
+        "complianceRate": "合規率"
+      }
+    }
+  },
+  "whyLeap": {
+    "badge": "為何選擇LEAP",
+    "heading": "為何香港創業者選擇LEAP",
+    "subheading": "不只是會計服務——我們是了解初創企業、說您的語言、從第一天起就讓您的業務保持正軌的合規夥伴。",
+    "features": {
+      "dedicatedCPA": {
+        "title": "專屬執業會計師顧問",
+        "description": "您將獲得一位了解您業務的實名執業會計師，而非輪值的客服信箱。與了解您的股權結構、現金流和計劃的專業人士交流——並在您成長過程中持續陪伴。"
+      },
+      "smartAccounting": {
+        "title": "度身訂造的智能會計",
+        "description": "我們基於雲端的專有智能會計系統準確記錄您的財務狀況，及早標記問題，確保核數或報稅時不會有意外。"
+      },
+      "flexiblePricing": {
+        "title": "靈活公平的定價",
+        "description": "按營業額透明的基準定價，加上針對您的階段、交易量和複雜程度度身訂造的服務組合——您只需支付真正需要的服務。"
+      },
+      "allInOne": {
+        "title": "一站式商業方案",
+        "description": "從公司註冊和秘書服務到持續會計、核數和稅務諮詢，所有服務均由一個負責任的合作夥伴提供。"
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "運作方式",
+    "heading": "四個簡單步驟實現合規、投資者就緒的財務",
+    "subheading": "從您的第一通電話到持續的每月支援，我們讓合規變得可預測且輕鬆——讓您專注於建立業務。",
+    "steps": {
+      "step1": {
+        "title": "了解您的業務",
+        "description": "我們從一個簡短的電話開始，了解您的業務模式、交易量和目標——以便推薦合適的服務組合。"
+      },
+      "step2": {
+        "title": "建立您的LEAP系統",
+        "description": "我們處理智能會計系統的開通、收集初始文件，並為您安排全年的合規日程。"
+      },
+      "step3": {
+        "title": "您經營業務，其餘交給我們",
+        "description": "每個月我們保持您的帳目最新、追蹤期限並回答問題，而您專注於客戶和產品。"
+      },
+      "step4": {
+        "title": "審核、完善和成長",
+        "description": "我們與您一起審核數字、標記風險並提出改進建議，確保您的財務隨時符合投資者和銀行的要求。"
+      }
+    }
+  },
+  "servicesPricing": {
+    "badge": "服務與定價",
+    "heading": "隨業務規模擴展的透明定價",
+    "subheading": "我們列出的價格是標準服務的基準。我們提供度身訂造的服務組合。最終報價將在簡短討論您的業務後定制。",
+    "categories": {
+      "accounting": {
+        "title": "會計服務",
+        "description": "專業記帳和財務記錄管理",
+        "services": {
+          "small": {
+            "name": "年營業額 < HK$500,000",
+            "description": "適合獨立創業者和早期初創企業"
+          },
+          "medium": {
+            "name": "年營業額 < HK$1,500,000",
+            "description": "適合複雜度適中的成長中企業"
+          },
+          "large": {
+            "name": "年營業額 HK$1,500,000+",
+            "description": "適合業務複雜的成熟企業"
+          }
+        }
+      },
+      "incorporation": {
+        "title": "公司註冊",
+        "description": "包含所有法定要求的完整公司設立",
+        "packageName": "公司註冊套餐",
+        "packageDescription": "註冊香港公司所需的一切",
+        "included": {
+          "item1": "向公司註冊處提交註冊申請",
+          "item2": "公司註冊證書",
+          "item3": "公司章程",
+          "item4": "稅務局商業登記"
+        }
+      },
+      "secretarial": {
+        "title": "公司秘書服務",
+        "description": "持續法定合規和公司秘書支援",
+        "serviceName": "年度秘書服務",
+        "serviceDescription": "全年完整的公司秘書支援",
+        "included": {
+          "item1": "準備股東週年大會文件",
+          "item2": "周年申報表（NAR1）提交",
+          "item3": "公司秘書支援",
+          "item4": "合規日程管理"
+        }
+      },
+      "audit": {
+        "title": "核數及利得稅報稅",
+        "description": "獨立、全面且符合法定要求的核數",
+        "serviceName": "核數服務",
+        "serviceDescription": "考慮您的業務性質、交易複雜程度和報告期限的法定核數",
+        "included": {
+          "item1": "獨立核數",
+          "item2": "法定合規",
+          "item3": "核數師報告",
+          "item4": "利得稅報稅"
+        },
+        "cta": "預約核數諮詢"
+      },
+      "other": {
+        "title": "其他服務",
+        "description": "度身訂造的額外支援服務",
+        "cta": "聯絡我們進行保密討論",
+        "services": {
+          "item1": "銀行開戶協助",
+          "item2": "個人報稅",
+          "item3": "薪酬處理",
+          "item4": "及更多..."
+        },
+        "availableServices": "提供的服務包括："
+      }
+    },
+    "calculator": {
+      "title": "您的投資",
+      "selectServices": "選擇服務",
+      "selectServicesDescription": "選擇您需要的服務以查看估計投資",
+      "monthly": "每月",
+      "yearly": "每年",
+      "oneTime": "一次性",
+      "perMonth": "每月",
+      "perYear": "每年",
+      "oneTimeLabel": "一次性",
+      "disclaimer": "最終定價將根據您的具體需求定制"
+    },
+    "cta": {
+      "getQuote": "取得個人化報價",
+      "scheduleConsultation": "預約諮詢",
+      "contactForQuote": "聯絡我們取得個人化報價",
+      "message": "我們相信公平定價應反映您的實際需求"
+    },
+    "badges": {
+      "monthly": "每月",
+      "yearly": "每年",
+      "oneTime": "一次性"
+    }
+  },
+  "cta": {
+    "heading": "準備註冊並加入等候名單？",
+    "subheading": "立即獲取我們最先進項目的訪問權限並加入等候名單。",
+    "button": "加入等候名單"
+  },
+  "skeletons": {
+    "first": {
+      "yourDedicatedAdvisor": "您的專屬顧問",
+      "cpaName": "陸雅麗會計師",
+      "directMessaging": "與您的執業會計師直接溝通",
+      "messageSubtext": "詢問股權結構、現金流或稅務規劃",
+      "whatsapp": {
+        "leapCpaTeam": "LEAP 執業會計師團隊",
+        "online": "在線",
+        "greeting": "您好！👋 感謝聯絡我們。請告訴我們您的業務模式",
+        "userResponse1": "我們是SaaS初創企業，每月約50筆交易",
+        "question": "很好！您的主要財務目標是什麼？",
+        "userResponse2": "我們需要符合投資者要求的財務報表及清晰的帳目以進行融資",
+        "recommendation": "完美！根據您的需求，我建議選擇我們的初創套餐。我們可以安排15分鐘的電話嗎？",
+        "typeMessage": "輸入訊息"
+      }
+    },
+    "second": {
+      "title": "智能會計活動",
+      "invoiceProcessing": {
+        "title": "發票處理",
+        "description": "已處理2024年第一季度的12張發票"
+      },
+      "expenseTracking": {
+        "title": "費用追蹤",
+        "description": "自動分類45筆交易"
+      },
+      "taxCalculation": {
+        "title": "稅務計算",
+        "description": "估算季度稅務義務"
+      },
+      "auditPreparation": {
+        "title": "核數準備",
+        "description": "編制年度核數財務報表"
+      },
+      "bankReconciliation": {
+        "title": "銀行對帳",
+        "description": "匹配98%的銀行交易"
+      },
+      "complianceAlert": {
+        "title": "合規提醒",
+        "description": "標記2張遺失收據待審核"
+      },
+      "monthlyReport": {
+        "title": "月度報告",
+        "description": "生成財務表現報告"
+      },
+      "badges": {
+        "complete": "已完成",
+        "processing": "處理中",
+        "attention": "需注意"
+      }
+    },
+    "third": {
+      "selectServices": "選擇服務",
+      "add": "新增",
+      "services": {
+        "incorporation": "公司註冊",
+        "companySecretary": "公司秘書",
+        "monthlyAccounting": "每月會計",
+        "annualAudit": "年度核數"
+      },
+      "prices": {
+        "incorporation": "港幣6,000元",
+        "companySecretary": "港幣3,500元/年",
+        "monthlyAccounting": "由港幣800元/月起",
+        "annualAudit": "由港幣10,000元起"
+      }
+    },
+    "allInOne": {
+      "incorporation": "公司註冊",
+      "companySecretarial": "公司秘書",
+      "accounting": "會計服務",
+      "audit": "核數",
+      "taxAdvisory": "稅務諮詢"
+    },
+    "howItWorks": {
+      "step1": {
+        "leapSetup": "LEAP系統設置",
+        "onboardingInProgress": "開通進行中",
+        "complete": "完成",
+        "smartAccountingSystem": {
+          "title": "智能會計系統",
+          "description": "雲端系統已啟動",
+          "day": "第1天"
+        },
+        "documentCollection": {
+          "title": "文件收集",
+          "description": "已收集初始文件",
+          "day": "第2天"
+        },
+        "complianceCalendar": {
+          "title": "合規日程",
+          "description": "已同步年度期限",
+          "day": "第3天"
+        },
+        "initialOnboarding": {
+          "title": "初始開通",
+          "description": "進行中...",
+          "day": "第4天"
+        },
+        "readyToGo": {
+          "title": "準備就緒",
+          "description": "快完成了！",
+          "day": "第5天"
+        },
+        "estimated": "預計：剩餘1天"
+      },
+      "step2": {
+        "autoPilotMode": "自動駕駛模式",
+        "monthlyTasks": "每月任務",
+        "completeStatus": "完成",
+        "bookkeepingUpdated": {
+          "title": "記帳已更新",
+          "description": "所有交易已分類",
+          "dueDate": "2月5日"
+        },
+        "annualReturnFiled": {
+          "title": "已提交周年申報表",
+          "description": "已提交公司註冊處",
+          "dueDate": "2月10日"
+        },
+        "brNoticeSigned": {
+          "title": "已簽署商業登記通知",
+          "description": "商業登記續期",
+          "dueDate": "2月12日"
+        },
+        "profitTaxReturn": {
+          "title": "利得稅報稅表",
+          "description": "稅務局申報進行中",
+          "dueDate": "2月28日"
+        },
+        "mpfContributions": {
+          "title": "強積金供款",
+          "description": "下週安排",
+          "dueDate": "3月5日"
+        },
+        "payrollProcessing": {
+          "title": "薪酬處理",
+          "description": "月底薪酬",
+          "dueDate": "3月1日"
+        },
+        "overdue": "逾期",
+        "upcoming": "即將到期",
+        "onTime": "準時"
+      },
+      "step3": {
+        "quarterlyReview": "季度審核",
+        "cpaPlusClient": "執業會計師 + 客戶",
+        "recording": "錄影中",
+        "cpa": "執業會計師",
+        "you": "您",
+        "cfo": "財務總監",
+        "q4Report": "2025年第四季度報告",
+        "approved": "已批准",
+        "revenueGrowth": {
+          "label": "收入增長",
+          "value": "+32%",
+          "note": "強勁季度！"
+        },
+        "cashPosition": {
+          "label": "現金狀況",
+          "value": "$125K",
+          "note": "健康的資金儲備"
+        },
+        "compliance": {
+          "label": "合規",
+          "value": "100%",
+          "note": "所有申報準時"
+        },
+        "recommendations": "建議",
+        "actionItems": {
+          "high": "高",
+          "medium": "中",
+          "low": "低",
+          "rdTaxCredits": "考慮研發稅務優惠",
+          "reviewExpenses": "審核費用類別",
+          "planForGrowth": "計劃2026年第一季度增長"
+        },
+        "nextMeeting": "下次：3月15日"
+      }
+    }
+  },
+  "whatsapp": {
+    "tooltip": "透過WhatsApp聯絡我們",
+    "message": "您好！我想了解更多關於LEAP專業會計服務的資訊。我想查詢關於："
+  },
+  "email": {
+    "tooltip": "電郵給我們",
+    "subject": "查詢LEAP服務"
+  },
+  "footer": {
+    "description": "LEAP by LLL 為香港創業者提供專屬執業會計師服務、智能雲端會計及無憂合規服務。",
+    "navigation": "導航",
+    "legal": "法律",
+    "social": "聯繫",
+    "copyright": "© 2026 LEAP by LLL。版權所有。",
+    "allRightsReserved": "版權所有",
+    "links": {
+      "whoWeServe": "服務對象",
+      "whyLeap": "為何選擇LEAP",
+      "howItWorks": "運作方式",
+      "servicesPricing": "服務與定價",
+      "contactUs": "聯絡我們",
+      "getQuote": "取得報價",
+      "privacyPolicy": "私隱政策",
+      "termsOfService": "服務條款",
+      "linkedin": "領英"
+    }
+  },
+  "getQuote": {
+    "title": "取得免費報價",
+    "subtitle": "告訴我們您的業務",
+    "description": "向我們的專業執業會計師團隊索取免費定制報價。我們為會計、核數、稅務諮詢和公司秘書服務提供透明定價。",
+    "form": {
+      "subtitle": "告訴我們您的業務",
+      "title": "取得免費報價",
+      "description": "向我們的專業執業會計師團隊索取免費定制報價。我們為會計、核數、稅務諮詢和公司秘書服務提供透明定價。",
+      "section1Title": "公司資料",
+      "section2Title": "服務需求",
+      "section3Title": "業務詳情",
+      "companyName": "公司名稱",
+      "companyNameLabel": "公司名稱",
+      "companyNamePlaceholder": "輸入公司名稱",
+      "natureOfBusiness": "業務性質",
+      "natureOfBusinessLabel": "業務性質",
+      "natureOfBusinessPlaceholder": "例如：科技、零售、諮詢",
+      "companyType": "公司類型",
+      "companyTypeLabel": "公司類型",
+      "companyTypePlaceholder": "選擇公司類型",
+      "companyTypeOptions": {
+        "newlyIncorporated": "新註冊公司/交易量極少的公司",
+        "activeSME": "活躍中小企",
+        "established": "成熟企業"
+      },
+      "companyTypeNewly": "新註冊公司/交易量極少的公司",
+      "companyTypeActiveSME": "活躍中小企",
+      "companyTypeEstablished": "成熟企業",
+      "contactPerson": "聯絡人",
+      "contactPersonLabel": "聯絡人",
+      "contactPersonPlaceholder": "全名",
+      "position": "職位",
+      "positionLabel": "職位",
+      "positionPlaceholder": "您的職位",
+      "email": "電郵",
+      "emailLabel": "電郵",
+      "emailPlaceholder": "your@email.com",
+      "phone": "電話號碼",
+      "phoneLabel": "電話號碼",
+      "phonePlaceholder": "+852 1234 5678",
+      "services": "感興趣的服務",
+      "servicesLabel": "感興趣的服務",
+      "servicesList": {
+        "accountingBookkeeping": "會計及記帳",
+        "auditServices": "核數服務",
+        "taxComputationFiling": "利得稅計算及申報",
+        "employerReturnFiling": "僱主報稅表提交",
+        "companySecretaryServices": "公司秘書服務",
+        "taxEnquiryCase": "稅務查詢個案",
+        "other": "其他（請註明）"
+      },
+      "serviceAccountingBookkeeping": "會計及記帳",
+      "serviceAuditServices": "核數服務",
+      "serviceTaxComputation": "利得稅計算及申報",
+      "serviceEmployerReturn": "僱主報稅表提交",
+      "serviceCompanySecretary": "公司秘書服務",
+      "serviceTaxEnquiry": "稅務查詢個案",
+      "serviceOther": "其他（請註明）",
+      "otherServiceDetails": "其他服務詳情",
+      "otherServicePlaceholder": "請註明所需的其他服務",
+      "transactionsPerMonth": "每月交易量",
+      "transactionsPerMonthLabel": "每月交易量",
+      "transactionsPerMonthPlaceholder": "選擇交易量",
+      "transactionsOptions": {
+        "upTo25": "每月最多25筆銀行交易",
+        "upTo100": "每月最多100筆交易",
+        "moreThan100": "每月超過100筆交易"
+      },
+      "transactionsUpTo25": "每月最多25筆銀行交易",
+      "transactionsUpTo100": "每月最多100筆交易",
+      "transactionsMoreThan100": "每月超過100筆交易",
+      "numberOfBankAccounts": "銀行帳戶數量",
+      "bankAccountsLabel": "銀行帳戶數量",
+      "bankAccountsPlaceholder": "選擇帳戶數量",
+      "bankAccountsOptions": {
+        "one": "1個銀行帳戶",
+        "upTo3": "最多3個銀行帳戶",
+        "moreThan3": "超過3個銀行帳戶"
+      },
+      "bankAccounts1": "1個銀行帳戶",
+      "bankAccountsUpTo3": "最多3個銀行帳戶",
+      "bankAccountsMoreThan3": "超過3個銀行帳戶",
+      "numberOfEmployees": "員工人數",
+      "employeesLabel": "員工人數",
+      "employeesPlaceholder": "選擇員工人數",
+      "employees0to5": "0-5名員工",
+      "employees6to10": "6-10名員工",
+      "employees11to25": "11-25名員工",
+      "employees26to50": "26-50名員工",
+      "employees51to100": "51-100名員工",
+      "employees100plus": "100名以上員工",
+      "annualTurnover": "年營業額",
+      "annualTurnoverLabel": "年營業額",
+      "annualTurnoverPlaceholder": "選擇年營業額",
+      "turnoverOptions": {
+        "upTo1m": "最多港幣100萬",
+        "1to10m": "港幣100萬 - 1,000萬",
+        "10to50m": "港幣1,000萬 - 5,000萬",
+        "50mPlus": "超過港幣5,000萬"
+      },
+      "turnover1m": "最多港幣100萬",
+      "turnover1to10m": "港幣100萬 - 1,000萬",
+      "turnover10to50m": "港幣1,000萬 - 5,000萬",
+      "turnover50mPlus": "超過港幣5,000萬",
+      "submit": "提交報價請求",
+      "submitButton": "提交報價請求",
+      "submitting": "提交中...",
+      "selectPlaceholder": "選擇...",
+      "errorRequired": "此欄位為必填",
+      "errorInvalidEmail": "請輸入有效的電郵地址",
+      "errorPhoneTooShort": "電話號碼太短",
+      "errorPhoneTooLong": "電話號碼太長",
+      "errorSelectService": "請至少選擇一項服務",
+      "successTitle": "報價請求已收到！",
+      "successMessage": "感謝您的報價請求。我們已收到您的資料，將在1個工作天內回覆個人化報價。",
+      "successBackButton": "返回主頁",
+      "errorTitle": "發生錯誤",
+      "errorMessage": "我們在發送您的報價請求時遇到錯誤。請重試或直接聯絡我們：leap@lll.com.hk",
+      "errorRetryButton": "重試",
+      "estimatedFeesTitle": "估計費用",
+      "accountingFeesLabel": "會計及記帳",
+      "auditFeesLabel": "核數服務",
+      "perMonth": "每月",
+      "fromAmount": "由港幣${amount}起",
+      "rangeAmount": "港幣${min} - ${max}"
+    }
+  },
+  "contactUs": {
+    "title": "聯絡我們",
+    "subtitle": "保持聯繫",
+    "description": "我們很樂意收到您的來信。發送訊息給我們，我們會盡快回覆。",
+    "form": {
+      "subtitle": "保持聯繫",
+      "title": "聯絡我們",
+      "name": "姓名",
+      "email": "電郵",
+      "company": "公司",
+      "message": "訊息",
+      "servicesInterest": "感興趣的服務（可選）",
+      "servicesList": {
+        "accountingBookkeeping": "會計及記帳",
+        "auditAssurance": "核數及保證",
+        "taxAdvisory": "稅務及商業諮詢",
+        "companySecretarial": "公司秘書"
+      },
+      "namePlaceholder": "您的姓名",
+      "emailPlaceholder": "您的電郵",
+      "messagePlaceholder": "您的訊息",
+      "selectService": "感興趣的服務（可選）",
+      "accountingBookkeeping": "會計及記帳",
+      "auditAssurance": "核數及保證",
+      "taxAdvisory": "稅務及商業諮詢",
+      "companySecretarial": "公司秘書",
+      "submit": "發送訊息",
+      "submitButton": "發送訊息",
+      "submitting": "發送中...",
+      "successTitle": "謝謝！",
+      "successSubtitle": "訊息已成功發送",
+      "successMessage": "感謝您聯絡我們。我們已收到您的訊息，會盡快回覆。",
+      "successBackButton": "發送另一則訊息",
+      "errorTitle": "糟糕！",
+      "errorSubtitle": "發生錯誤",
+      "errorMessage": "我們在發送您的訊息時遇到錯誤。請重試或直接聯絡我們。",
+      "errorRetryButton": "重試",
+      "errorRequired": "此欄位為必填",
+      "errorEmailRequired": "電郵為必填",
+      "errorInvalidEmail": "請輸入有效的電郵地址",
+      "errorMessageRequired": "訊息為必填"
+    }
   },
   "features": {
     "heading": "具備數千種功能",
@@ -139,21 +740,5 @@
     "submit": "註冊",
     "haveAccount": "已經有帳戶？",
     "signIn": "登入"
-  },
-  "footer": {
-    "description": "Everything AI 是一個提供各種人工智能工具和服務的平台。",
-    "product": "產品",
-    "company": "公司",
-    "resources": "資源",
-    "legal": "法律",
-    "features": "功能",
-    "pricing": "定價",
-    "about": "關於",
-    "careers": "職業",
-    "blog": "博客",
-    "documentation": "文檔",
-    "privacy": "隱私政策",
-    "terms": "服務條款",
-    "copyright": "© 2024 Everything AI。版權所有。"
   }
 }

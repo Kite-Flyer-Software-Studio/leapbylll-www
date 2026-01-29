@@ -1,6 +1,7 @@
 "use client";
 import { Link } from "@/i18n/navigation";
 import React from "react";
+import Image from "next/image";
 
 export const Logo = () => {
   // const handleLogoClick = (e: React.MouseEvent) => {
@@ -14,10 +15,16 @@ export const Logo = () => {
     <Link
       href="/"
       // onClick={handleLogoClick}
-      className="font-normal flex space-x-2 items-center text-sm mr-4  text-black px-2 py-1  relative z-20"
+      className="font-normal flex items-center text-sm mr-4 px-2 py-1 relative z-20"
     >
-      <div className="h-5 w-6 bg-black dark:bg-white rounded-br-lg rounded-tr-sm rounded-tl-lg rounded-bl-sm" />
-      <span className="font-medium text-black dark:text-white">Every AI</span>
+      <Image
+        src="/logos/leapbylll-logo.png"
+        alt="LEAP by LLL"
+        width={120}
+        height={40}
+        className="h-12 w-auto"
+        priority
+      />
     </Link>
   );
 };

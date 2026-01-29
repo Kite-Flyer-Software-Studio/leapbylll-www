@@ -7,10 +7,10 @@ import { Badge } from "@/components/badge";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from 'next-intl';
+import { HeroIllustration } from "./hero-illustration";
 
 export const Hero = () => {
   const router = useRouter();
@@ -90,7 +90,7 @@ export const Hero = () => {
         }}
         className="flex items-center gap-4 justify-center mt-6 relative z-10"
       >
-        <Button as={Link} href="/contact">{t('getStarted')}</Button>
+        <Button as={Link} href="/get-quote">{t('getStarted')}</Button>
         <Button
           variant="simple"
           as={Link}
@@ -123,17 +123,9 @@ export const Hero = () => {
           {t('backedBy')}
         </p>
       </motion.div>
-      <div className="p-4 border border-neutral-200 bg-neutral-100 dark:bg-neutral-800 dark:border-neutral-700 rounded-[32px] mt-20 relative">
+      <div className="mt-20 relative">
+        <HeroIllustration />
         <div className="absolute inset-x-0 bottom-0 h-40 w-full bg-gradient-to-b from-transparent via-white to-white dark:via-black/50 dark:to-black scale-[1.1] pointer-events-none" />
-        <div className="p-2 bg-white dark:bg-black dark:border-neutral-700 border border-neutral-200 rounded-[24px]">
-          <Image
-            src="/header.png"
-            alt="header"
-            width={1920}
-            height={1080}
-            className="rounded-[20px]"
-          />
-        </div>
       </div>
     </div >
   );

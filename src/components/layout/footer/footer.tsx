@@ -1,48 +1,56 @@
+"use client";
+
 import { Link } from "@/i18n/navigation";
 import React from "react";
 import { Logo } from "@/components/Logo";
+import { useTranslations } from "next-intl";
 
 export const Footer = () => {
-  const links = [
+  const t = useTranslations("footer");
+
+  const navigation = [
     {
-      name: "Pricing",
-      href: "/pricing",
+      name: t("links.whoWeServe"),
+      href: "/#who-we-serve",
     },
     {
-      name: "Blog",
-      href: "/blog",
+      name: t("links.whyLeap"),
+      href: "/#why-leap",
     },
     {
-      name: "Contact",
-      href: "/contact",
+      name: t("links.howItWorks"),
+      href: "/#how-it-works",
+    },
+    {
+      name: t("links.servicesPricing"),
+      href: "/#services-pricing",
+    },
+  ];
+
+  const quickLinks = [
+    {
+      name: t("links.getQuote"),
+      href: "/get-quote",
+    },
+    {
+      name: t("links.contactUs"),
+      href: "/contact-us",
     },
   ];
   const legal = [
     {
-      name: "Privacy Policy",
+      name: t("links.privacyPolicy"),
       href: "#",
     },
     {
-      name: "Terms of Service",
-      href: "#",
-    },
-    {
-      name: "Refund Policy",
+      name: t("links.termsOfService"),
       href: "#",
     },
   ];
   const socials = [
     {
-      name: "Twitter",
-      href: "https://twitter.com/mannupaaji",
-    },
-    {
-      name: "LinkedIn",
-      href: "https://linkedin.com/in/manuarora28",
-    },
-    {
-      name: "GitHub",
-      href: "https://github.com/manuarora700",
+      name: t("links.linkedin"),
+      href: "https://www.linkedin.com/company/louis-lai-luk-cpa-limited/",
     },
   ];
   return (
@@ -53,12 +61,15 @@ export const Footer = () => {
             <div className="mr-4  md:flex mb-4">
               <Logo />
             </div>
-            <div>Copyright &copy; 2024 Every Labs</div>
-            <div className="mt-2">All rights reserved</div>
+            <div>{t("copyright")}</div>
+            <div className="mt-2">{t("allRightsReserved")}</div>
           </div>
           <div className="grid grid-cols-3 gap-10 items-start mt-10 md:mt-0">
             <div className="flex justify-center space-y-4 flex-col mt-4">
-              {links.map((link) => (
+              <div className="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
+                {t("navigation")}
+              </div>
+              {navigation.map((link) => (
                 <Link
                   key={link.name}
                   className="transition-colors hover:text-black text-muted dark:text-muted-dark dark:hover:text-neutral-400 text-xs sm:text-sm"
@@ -69,6 +80,9 @@ export const Footer = () => {
               ))}
             </div>
             <div className="flex justify-center space-y-4 flex-col mt-4">
+              <div className="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
+                {t("legal")}
+              </div>
               {legal.map((link) => (
                 <Link
                   key={link.name}
@@ -78,13 +92,27 @@ export const Footer = () => {
                   {link.name}
                 </Link>
               ))}
+              {quickLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  className="transition-colors hover:text-black text-muted dark:text-muted-dark dark:hover:text-neutral-400 text-xs sm:text-sm"
+                  href={link.href}
+                >
+                  {link.name}
+                </Link>
+              ))}
             </div>
             <div className="flex justify-center space-y-4 flex-col mt-4">
+              <div className="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
+                {t("social")}
+              </div>
               {socials.map((link) => (
                 <Link
                   key={link.name}
                   className="transition-colors hover:text-black text-muted dark:text-muted-dark dark:hover:text-neutral-400 text-xs sm:text-sm"
                   href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
                   {link.name}
                 </Link>

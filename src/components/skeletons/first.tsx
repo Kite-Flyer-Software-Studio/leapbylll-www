@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { IconCircleArrowLeft } from "@tabler/icons-react";
+import { useTranslations } from "next-intl";
 
 const Logo = () => {
   return (
@@ -26,6 +27,8 @@ const Logo = () => {
 };
 
 export const SkeletonOne = () => {
+  const t = useTranslations("skeletons.first");
+
   return (
     <div className="w-full h-full p-4 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 rounded-xl">
       {/* Dashboard Header */}
@@ -67,11 +70,15 @@ export const SkeletonOne = () => {
             <div className="relative">
               <motion.div
                 whileHover={{ scale: 1.1 }}
-                className="rounded-full bg-gradient-to-br from-blue-500 to-blue-600 overflow-hidden ring-2 ring-white dark:ring-neutral-700"
+                className="rounded-full overflow-hidden ring-2 ring-white dark:ring-neutral-700 w-14 h-14"
               >
-                <div className="w-14 h-14 flex items-center justify-center text-white font-bold text-xl">
-                  CPA
-                </div>
+                <Image
+                  src="/natluk.jpeg"
+                  alt="Natalie Luk, CPA"
+                  width={56}
+                  height={56}
+                  className="w-14 h-14 object-cover"
+                />
               </motion.div>
               <motion.div
                 animate={{ scale: [1, 1.2, 1] }}
@@ -87,10 +94,10 @@ export const SkeletonOne = () => {
               className="space-y-1"
             >
               <div className="text-[10px] md:text-xs font-medium text-neutral-400 tracking-wider">
-                YOUR DEDICATED ADVISOR
+                {t("yourDedicatedAdvisor")}
               </div>
               <div className="text-xs md:text-lg font-semibold bg-gradient-to-r from-neutral-800 to-neutral-600 dark:from-neutral-200 dark:to-neutral-400 bg-clip-text text-transparent">
-                Natalie Luk, CPA
+                {t("cpaName")}
               </div>
             </motion.div>
           </div>
@@ -131,7 +138,7 @@ export const SkeletonOne = () => {
               transition={{ duration: 0.4, ease: "easeOut" }}
               className="text-sm text-center mt-2"
             >
-              Direct messaging with your CPA
+              {t("directMessaging")}
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
@@ -140,7 +147,7 @@ export const SkeletonOne = () => {
               transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
               className="text-xs text-neutral-400 dark:text-neutral-500 text-center mt-1"
             >
-              Ask about cap tables, cash flow, or tax planning
+              {t("messageSubtext")}
             </motion.div>
           </motion.div>
         </motion.div>

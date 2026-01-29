@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { cn } from "@/lib/utils";
 import { IconPhone, IconSettings, IconRocket, IconChartBar } from "@tabler/icons-react";
@@ -7,7 +5,6 @@ import { Container } from "@/components/container";
 import { Badge as HeaderBadge } from "@/components/badge";
 import { Heading } from "@/components/heading";
 import { Subheading } from "@/components/subheading";
-import { useTranslations } from "next-intl";
 
 import {
   IconCheck,
@@ -26,71 +23,70 @@ import {
   IconMail,
 } from "@tabler/icons-react";
 
-export function HowItWorks() {
-  const t = useTranslations("howItWorks");
-
+export function HowItWorks2() {
   return (
     <div id="how-it-works" className="relative overflow-hidden py-20">
       <Container>
         <div className="relative flex flex-col items-center">
-          <HeaderBadge>{t("badge")}</HeaderBadge>
+          <HeaderBadge>How It Works</HeaderBadge>
           <Heading as="h2" className="mt-4">
-            {t("heading")}
+            Four simple steps to compliant, investor-ready finances
           </Heading>
 
           <Subheading as="p" className="mt-6 max-w-3xl text-center">
-            {t("subheading")}
+            From your first call to ongoing monthly support, we make compliance
+            predictable and painless – so you can stay focused on building your business.
           </Subheading>
         </div>
         <div className="my-10 grid grid-cols-1 gap-4 md:my-20 md:grid-cols-2 lg:grid-cols-4">
           <Card className="lg:rounded-tl-3xl lg:rounded-bl-3xl">
-            <StepBadge step={1} />
+            <StepBadge step={1} color="blue" />
             <CardSkeleton>
               <SkeletonOne />
             </CardSkeleton>
             <CardContent>
-              <CardTitle className="pt-6">{t("steps.step1.title")}</CardTitle>
+              <CardTitle>Understand your business</CardTitle>
               <CardDescription>
-                {t("steps.step1.description")}
+                We start with a short call to learn your business model, transaction volume, and goals – so we can recommend the right bundle.
               </CardDescription>
             </CardContent>
           </Card>
 
           <Card>
-            <StepBadge step={2} />
+            <StepBadge step={2} color="purple" />
             <CardSkeleton>
               <SkeletonTwo />
             </CardSkeleton>
             <CardContent>
-              <CardTitle className="pt-6">{t("steps.step2.title")}</CardTitle>
+              <CardTitle>Set up your LEAP stack</CardTitle>
               <CardDescription>
-                {t("steps.step2.description")}
+                We handle onboarding to our smart accounting system, gather initial documents, and align your compliance calendar for the year.
               </CardDescription>
             </CardContent>
           </Card>
 
           <Card>
-            <StepBadge step={3} />
+            <StepBadge step={3} color="green" />
             <CardSkeleton>
               <SkeletonThree />
             </CardSkeleton>
             <CardContent>
-              <CardTitle className="pt-6">{t("steps.step3.title")}</CardTitle>
+              <CardTitle>Run your business, we handle the rest</CardTitle>
               <CardDescription>
-                {t("steps.step3.description")}
+                Each month we keep your books up‑to‑date, track deadlines, and answer questions, while you focus on customers and product.
               </CardDescription>
             </CardContent>
           </Card>
 
           <Card className="lg:rounded-tr-3xl lg:rounded-br-3xl">
-            <StepBadge step={4} />
+            <StepBadge step={4} color="orange" />
             <CardSkeleton>
               <SkeletonFour />
             </CardSkeleton>
             <CardContent>
-              <CardTitle className="pt-6">{t("steps.step4.title")}</CardTitle>
+              <CardTitle>Review, refine, and grow</CardTitle>
               <CardDescription>
-                {t("steps.step4.description")}
+                We review your numbers with you, flag risks, and suggest improvements, so your finances stay investor‑ and bank‑ready.
               </CardDescription>
             </CardContent>
           </Card>
@@ -118,14 +114,23 @@ export const Card = ({
 
 export const StepBadge = ({
   step,
+  color,
 }: {
   step: number;
+  color: 'blue' | 'purple' | 'green' | 'orange';
 }) => {
+  const colorClasses = {
+    blue: 'bg-blue-100 dark:bg-blue-950/50 text-blue-700 dark:text-blue-300 border-blue-200 dark:border-blue-900',
+    purple: 'bg-purple-100 dark:bg-purple-950/50 text-purple-700 dark:text-purple-300 border-purple-200 dark:border-purple-900',
+    green: 'bg-green-100 dark:bg-green-950/50 text-green-700 dark:text-green-300 border-green-200 dark:border-green-900',
+    orange: 'bg-orange-100 dark:bg-orange-950/50 text-orange-700 dark:text-orange-300 border-orange-200 dark:border-orange-900',
+  };
+
   return (
     <div className="absolute -top-3 -right-3 z-10">
       <div className={cn(
         "flex items-center justify-center w-12 h-12 rounded-full font-semibold text-base shadow-sm border-2",
-        "bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 border-neutral-200 dark:border-neutral-700"
+        colorClasses[color]
       )}>
         {step}
       </div>
@@ -218,8 +223,6 @@ export const CardSkeleton = ({
 };
 
 export const SkeletonOne = () => {
-  const t = useTranslations("skeletons.first.whatsapp");
-
   return (
     <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
       {/* WhatsApp-style wallpaper background */}
@@ -241,8 +244,8 @@ export const SkeletonOne = () => {
                 <div className="absolute bottom-0 right-0 w-3 h-3 bg-[#25d366] rounded-full border-2 border-[#202c33]" />
               </div>
               <div className="flex-1">
-                <p className="text-sm font-medium text-white">{t("leapCpaTeam")}</p>
-                <p className="text-[10px] text-[#8696a0]">{t("online")}</p>
+                <p className="text-sm font-medium text-white">LEAP CPA Team</p>
+                <p className="text-[10px] text-[#8696a0]">online</p>
               </div>
               <IconPhone className="w-5 h-5 text-[#8696a0]" />
             </div>
@@ -252,29 +255,29 @@ export const SkeletonOne = () => {
           <div className="p-3 space-y-2 min-h-[280px] max-h-[280px] overflow-hidden">
             <WhatsAppMessage
               side="left"
-              text={t("greeting")}
+              text="Hi! 👋 Thanks for reaching out. Tell us about your business model"
               time="9:23 AM"
             />
             <WhatsAppMessage
               side="right"
-              text={t("userResponse1")}
+              text="We're a SaaS startup, around 50 transactions per month"
               time="9:24 AM"
               delivered
             />
             <WhatsAppMessage
               side="left"
-              text={t("question")}
+              text="Great! What are your main financial goals?"
               time="9:25 AM"
             />
             <WhatsAppMessage
               side="right"
-              text={t("userResponse2")}
+              text="We need investor-ready finances and clean books for fundraising"
               time="9:26 AM"
               delivered
             />
             <WhatsAppMessage
               side="left"
-              text={t("recommendation")}
+              text="Perfect! Based on your needs, I'd recommend our Starter bundle. Can we schedule a 15-min call?"
               time="9:27 AM"
             />
 
@@ -294,7 +297,7 @@ export const SkeletonOne = () => {
           <div className="px-3 py-2 bg-[#202c33] border-t border-[#2a3942] flex items-center gap-2">
             <div className="flex-1 bg-[#2a3942] rounded-lg px-3 py-1.5 flex items-center gap-2">
               <span className="text-sm text-[#8696a0]">😊</span>
-              <span className="text-[10px] text-[#8696a0]">{t("typeMessage")}</span>
+              <span className="text-[10px] text-[#8696a0]">Type a message</span>
             </div>
             <div className="w-8 h-8 rounded-full bg-[#25d366] flex items-center justify-center">
               <IconSend className="w-4 h-4 text-white" />
@@ -340,8 +343,6 @@ const WhatsAppMessage = ({
 };
 
 export const SkeletonTwo = () => {
-  const t = useTranslations("skeletons.howItWorks.step1");
-
   return (
     <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
       {/* Background gradient glow */}
@@ -358,13 +359,13 @@ export const SkeletonTwo = () => {
                   <IconSettings className="w-5 h-5 text-white animate-spin" style={{ animationDuration: '3s' }} />
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-purple-900 dark:text-purple-100">{t("leapSetup")}</p>
-                  <p className="text-[10px] text-purple-600 dark:text-purple-400">{t("onboardingInProgress")}</p>
+                  <p className="text-sm font-bold text-purple-900 dark:text-purple-100">LEAP Setup</p>
+                  <p className="text-[10px] text-purple-600 dark:text-purple-400">Onboarding in progress</p>
                 </div>
               </div>
               <div className="text-right">
                 <p className="text-xs font-bold text-purple-900 dark:text-purple-100">80%</p>
-                <p className="text-[9px] text-purple-600 dark:text-purple-400">{t("complete")}</p>
+                <p className="text-[9px] text-purple-600 dark:text-purple-400">Complete</p>
               </div>
             </div>
 
@@ -378,38 +379,38 @@ export const SkeletonTwo = () => {
           <div className="p-4 space-y-3">
             <SetupStep
               icon={<IconCheck className="w-4 h-4 text-white" />}
-              title={t("smartAccountingSystem.title")}
-              description={t("smartAccountingSystem.description")}
+              title="Smart Accounting System"
+              description="Cloud-based system activated"
               status="completed"
-              day={t("smartAccountingSystem.day")}
+              day="Day 1"
             />
             <SetupStep
               icon={<IconCheck className="w-4 h-4 text-white" />}
-              title={t("documentCollection.title")}
-              description={t("documentCollection.description")}
+              title="Document Collection"
+              description="Initial docs gathered"
               status="completed"
-              day={t("documentCollection.day")}
+              day="Day 2"
             />
             <SetupStep
               icon={<IconCheck className="w-4 h-4 text-white" />}
-              title={t("complianceCalendar.title")}
-              description={t("complianceCalendar.description")}
+              title="Compliance Calendar"
+              description="Annual deadlines synced"
               status="completed"
-              day={t("complianceCalendar.day")}
+              day="Day 3"
             />
             <SetupStep
               icon={<IconLoader2 className="w-4 h-4 text-white animate-spin" />}
-              title={t("initialOnboarding.title")}
-              description={t("initialOnboarding.description")}
+              title="Initial Onboarding"
+              description="In progress..."
               status="inprogress"
-              day={t("initialOnboarding.day")}
+              day="Day 4"
             />
             <SetupStep
               icon={<IconClock className="w-4 h-4 text-neutral-400" />}
-              title={t("readyToGo.title")}
-              description={t("readyToGo.description")}
+              title="Ready to Go"
+              description="Almost there!"
               status="pending"
-              day={t("readyToGo.day")}
+              day="Day 5"
             />
           </div>
 
@@ -418,7 +419,7 @@ export const SkeletonTwo = () => {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-purple-500 animate-pulse" />
-                <span className="text-[10px] font-semibold text-purple-900 dark:text-purple-100">{t("estimated")}</span>
+                <span className="text-[10px] font-semibold text-purple-900 dark:text-purple-100">Estimated: 1 day remaining</span>
               </div>
               <IconRocket className="w-4 h-4 text-purple-600 dark:text-purple-400" />
             </div>
@@ -484,8 +485,6 @@ const SetupStep = ({
 };
 
 export const SkeletonThree = () => {
-  const t = useTranslations("skeletons.howItWorks.step2");
-
   return (
     <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
       {/* Background gradient glow */}
@@ -502,7 +501,7 @@ export const SkeletonThree = () => {
                   <IconRocket className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <p className="text-sm font-bold text-green-900 dark:text-green-100">{t("autoPilotMode")}</p>
+                  <p className="text-sm font-bold text-green-900 dark:text-green-100">Auto-Pilot Mode</p>
                   <p className="text-[10px] text-green-600 dark:text-green-400">February 2026</p>
                 </div>
               </div>
@@ -515,8 +514,8 @@ export const SkeletonThree = () => {
             {/* Monthly Progress */}
             <div className="space-y-1">
               <div className="flex items-center justify-between text-[10px]">
-                <span className="text-green-900 dark:text-green-100 font-medium">{t("monthlyTasks")}</span>
-                <span className="text-green-600 dark:text-green-400 font-bold">8/10 {t("completeStatus")}</span>
+                <span className="text-green-900 dark:text-green-100 font-medium">Monthly Tasks</span>
+                <span className="text-green-600 dark:text-green-400 font-bold">8/10 Complete</span>
               </div>
               <div className="h-2 bg-green-100 dark:bg-green-900/30 rounded-full overflow-hidden">
                 <div className="h-full bg-gradient-to-r from-green-500 to-emerald-500 rounded-full transition-all duration-1000" style={{ width: '80%' }} />
@@ -528,45 +527,45 @@ export const SkeletonThree = () => {
           <div className="p-4 space-y-2 max-h-[250px] overflow-y-auto">
             <OperationalTask
               icon={<IconCalculator className="w-4 h-4 text-white" />}
-              title={t("bookkeepingUpdated.title")}
-              description={t("bookkeepingUpdated.description")}
+              title="Bookkeeping Updated"
+              description="All transactions categorized"
               status="completed"
-              dueDate={t("bookkeepingUpdated.dueDate")}
+              dueDate="Feb 5"
             />
             <OperationalTask
               icon={<IconFileCheck className="w-4 h-4 text-white" />}
-              title={t("annualReturnFiled.title")}
-              description={t("annualReturnFiled.description")}
+              title="Annual Return Filed"
+              description="Companies Registry submitted"
               status="completed"
-              dueDate={t("annualReturnFiled.dueDate")}
+              dueDate="Feb 10"
             />
             <OperationalTask
               icon={<IconMail className="w-4 h-4 text-white" />}
-              title={t("brNoticeSigned.title")}
-              description={t("brNoticeSigned.description")}
+              title="BR Notice Signed"
+              description="Business registration renewal"
               status="completed"
-              dueDate={t("brNoticeSigned.dueDate")}
+              dueDate="Feb 12"
             />
             <OperationalTask
               icon={<IconFileText className="w-4 h-4 text-white" />}
-              title={t("profitTaxReturn.title")}
-              description={t("profitTaxReturn.description")}
+              title="Profit Tax Return"
+              description="IRD filing in progress"
               status="inprogress"
-              dueDate={t("profitTaxReturn.dueDate")}
+              dueDate="Feb 28"
             />
             <OperationalTask
               icon={<IconCalendarDue className="w-4 h-4 text-neutral-400" />}
-              title={t("mpfContributions.title")}
-              description={t("mpfContributions.description")}
+              title="MPF Contributions"
+              description="Scheduled for next week"
               status="pending"
-              dueDate={t("mpfContributions.dueDate")}
+              dueDate="Mar 5"
             />
             <OperationalTask
               icon={<IconUsers className="w-4 h-4 text-neutral-400" />}
-              title={t("payrollProcessing.title")}
-              description={t("payrollProcessing.description")}
+              title="Payroll Processing"
+              description="End of month payroll"
               status="pending"
-              dueDate={t("payrollProcessing.dueDate")}
+              dueDate="Mar 1"
             />
           </div>
 
@@ -575,15 +574,15 @@ export const SkeletonThree = () => {
             <div className="grid grid-cols-3 gap-2 text-center">
               <div>
                 <p className="text-xs font-bold text-green-600 dark:text-green-400">0</p>
-                <p className="text-[9px] text-neutral-600 dark:text-neutral-400">{t("overdue")}</p>
+                <p className="text-[9px] text-neutral-600 dark:text-neutral-400">Overdue</p>
               </div>
               <div>
                 <p className="text-xs font-bold text-green-600 dark:text-green-400">2</p>
-                <p className="text-[9px] text-neutral-600 dark:text-neutral-400">{t("upcoming")}</p>
+                <p className="text-[9px] text-neutral-600 dark:text-neutral-400">Upcoming</p>
               </div>
               <div>
                 <p className="text-xs font-bold text-green-600 dark:text-green-400">100%</p>
-                <p className="text-[9px] text-neutral-600 dark:text-neutral-400">{t("onTime")}</p>
+                <p className="text-[9px] text-neutral-600 dark:text-neutral-400">On-Time</p>
               </div>
             </div>
           </div>
@@ -655,8 +654,6 @@ const OperationalTask = ({
 };
 
 export const SkeletonFour = () => {
-  const t = useTranslations("skeletons.howItWorks.step3");
-
   return (
     <div className="relative h-full w-full flex items-center justify-center overflow-hidden">
       {/* Background gradient glow */}
@@ -676,21 +673,21 @@ export const SkeletonFour = () => {
                   <div className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 bg-green-500 rounded-full border border-white dark:border-neutral-900" />
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-orange-900 dark:text-orange-100">{t("quarterlyReview")}</p>
-                  <p className="text-[9px] text-orange-600 dark:text-orange-400">{t("cpaPlusClient")}</p>
+                  <p className="text-xs font-bold text-orange-900 dark:text-orange-100">Quarterly Review</p>
+                  <p className="text-[9px] text-orange-600 dark:text-orange-400">CPA + Client</p>
                 </div>
               </div>
               <div className="flex items-center gap-1">
                 <div className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-                <span className="text-[9px] font-bold text-red-600 dark:text-red-400">{t("recording")}</span>
+                <span className="text-[9px] font-bold text-red-600 dark:text-red-400">REC</span>
               </div>
             </div>
 
             {/* Participants */}
             <div className="flex gap-1.5">
-              <ParticipantAvatar name={t("cpa")} color="from-orange-500 to-amber-500" active />
-              <ParticipantAvatar name={t("you")} color="from-blue-500 to-cyan-500" active />
-              <ParticipantAvatar name={t("cfo")} color="from-purple-500 to-violet-500" />
+              <ParticipantAvatar name="CPA" color="from-orange-500 to-amber-500" active />
+              <ParticipantAvatar name="You" color="from-blue-500 to-cyan-500" active />
+              <ParticipantAvatar name="CFO" color="from-purple-500 to-violet-500" />
             </div>
           </div>
 
@@ -702,32 +699,32 @@ export const SkeletonFour = () => {
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-2">
                     <IconChartBar className="w-4 h-4 text-orange-600 dark:text-orange-400" />
-                    <span className="text-xs font-semibold text-orange-900 dark:text-orange-100">{t("q4Report")}</span>
+                    <span className="text-xs font-semibold text-orange-900 dark:text-orange-100">Q4 2025 Report</span>
                   </div>
                   <div className="px-2 py-0.5 rounded-full bg-green-100 dark:bg-green-900/30">
-                    <span className="text-[9px] font-bold text-green-700 dark:text-green-400">{t("approved")}</span>
+                    <span className="text-[9px] font-bold text-green-700 dark:text-green-400">APPROVED</span>
                   </div>
                 </div>
 
                 {/* Key highlights being discussed */}
                 <div className="space-y-1.5">
                   <ReviewInsight
-                    label={t("revenueGrowth.label")}
-                    value={t("revenueGrowth.value")}
+                    label="Revenue Growth"
+                    value="+32%"
                     status="positive"
-                    note={t("revenueGrowth.note")}
+                    note="Strong quarter!"
                   />
                   <ReviewInsight
-                    label={t("cashPosition.label")}
-                    value={t("cashPosition.value")}
+                    label="Cash Position"
+                    value="$125K"
                     status="positive"
-                    note={t("cashPosition.note")}
+                    note="Healthy runway"
                   />
                   <ReviewInsight
-                    label={t("compliance.label")}
-                    value={t("compliance.value")}
+                    label="Compliance"
+                    value="100%"
                     status="positive"
-                    note={t("compliance.note")}
+                    note="All filings on time"
                   />
                 </div>
               </div>
@@ -736,12 +733,12 @@ export const SkeletonFour = () => {
               <div className="bg-white dark:bg-neutral-800 rounded-lg p-3 border border-orange-100 dark:border-orange-900/50">
                 <div className="flex items-center gap-2 mb-2">
                   <IconFileText className="w-3 h-3 text-orange-600 dark:text-orange-400" />
-                  <span className="text-[10px] font-semibold text-orange-900 dark:text-orange-100">{t("recommendations")}</span>
+                  <span className="text-[10px] font-semibold text-orange-900 dark:text-orange-100">Recommendations</span>
                 </div>
                 <div className="space-y-1.5">
-                  <ActionItem text={t("actionItems.rdTaxCredits")} priority="high" />
-                  <ActionItem text={t("actionItems.reviewExpenses")} priority="medium" />
-                  <ActionItem text={t("actionItems.planForGrowth")} priority="medium" />
+                  <ActionItem text="Consider R&D tax credits" priority="high" />
+                  <ActionItem text="Review expense categories" priority="medium" />
+                  <ActionItem text="Plan for Q1 2026 growth" priority="medium" />
                 </div>
               </div>
             </div>
@@ -758,7 +755,7 @@ export const SkeletonFour = () => {
                 <div className="w-6 h-6 rounded-full bg-orange-100 dark:bg-orange-900 flex items-center justify-center">
                   <IconCheck className="w-3 h-3 text-orange-600 dark:text-orange-400" />
                 </div>
-                <span className="text-[9px] text-neutral-600 dark:text-neutral-400">{t("nextMeeting")}</span>
+                <span className="text-[9px] text-neutral-600 dark:text-neutral-400">Next: Mar 15</span>
               </div>
             </div>
           </div>
@@ -834,18 +831,10 @@ const ActionItem = ({
   text: string;
   priority: 'high' | 'medium' | 'low';
 }) => {
-  const t = useTranslations("skeletons.howItWorks.step3.actionItems");
-
   const priorityColors = {
     high: 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400',
     medium: 'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400',
     low: 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
-  };
-
-  const priorityLabels = {
-    high: t("high"),
-    medium: t("medium"),
-    low: t("low"),
   };
 
   return (
@@ -854,7 +843,7 @@ const ActionItem = ({
         "px-1.5 py-0.5 rounded text-[8px] font-bold uppercase",
         priorityColors[priority]
       )}>
-        {priorityLabels[priority]}
+        {priority}
       </div>
       <span className="text-[10px] text-neutral-700 dark:text-neutral-300">{text}</span>
     </div>

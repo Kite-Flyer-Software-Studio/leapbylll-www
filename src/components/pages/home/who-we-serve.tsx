@@ -17,24 +17,27 @@ import {
 } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 
 export const WhoWeServe = () => {
+  const t = useTranslations("whoWeServe");
+
   const painPoints = [
     {
-      title: "Deadline disasters",
-      description: "Emails ignored, questions unanswered until penalty notices arrive",
+      title: t("painPoints.deadlineDisasters.title"),
+      description: t("painPoints.deadlineDisasters.description"),
       icon: <IconAlertTriangle className="size-6" />,
       type: "pain" as const,
     },
     {
-      title: "Fragmented providers",
-      description: "No one takes ownership – your accountant, secretary, and auditor keep pointing fingers.",
+      title: t("painPoints.fragmentedProviders.title"),
+      description: t("painPoints.fragmentedProviders.description"),
       icon: <IconUsers className="size-6" />,
       type: "pain" as const,
     },
     {
-      title: "Year-end shocks",
-      description: "Missed deadlines, penalty letters, and messy records you have to clean up later.",
+      title: t("painPoints.yearEndShocks.title"),
+      description: t("painPoints.yearEndShocks.description"),
       icon: <IconFileAlert className="size-6" />,
       type: "pain" as const,
     },
@@ -42,23 +45,20 @@ export const WhoWeServe = () => {
 
   const targets = [
     {
-      title: "Solo entrepreneurs",
-      description:
-        "Solo entrepreneurs launching their first business",
+      title: t("targets.soloEntrepreneurs.title"),
+      description: t("targets.soloEntrepreneurs.description"),
       icon: <IconUser className="size-6" />,
       type: "solution" as const,
     },
     {
-      title: "Start-up companies",
-      description:
-        "Start-up companies needing structure and investor-ready numbers",
+      title: t("targets.startupCompanies.title"),
+      description: t("targets.startupCompanies.description"),
       icon: <IconRocket className="size-6" />,
       type: "solution" as const,
     },
     {
-      title: "Growing SMEs",
-      description:
-        "Growing SMEs preparing for larger teams, funding, or expansion",
+      title: t("targets.growingSMEs.title"),
+      description: t("targets.growingSMEs.description"),
       icon: <IconBuildingSkyscraper className="size-6" />,
       type: "solution" as const,
     },
@@ -68,15 +68,13 @@ export const WhoWeServe = () => {
     <div id="who-we-serve" className="relative overflow-hidden py-20">
       <Container>
         <div className="relative flex flex-col items-center">
-          <Badge>Who We Serve</Badge>
+          <Badge>{t("badge")}</Badge>
           <Heading as="h2" className="mt-4">
-            Built for founders who can&apos;t afford compliance mistakes
+            {t("heading")}
           </Heading>
 
           <Subheading as="p" className="mt-6 max-w-3xl">
-            From missed deadlines to fragmented providers, we understand the
-            compliance chaos that founders face. LEAP by LLL transforms these
-            pain points into predictable, manageable processes.
+            {t("subheading")}
           </Subheading>
         </div>
         <div className="mt-20 grid grid-cols-1 gap-4 md:grid-cols-3">
@@ -98,7 +96,12 @@ export const WhoWeServe = () => {
 };
 
 const MiddleCard = () => {
-  const texts = ["Deadline tracked", "Filings complete", "Books audit-ready"];
+  const t = useTranslations("whoWeServe.middleCard");
+  const texts = [
+    t("statuses.deadlineTracked"),
+    t("statuses.filingsComplete"),
+    t("statuses.booksAuditReady")
+  ];
   const [activeText, setActiveText] = useState(0);
 
   useEffect(() => {
@@ -107,6 +110,12 @@ const MiddleCard = () => {
     }, 4000);
     return () => clearInterval(interval);
   }, []);
+
+  const metrics = [
+    { label: t("metrics.filingsOnTime"), width: 98 },
+    { label: t("metrics.clientSatisfaction"), width: 95 },
+    { label: t("metrics.complianceRate"), width: 100 },
+  ];
 
   return (
     <div className="relative flex min-h-40 flex-col justify-end overflow-hidden rounded-lg bg-neutral-50 p-4 md:p-5 dark:bg-neutral-900">
@@ -133,7 +142,7 @@ const MiddleCard = () => {
       <div className="relative z-20 mt-4 flex flex-col items-center justify-center">
         <div className="mb-2 h-8 w-px bg-neutral-300 dark:bg-neutral-700"></div>
         <div className="rounded-sm border border-blue-500 bg-blue-50 px-2 py-0.5 text-xs text-blue-500 dark:bg-blue-900/30 dark:text-blue-400">
-          Managed
+          {t("managed")}
         </div>
       </div>
 
@@ -165,15 +174,11 @@ const MiddleCard = () => {
             <div className="h-full w-14 border-r border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900" />
             <motion.div className="w-full gap-y-4 p-4">
               <h2 className="text-sm font-semibold text-neutral-800 dark:text-neutral-300">
-                Dashboard
+                {t("dashboard")}
               </h2>
 
               <div className="mt-4 flex flex-col gap-y-3">
-                {[
-                  { label: "Filings On-Time", width: 98 },
-                  { label: "Client Satisfaction", width: 95 },
-                  { label: "Compliance Rate", width: 100 },
-                ].map((item, index) => (
+                {metrics.map((item, index) => (
                   <div key={item.label} className="space-y-1">
                     <div className="flex items-center justify-between text-xs">
                       <span className="text-muted dark:text-muted-dark">

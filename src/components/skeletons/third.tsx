@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { IconDots, IconPlus } from "@tabler/icons-react";
 import { Switch } from "../switch";
+import { useTranslations } from "next-intl";
 
 export const SkeletonThree = () => {
+  const t = useTranslations("skeletons.third");
+
   return (
     <div className="h-full w-full sm:w-[80%] mx-auto bg-white dark:bg-neutral-800  shadow-2xl dark:shadow-white/40 mt-10 group rounded-md">
       <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-white via-white dark:from-black dark:via-black to-transparent w-full pointer-events-none z-[11]" />
@@ -13,18 +16,18 @@ export const SkeletonThree = () => {
       <div className="flex flex-1 w-full h-full flex-col space-y-2 ">
         <div className="flex justify-between border-b dark:border-neutral-700 pb-2 p-4">
           <p className="text-muted text-sm font-bold dark:text-muted-dark">
-            Select Services
+            {t("selectServices")}
           </p>
           <p className="shadow-derek text-muted dark:text-muted-dark text-sm px-2 py-1 rounded-md flex-shrink-0 flex space-x-1 items-center dark:bg-neutral-700">
             <IconPlus className="h-4 w-4 text-muted dark:text-muted-dark" />{" "}
-            <span>Add</span>
+            <span>{t("add")}</span>
           </p>
         </div>
         <div className="flex flex-col space-y-4 p-4">
-          <Row title="Incorporation" updatedAt="HK$6,000" active />
-          <Row title="Company Secretary" updatedAt="HK$3,500/yr" active />
-          <Row title="Monthly Accounting" updatedAt="From HK$800/mo" active />
-          <Row title="Annual Audit" updatedAt="From HK$10,000" />
+          <Row title={t("services.incorporation")} updatedAt={t("prices.incorporation")} active />
+          <Row title={t("services.companySecretary")} updatedAt={t("prices.companySecretary")} active />
+          <Row title={t("services.monthlyAccounting")} updatedAt={t("prices.monthlyAccounting")} active />
+          <Row title={t("services.annualAudit")} updatedAt={t("prices.annualAudit")} />
         </div>
       </div>
     </div>

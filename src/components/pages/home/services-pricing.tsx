@@ -9,6 +9,7 @@ import { Button } from "@/components/button";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 import {
   IconChevronDown,
   IconCalculator,
@@ -44,377 +45,369 @@ interface ServiceCategory {
 }
 
 export const ServicesPricing = () => {
-  const [selectedServices, setSelectedServices] = useState<Set<string>>(
-    new Set()
-  );
-  const [expandedCategories, setExpandedCategories] = useState<Set<string>>(
-    new Set(["accounting"]) // Default open accounting section
-  );
+const t = useTranslations("servicesPricing");
 
-  const categories: ServiceCategory[] = [
-    {
-      id: "accounting",
-      title: "Accounting",
-      description: "Professional bookkeeping and financial record management",
-      icon: <IconCalculator className="size-6" />,
-      services: [
-        {
-          id: "accounting-small",
-          name: "Annual Revenue < HK$500,000",
-          description: "Ideal for solo entrepreneurs and early-stage startups",
-          price: 800,
-          period: "monthly",
-          included: [
+const [selectedServices, setSelectedServices] = useState<Set<string>>(
+  new Set()
+);
+const [expandedCategories, setExpandedCategories] = useState<Set<string>>(
+  new Set(["accounting"]) // Default open accounting section
+);
 
-          ],
-        },
-        {
-          id: "accounting-medium",
-          name: "Annual Revenue < HK$1,500,000",
-          description: "Perfect for growing businesses with moderate complexity",
-          price: 1200,
-          period: "monthly",
-          included: [
-
-          ],
-        },
-        {
-          id: "accounting-large",
-          name: "Annual Revenue HK$1,500,000+",
-          description: "For established businesses with complex operations",
-          price: 1600,
-          period: "monthly",
-          included: [
-
-          ],
-        },
-      ],
-    },
-    {
-      id: "incorporation",
-      title: "Company Incorporation",
-      description: "Complete company setup with all statutory requirements",
-      icon: <IconBuildingBank className="size-6" />,
-      services: [
-        {
-          id: "incorporation-package",
-          name: "Company Incorporation Package",
-          description: "Everything you need to incorporate your Hong Kong company",
-          price: 6000,
-          period: "one-time",
-          included: [
-            "Incorporation application to the Companies Registry",
-            "Certificate of Incorporation",
-            "Articles of Association",
-            "Business Registration with Inland Revenue Department",
-          ],
-        },
-      ],
-    },
-    {
-      id: "secretarial",
-      title: "Company Secretarial Services",
-      description: "Ongoing statutory compliance and corporate secretary support",
-      icon: <IconFileText className="size-6" />,
-      services: [
-        {
-          id: "secretarial-annual",
-          name: "Annual Secretarial Services",
-          description: "Complete company secretarial support for the year",
-          price: 3500,
-          period: "yearly",
-          included: [
-            "Preparation of Annual General Meeting documents",
-            "Annual Returns Filing (NAR1)",
-            "Corporate secretary support",
-            "Compliance calendar management",
-          ],
-        },
-      ],
-    },
-    {
-      id: "audit",
-      title: "Audit & Profits Tax Return Filing",
-      description:
-        "Independent, thorough audits that meet statutory requirements",
-      icon: <IconFileCheck className="size-6" />,
-      services: [
-        {
-          id: "audit-basic",
-          name: "Audit Services",
-          description:
-            "Statutory audit considering your business nature, transaction complexity, and reporting deadlines",
-          price: 10000,
-          period: "yearly",
-          included: [
-            "Independent audit",
-            "Statutory compliance",
-            "Auditor's report",
-            "Profits tax return filing",
-          ],
-        },
-      ],
-      customCTA: {
-        text: "Schedule an audit consultation",
-        action: "/contact?service=audit",
+const categories: ServiceCategory[] = [
+  {
+    id: "accounting",
+    title: t("categories.accounting.title"),
+    description: t("categories.accounting.description"),
+    icon: <IconCalculator className="size-6" />,
+    services: [
+      {
+        id: "accounting-small",
+        name: t("categories.accounting.services.small.name"),
+        description: t("categories.accounting.services.small.description"),
+        price: 800,
+        period: "monthly",
+        included: [],
       },
-    },
-    {
-      id: "other",
-      title: "Other Services",
-      description: "Additional support services tailored to your needs",
-      icon: <IconSettings className="size-6" />,
-      services: [],
-      customCTA: {
-        text: "Contact us for a confidential discussion",
-        action: "/contact",
+      {
+        id: "accounting-medium",
+        name: t("categories.accounting.services.medium.name"),
+        description: t("categories.accounting.services.medium.description"),
+        price: 1200,
+        period: "monthly",
+        included: [],
       },
+      {
+        id: "accounting-large",
+        name: t("categories.accounting.services.large.name"),
+        description: t("categories.accounting.services.large.description"),
+        price: 1600,
+        period: "monthly",
+        included: [],
+      },
+    ],
+  },
+  {
+    id: "incorporation",
+    title: t("categories.incorporation.title"),
+    description: t("categories.incorporation.description"),
+    icon: <IconBuildingBank className="size-6" />,
+    services: [
+      {
+        id: "incorporation-package",
+        name: t("categories.incorporation.packageName"),
+        description: t("categories.incorporation.packageDescription"),
+        price: 6000,
+        period: "one-time",
+        included: [
+          t("categories.incorporation.included.item1"),
+          t("categories.incorporation.included.item2"),
+          t("categories.incorporation.included.item3"),
+          t("categories.incorporation.included.item4"),
+        ],
+      },
+    ],
+  },
+  {
+    id: "secretarial",
+    title: t("categories.secretarial.title"),
+    description: t("categories.secretarial.description"),
+    icon: <IconFileText className="size-6" />,
+    services: [
+      {
+        id: "secretarial-annual",
+        name: t("categories.secretarial.serviceName"),
+        description: t("categories.secretarial.serviceDescription"),
+        price: 3500,
+        period: "yearly",
+        included: [
+          t("categories.secretarial.included.item1"),
+          t("categories.secretarial.included.item2"),
+          t("categories.secretarial.included.item3"),
+          t("categories.secretarial.included.item4"),
+        ],
+      },
+    ],
+  },
+  {
+    id: "audit",
+    title: t("categories.audit.title"),
+    description: t("categories.audit.description"),
+    icon: <IconFileCheck className="size-6" />,
+    services: [
+      {
+        id: "audit-basic",
+        name: t("categories.audit.serviceName"),
+        description: t("categories.audit.serviceDescription"),
+        price: 10000,
+        period: "yearly",
+        included: [
+          t("categories.audit.included.item1"),
+          t("categories.audit.included.item2"),
+          t("categories.audit.included.item3"),
+          t("categories.audit.included.item4"),
+        ],
+      },
+    ],
+    customCTA: {
+      text: t("categories.audit.cta"),
+      action: "/contact-us?service=audit",
     },
-  ];
+  },
+  {
+    id: "other",
+    title: t("categories.other.title"),
+    description: t("categories.other.description"),
+    icon: <IconSettings className="size-6" />,
+    services: [],
+    customCTA: {
+      text: t("categories.other.cta"),
+      action: "/contact-us",
+    },
+  },
+];
 
-  const toggleCategory = (categoryId: string) => {
-    setExpandedCategories((prev) => {
-      const newSet = new Set<string>();
-      // Only one section open at a time - if clicking the same one, close it, otherwise open the new one
-      if (!prev.has(categoryId)) {
-        newSet.add(categoryId);
+const toggleCategory = (categoryId: string) => {
+  setExpandedCategories((prev) => {
+    const newSet = new Set<string>();
+    // Only one section open at a time - if clicking the same one, close it, otherwise open the new one
+    if (!prev.has(categoryId)) {
+      newSet.add(categoryId);
+    }
+    return newSet;
+  });
+};
+
+const toggleService = (serviceId: string, categoryId: string) => {
+  setSelectedServices((prev) => {
+    const newSet = new Set(prev);
+
+    // For accounting category, ensure only one option can be selected
+    if (categoryId === "accounting") {
+      const category = categories.find(c => c.id === categoryId);
+      if (category) {
+        // Remove all accounting service selections
+        category.services.forEach(service => {
+          newSet.delete(service.id);
+        });
       }
-      return newSet;
-    });
-  };
+    }
 
-  const toggleService = (serviceId: string, categoryId: string) => {
-    setSelectedServices((prev) => {
-      const newSet = new Set(prev);
+    if (prev.has(serviceId)) {
+      newSet.delete(serviceId);
+    } else {
+      newSet.add(serviceId);
+    }
+    return newSet;
+  });
+};
 
-      // For accounting category, ensure only one option can be selected
-      if (categoryId === "accounting") {
-        const category = categories.find(c => c.id === categoryId);
-        if (category) {
-          // Remove all accounting service selections
-          category.services.forEach(service => {
-            newSet.delete(service.id);
-          });
+const calculateCosts = () => {
+  let monthly = 0;
+  let yearly = 0;
+  let oneTime = 0;
+
+  categories.forEach((category) => {
+    category.services.forEach((service) => {
+      if (selectedServices.has(service.id)) {
+        if (service.period === "monthly") {
+          monthly += service.price;
+        } else if (service.period === "yearly") {
+          yearly += service.price;
+        } else if (service.period === "one-time") {
+          oneTime += service.price;
         }
       }
-
-      if (prev.has(serviceId)) {
-        newSet.delete(serviceId);
-      } else {
-        newSet.add(serviceId);
-      }
-      return newSet;
     });
-  };
+  });
 
-  const calculateCosts = () => {
-    let monthly = 0;
-    let yearly = 0;
-    let oneTime = 0;
+  return { monthly, yearly, oneTime };
+};
 
-    categories.forEach((category) => {
-      category.services.forEach((service) => {
-        if (selectedServices.has(service.id)) {
-          if (service.period === "monthly") {
-            monthly += service.price;
-          } else if (service.period === "yearly") {
-            yearly += service.price;
-          } else if (service.period === "one-time") {
-            oneTime += service.price;
-          }
-        }
-      });
-    });
+const costs = calculateCosts();
+const hasSelectedServices = selectedServices.size > 0;
 
-    return { monthly, yearly, oneTime };
-  };
+return (
+  <div id="services-pricing" className="py-20" >
+    <Container>
+      <div className="relative flex flex-col items-center">
+        <Badge>{t("badge")}</Badge>
+        <Heading as="h2" className="mt-4">
+          {t("heading")}
+        </Heading>
 
-  const costs = calculateCosts();
-  const hasSelectedServices = selectedServices.size > 0;
+        <Subheading as="p" className="mt-6 max-w-3xl">
+          {t("subheading")}
+        </Subheading>
+      </div>
 
-  return (
-    <div id="services-pricing" className="py-20">
-      <Container>
-        <div className="relative flex flex-col items-center">
-          <Badge>Services & Pricing</Badge>
-          <Heading as="h2" className="mt-4">
-            Transparent pricing that scales with your business
-          </Heading>
-
-          <Subheading as="p" className="mt-6 max-w-3xl">
-            Our listed prices are benchmarks for standard engagements. Service
-            bundles tailored to your needs are available. Your final quote will
-            be customized after a brief discussion about your business.
-          </Subheading>
+      {/* Two Column Layout: Services Left, Cost Estimate Right */}
+      <div className="mt-12 grid grid-cols-1 lg:grid-cols-[minmax(600px,2fr)_minmax(350px,1fr)] gap-8 w-full">
+        {/* Left Column - Service Categories */}
+        <div className="space-y-4 w-full min-w-[600px] relative z-20">
+          {categories.map((category) => (
+            <CategorySection
+              key={category.id}
+              category={category}
+              isExpanded={expandedCategories.has(category.id)}
+              onToggle={() => toggleCategory(category.id)}
+              selectedServices={selectedServices}
+              onToggleService={(serviceId) => toggleService(serviceId, category.id)}
+            />
+          ))}
         </div>
 
-        {/* Two Column Layout: Services Left, Cost Estimate Right */}
-        <div className="mt-12 grid grid-cols-1 lg:grid-cols-[minmax(600px,2fr)_minmax(350px,1fr)] gap-8 w-full">
-          {/* Left Column - Service Categories */}
-          <div className="space-y-4 w-full min-w-[600px] relative z-20">
-            {categories.map((category) => (
-              <CategorySection
-                key={category.id}
-                category={category}
-                isExpanded={expandedCategories.has(category.id)}
-                onToggle={() => toggleCategory(category.id)}
-                selectedServices={selectedServices}
-                onToggleService={(serviceId) => toggleService(serviceId, category.id)}
-              />
-            ))}
-          </div>
+        {/* Right Column - Cost Calculator Display */}
+        <div className="w-full min-w-[350px] relative z-10">
+          <div className="sticky top-24 w-full min-w-[350px]">
+            <AnimatePresence mode="wait">
+              {hasSelectedServices ? (
+                <motion.div
+                  key="cost-display"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="min-w-full"
+                >
+                  <div className="relative rounded-2xl border border-neutral-200 bg-white p-6 shadow-xl dark:border-neutral-800 dark:bg-neutral-900 w-full">
+                    {/* Background gradient glow */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-green-500/5 rounded-2xl" />
 
-          {/* Right Column - Cost Calculator Display */}
-          <div className="w-full min-w-[350px] relative z-10">
-            <div className="sticky top-24 w-full min-w-[350px]">
-              <AnimatePresence mode="wait">
-                {hasSelectedServices ? (
-                  <motion.div
-                    key="cost-display"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="min-w-full"
-                  >
-                    <div className="relative rounded-2xl border border-neutral-200 bg-white p-6 shadow-xl dark:border-neutral-800 dark:bg-neutral-900 w-full">
-                      {/* Background gradient glow */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-green-500/5 rounded-2xl" />
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-3 mb-6">
+                        <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/30">
+                          <IconCurrencyDollar className="size-6 text-blue-600 dark:text-blue-400" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
+                          {t("calculator.title")}
+                        </h3>
+                      </div>
 
-                      <div className="relative z-10">
-                        <div className="flex items-center gap-3 mb-6">
-                          <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/30">
-                            <IconCurrencyDollar className="size-6 text-blue-600 dark:text-blue-400" />
+                      <div className="space-y-3">
+                        {costs.monthly > 0 && (
+                          <div className="rounded-lg border border-neutral-200 dark:border-neutral-800 p-4 bg-neutral-50 dark:bg-neutral-900/50">
+                            <span className="text-xs text-neutral-600 dark:text-neutral-400 font-medium uppercase tracking-wide">
+                              {t("calculator.monthly")}
+                            </span>
+                            <div className="mt-2">
+                              <span className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
+                                HK${costs.monthly.toLocaleString()}
+                              </span>
+                              <span className="text-sm font-normal text-neutral-500 dark:text-neutral-400 ml-1">
+                                / {t("calculator.perMonth")}
+                              </span>
+                            </div>
                           </div>
-                          <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
-                            Your Investment
-                          </h3>
-                        </div>
+                        )}
 
-                        <div className="space-y-3">
-                          {costs.monthly > 0 && (
-                            <div className="rounded-lg border border-neutral-200 dark:border-neutral-800 p-4 bg-neutral-50 dark:bg-neutral-900/50">
-                              <span className="text-xs text-neutral-600 dark:text-neutral-400 font-medium uppercase tracking-wide">
-                                Monthly
+                        {costs.yearly > 0 && (
+                          <div className="rounded-lg border border-neutral-200 dark:border-neutral-800 p-4 bg-neutral-50 dark:bg-neutral-900/50">
+                            <span className="text-xs text-neutral-600 dark:text-neutral-400 font-medium uppercase tracking-wide">
+                              {t("calculator.yearly")}
+                            </span>
+                            <div className="mt-2">
+                              <span className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
+                                HK${costs.yearly.toLocaleString()}
                               </span>
-                              <div className="mt-2">
-                                <span className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
-                                  HK${costs.monthly.toLocaleString()}
-                                </span>
-                                <span className="text-sm font-normal text-neutral-500 dark:text-neutral-400 ml-1">
-                                  / month
-                                </span>
-                              </div>
-                            </div>
-                          )}
-
-                          {costs.yearly > 0 && (
-                            <div className="rounded-lg border border-neutral-200 dark:border-neutral-800 p-4 bg-neutral-50 dark:bg-neutral-900/50">
-                              <span className="text-xs text-neutral-600 dark:text-neutral-400 font-medium uppercase tracking-wide">
-                                Yearly
+                              <span className="text-sm font-normal text-neutral-500 dark:text-neutral-400 ml-1">
+                                / {t("calculator.perYear")}
                               </span>
-                              <div className="mt-2">
-                                <span className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
-                                  HK${costs.yearly.toLocaleString()}
-                                </span>
-                                <span className="text-sm font-normal text-neutral-500 dark:text-neutral-400 ml-1">
-                                  / year
-                                </span>
-                              </div>
                             </div>
-                          )}
+                          </div>
+                        )}
 
-                          {costs.oneTime > 0 && (
-                            <div className="rounded-lg border border-neutral-200 dark:border-neutral-800 p-4 bg-neutral-50 dark:bg-neutral-900/50">
-                              <span className="text-xs text-neutral-600 dark:text-neutral-400 font-medium uppercase tracking-wide">
-                                One-time
+                        {costs.oneTime > 0 && (
+                          <div className="rounded-lg border border-neutral-200 dark:border-neutral-800 p-4 bg-neutral-50 dark:bg-neutral-900/50">
+                            <span className="text-xs text-neutral-600 dark:text-neutral-400 font-medium uppercase tracking-wide">
+                              {t("calculator.oneTime")}
+                            </span>
+                            <div className="mt-2">
+                              <span className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
+                                HK${costs.oneTime.toLocaleString()}
                               </span>
-                              <div className="mt-2">
-                                <span className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
-                                  HK${costs.oneTime.toLocaleString()}
-                                </span>
-                              </div>
                             </div>
-                          )}
-                        </div>
+                          </div>
+                        )}
+                      </div>
 
-                        <div className="mt-6 flex flex-col gap-3">
-                          <Button as={Link} href="/contact" className="w-full">Get Personalized Quote</Button>
-                          <Button as={Link} href="/contact" variant="simple" className="w-full">
-                            Schedule Consultation
-                          </Button>
-                        </div>
+                      <div className="mt-6 flex flex-col gap-3">
+                        <Button as={Link} href="/get-quote" className="w-full">{t("cta.getQuote")}</Button>
+                        <Button as={Link} href="/get-quote" variant="simple" className="w-full">
+                          {t("cta.scheduleConsultation")}
+                        </Button>
+                      </div>
 
-                        <p className="mt-4 text-xs text-center text-neutral-500 dark:text-neutral-400">
-                          Final pricing customized based on your specific needs
+                      <p className="mt-4 text-xs text-center text-neutral-500 dark:text-neutral-400">
+                        {t("calculator.disclaimer")}
+                      </p>
+                    </div>
+                  </div>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="placeholder"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="min-w-full"
+                >
+                  <div className="relative rounded-2xl border border-dashed border-neutral-300 bg-white p-6 shadow-xl dark:border-neutral-700 dark:bg-neutral-900 w-full">
+                    {/* Background gradient glow - same as cost display */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-neutral-500/5 via-neutral-500/5 to-neutral-500/5 rounded-2xl" />
+
+                    <div className="relative z-10">
+                      <div className="flex items-center gap-3 mb-6 opacity-30">
+                        <div className="p-2 rounded-lg bg-neutral-200 dark:bg-neutral-700">
+                          <IconCurrencyDollar className="size-6 text-neutral-400 dark:text-neutral-500" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-neutral-500 dark:text-neutral-400">
+                          {t("calculator.title")}
+                        </h3>
+                      </div>
+
+                      <div className="text-center py-12">
+                        <div className="mx-auto w-16 h-16 rounded-full bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center mb-4">
+                          <IconCalculator className="size-8 text-neutral-400 dark:text-neutral-600" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-neutral-700 dark:text-neutral-300 mb-2">
+                          {t("calculator.selectServices")}
+                        </h3>
+                        <p className="text-sm text-neutral-500 dark:text-neutral-400">
+                          {t("calculator.selectServicesDescription")}
                         </p>
                       </div>
-                    </div>
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="placeholder"
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="min-w-full"
-                  >
-                    <div className="relative rounded-2xl border border-dashed border-neutral-300 bg-white p-6 shadow-xl dark:border-neutral-700 dark:bg-neutral-900 w-full">
-                      {/* Background gradient glow - same as cost display */}
-                      <div className="absolute inset-0 bg-gradient-to-br from-neutral-500/5 via-neutral-500/5 to-neutral-500/5 rounded-2xl" />
 
-                      <div className="relative z-10">
-                        <div className="flex items-center gap-3 mb-6 opacity-30">
-                          <div className="p-2 rounded-lg bg-neutral-200 dark:bg-neutral-700">
-                            <IconCurrencyDollar className="size-6 text-neutral-400 dark:text-neutral-500" />
-                          </div>
-                          <h3 className="text-lg font-semibold text-neutral-500 dark:text-neutral-400">
-                            Your Investment
-                          </h3>
-                        </div>
+                      <div className="mt-6 flex flex-col gap-3 opacity-30">
+                        <div className="w-full h-10 rounded-full bg-neutral-200 dark:bg-neutral-800" />
+                        <div className="w-full h-10 rounded-full bg-neutral-100 dark:bg-neutral-800/50" />
+                      </div>
 
-                        <div className="text-center py-12">
-                          <div className="mx-auto w-16 h-16 rounded-full bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center mb-4">
-                            <IconCalculator className="size-8 text-neutral-400 dark:text-neutral-600" />
-                          </div>
-                          <h3 className="text-lg font-semibold text-neutral-700 dark:text-neutral-300 mb-2">
-                            Select Services
-                          </h3>
-                          <p className="text-sm text-neutral-500 dark:text-neutral-400">
-                            Choose the services you need to see your estimated investment
-                          </p>
-                        </div>
-
-                        <div className="mt-6 flex flex-col gap-3 opacity-30">
-                          <div className="w-full h-10 rounded-full bg-neutral-200 dark:bg-neutral-800" />
-                          <div className="w-full h-10 rounded-full bg-neutral-100 dark:bg-neutral-800/50" />
-                        </div>
-
-                        <div className="mt-4 h-4 opacity-0">
-                          <p className="text-xs text-center">Placeholder</p>
-                        </div>
+                      <div className="mt-4 h-4 opacity-0">
+                        <p className="text-xs text-center">Placeholder</p>
                       </div>
                     </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
+      </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-16 text-center">
-          <p className="text-lg font-medium text-neutral-700 dark:text-neutral-300 mb-6">
-            We believe in fair pricing that reflects your actual needs
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button as={Link} href="/contact" className="shadow-xl">Contact us for a personalised quote</Button>
-          </div>
+      {/* Bottom CTA */}
+      <div className="mt-16 text-center">
+        <p className="text-lg font-medium text-neutral-700 dark:text-neutral-300 mb-6">
+          {t("cta.message")}
+        </p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button as={Link} href="/get-quote" className="shadow-xl">{t("cta.contactForQuote")}</Button>
         </div>
-      </Container>
-    </div>
-  );
+      </div>
+    </Container>
+  </div>
+);
 };
 
 const CategorySection = ({
@@ -502,24 +495,24 @@ const CategorySection = ({
               ) : (
                 <div className="py-6 text-center">
                   <p className="text-neutral-600 dark:text-neutral-400 mb-4">
-                    Available services include:
+                    {t("categories.other.availableServices")}
                   </p>
                   <ul className="inline-block text-left space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
                     <li className="flex items-center gap-2">
                       <IconCheck className="size-4 text-green-600 dark:text-green-400" />
-                      Bank account opening assistance
+                      {t("categories.other.services.item1")}
                     </li>
                     <li className="flex items-center gap-2">
                       <IconCheck className="size-4 text-green-600 dark:text-green-400" />
-                      Individual Tax Returns
+                      {t("categories.other.services.item2")}
                     </li>
                     <li className="flex items-center gap-2">
                       <IconCheck className="size-4 text-green-600 dark:text-green-400" />
-                      Payroll Processing
+                      {t("categories.other.services.item3")}
                     </li>
                     <li className="flex items-center gap-2">
                       <IconCheck className="size-4 text-green-600 dark:text-green-400" />
-                      And more...
+                      {t("categories.other.services.item4")}
                     </li>
                   </ul>
                 </div>
@@ -549,18 +542,20 @@ const ServiceRow = ({
   isSelected: boolean;
   onToggle: () => void;
 }) => {
+  const t = useTranslations("servicesPricing");
+
   const getPeriodBadge = (period: PricingPeriod) => {
     const badges = {
       monthly: {
-        text: "Monthly",
+        text: t("badges.monthly"),
         color: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400",
       },
       yearly: {
-        text: "Yearly",
+        text: t("badges.yearly"),
         color: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400",
       },
       "one-time": {
-        text: "One-time",
+        text: t("badges.oneTime"),
         color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400",
       },
     };
@@ -636,9 +631,9 @@ const ServiceRow = ({
                 HK${service.price.toLocaleString()}
               </div>
               <div className="text-xs text-neutral-500 dark:text-neutral-400">
-                {service.period === "monthly" && "per month"}
-                {service.period === "yearly" && "per year"}
-                {service.period === "one-time" && "one-time"}
+                {service.period === "monthly" && t("calculator.perMonth")}
+                {service.period === "yearly" && t("calculator.perYear")}
+                {service.period === "one-time" && t("calculator.oneTimeLabel")}
               </div>
             </div>
           </div>
@@ -646,4 +641,4 @@ const ServiceRow = ({
       </div>
     </div>
   );
-};
+}; 

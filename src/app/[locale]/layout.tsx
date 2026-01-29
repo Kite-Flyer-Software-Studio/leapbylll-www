@@ -11,6 +11,7 @@ import { hasLocale } from 'next-intl';
 import { routing } from '@/i18n/routing';
 import { NavBar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer/footer";
+import ContactButtons from "@/components/elements/ContactButtons";
 
 
 export function generateStaticParams() {
@@ -61,6 +62,7 @@ export default async function RootLayout({
                 <NavBar />
                 {children}
                 <Footer />
+                <ContactButtons />
               </main>
             </ThemeProvider>
           </NextIntlClientProvider>

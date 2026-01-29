@@ -90,10 +90,10 @@ export const MobileNavbar = ({ navItems, visible }: Props) => {
               <Button
                 as={Link}
                 onClick={() => setOpen(false)}
-                href="/contact"
+                href="/get-quote"
                 className="block md:hidden w-full"
               >
-                Book a free consult
+                {t('bookConsult')}
               </Button>
             </motion.div>
           )}

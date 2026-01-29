@@ -1,0 +1,159 @@
+{
+  "nav": {
+    "home": "Home",
+    "whoWeServe": "Who We Serve",
+    "features": "Why LEAP",
+    "howItWorks": "How It Works",
+    "servicesPricing": "Services & Pricing",
+    "contact": "Contact Us",
+    "login": "Login",
+    "signup": "Sign Up"
+  },
+  "hero": {
+    "badge": "Backed by Legacy, Built for Starters.",
+    "title": "Your Accountant from start to growth.",
+    "subtitle": "LEAP by LLL gives Hong Kong founders a dedicated CPA, smart cloud accounting, and stress‑free compliance, so you can focus on building – not chasing deadlines.",
+    "getStarted": "Book a free consultation",
+    "contactUs": "See services & pricing",
+    "backedBy": "Powered by LLL, an established Hong Kong CPA firm."
+  },
+  "features": {
+    "heading": "Packed with thousands of features",
+    "subheading": "From Image generation to video generation, Everything AI has APIs for literally everything. It can even create this website copy for you.",
+    "items": {
+      "generateImages": {
+        "title": "Generate images with text",
+        "description": "Generate images from a text prompt, a video, or a video segment in bulk at the speed of light."
+      },
+      "chatbots": {
+        "title": "Create stupid simple chatbots",
+        "description": "Create Chatbots with a single button click. Customize as per your requirements and the AI will take care of the rest."
+      },
+      "llmSupport": {
+        "title": "We support every single LLM",
+        "description": "Whether it's OpenAI, GroQ or Your Mom's Basement LLM, we support everything."
+      },
+      "deploy": {
+        "title": "Deploy in seconds",
+        "description": "With our blazing fast, state of the art, cutting edge, we are so back cloud servies (read AWS) - you can deploy your model in seconds."
+      }
+    }
+  },
+  "companies": {
+    "trustedBy": "Trusted by teams at"
+  },
+  "gridFeatures": {
+    "heading": "Scale your content generation with Everything AI",
+    "subheading": "From social media posts to long form blog posts, Everything AI can generate content that is indistinguishable from human written content.",
+    "items": {
+      "generateContent": {
+        "title": "Generate content at scale",
+        "description": "Generate everything from blog posts to emails to social media posts at the speed of light."
+      },
+      "security": {
+        "title": "Bank level security",
+        "description": "Your data is protected by the same security measures used by banks."
+      },
+      "analytics": {
+        "title": "Deep insights and analytics",
+        "description": "Track your content performance with our built-in analytics dashboard."
+      },
+      "support": {
+        "title": "24/7 Customer Support",
+        "description": "Our support team is available 24/7 to help you with any issues."
+      },
+      "integration": {
+        "title": "Seamless integration",
+        "description": "Integrate with your existing tools and workflows in minutes."
+      },
+      "customization": {
+        "title": "Fully customizable",
+        "description": "Customize every aspect of your AI to match your brand and style."
+      }
+    }
+  },
+  "testimonials": {
+    "heading": "What people are saying"
+  },
+  "cta": {
+    "heading": "Ready to get started?",
+    "subheading": "Join thousands of teams already using Everything AI",
+    "button": "Get Started"
+  },
+  "pricing": {
+    "heading": "Pricing",
+    "subheading": "Choose the plan that's right for you",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "getStarted": "Get Started",
+    "contactSales": "Contact Sales",
+    "tiers": {
+      "hobby": {
+        "name": "Hobby",
+        "description": "Perfect for trying out Everything AI"
+      },
+      "starter": {
+        "name": "Starter",
+        "description": "For small teams and personal projects"
+      },
+      "professional": {
+        "name": "Professional",
+        "description": "For growing businesses"
+      },
+      "enterprise": {
+        "name": "Enterprise",
+        "description": "For large organizations"
+      }
+    }
+  },
+  "contact": {
+    "heading": "Contact us",
+    "subheading": "We'd love to hear from you",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send message"
+  },
+  "blog": {
+    "heading": "Blog",
+    "subheading": "Latest news and updates",
+    "readMore": "Read more"
+  },
+  "login": {
+    "heading": "Welcome back",
+    "subheading": "Sign in to your account",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Forgot password?",
+    "submit": "Sign in",
+    "noAccount": "Don't have an account?",
+    "signUp": "Sign up"
+  },
+  "signup": {
+    "heading": "Create an account",
+    "subheading": "Get started with Everything AI",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Sign up",
+    "haveAccount": "Already have an account?",
+    "signIn": "Sign in"
+  },
+  "footer": {
+    "description": "Everything AI is a platform that provides a wide range of AI tools and services.",
+    "product": "Product",
+    "company": "Company",
+    "resources": "Resources",
+    "legal": "Legal",
+    "features": "Features",
+    "pricing": "Pricing",
+    "about": "About",
+    "careers": "Careers",
+    "blog": "Blog",
+    "documentation": "Documentation",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2024 Everything AI. All rights reserved."
+  }
+}

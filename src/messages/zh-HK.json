@@ -1,0 +1,159 @@
+{
+  "nav": {
+    "home": "首頁",
+    "whoWeServe": "服務對象",
+    "features": "功能",
+    "howItWorks": "運作方式",
+    "servicesPricing": "服務與定價",
+    "contact": "聯繫",
+    "login": "登入",
+    "signup": "註冊"
+  },
+  "hero": {
+    "badge": "我們已籌集6900萬美元種子資金",
+    "title": "使用人工智能生成圖像、文本和視頻",
+    "subtitle": "Everything AI 將所有現代人工智能生成工具無縫集成到一個平台中，讓您只需點擊一下即可生成內容。",
+    "getStarted": "開始使用",
+    "contactUs": "聯繫我們",
+    "backedBy": "Powered by LLL, an established Hong Kong CPA firm."
+  },
+  "features": {
+    "heading": "具備數千種功能",
+    "subheading": "從圖像生成到視頻生成，Everything AI 擁有幾乎所有功能的 API。它甚至可以為您創建此網站副本。",
+    "items": {
+      "generateImages": {
+        "title": "使用文本生成圖像",
+        "description": "從文本提示、視頻或視頻片段中批量生成圖像，速度極快。"
+      },
+      "chatbots": {
+        "title": "創建簡單的聊天機器人",
+        "description": "只需點擊一個按鈕即可創建聊天機器人。根據您的要求進行自定義，其餘的交給 AI 處理。"
+      },
+      "llmSupport": {
+        "title": "我們支持每一個大型語言模型",
+        "description": "無論是 OpenAI、GroQ 還是您自家的 LLM，我們都支持。"
+      },
+      "deploy": {
+        "title": "幾秒鐘內部署",
+        "description": "憑藉我們極快、最先進的雲服務（例如 AWS），您可以在幾秒鐘內部署您的模型。"
+      }
+    }
+  },
+  "companies": {
+    "trustedBy": "受到以下團隊的信任"
+  },
+  "gridFeatures": {
+    "heading": "使用 Everything AI 擴展您的內容生成",
+    "subheading": "從社交媒體帖子到長篇博客文章，Everything AI 可以生成與人工撰寫內容無異的內容。",
+    "items": {
+      "generateContent": {
+        "title": "大規模生成內容",
+        "description": "以極快的速度生成從博客文章到電子郵件到社交媒體帖子的所有內容。"
+      },
+      "security": {
+        "title": "銀行級安全",
+        "description": "您的數據受到與銀行相同的安全措施保護。"
+      },
+      "analytics": {
+        "title": "深入的洞察和分析",
+        "description": "使用我們內置的分析儀表板跟踪您的內容效果。"
+      },
+      "support": {
+        "title": "24/7 客戶支持",
+        "description": "我們的支持團隊全天候為您提供幫助。"
+      },
+      "integration": {
+        "title": "無縫集成",
+        "description": "在幾分鐘內與您現有的工具和工作流程集成。"
+      },
+      "customization": {
+        "title": "完全可定制",
+        "description": "自定義您的 AI 的各個方面以匹配您的品牌和風格。"
+      }
+    }
+  },
+  "testimonials": {
+    "heading": "用戶評價"
+  },
+  "cta": {
+    "heading": "準備開始了嗎？",
+    "subheading": "加入已在使用 Everything AI 的數千個團隊",
+    "button": "開始使用"
+  },
+  "pricing": {
+    "heading": "定價",
+    "subheading": "選擇適合您的計劃",
+    "monthly": "每月",
+    "yearly": "每年",
+    "getStarted": "開始使用",
+    "contactSales": "聯繫銷售",
+    "tiers": {
+      "hobby": {
+        "name": "愛好",
+        "description": "非常適合試用 Everything AI"
+      },
+      "starter": {
+        "name": "入門",
+        "description": "適用於小型團隊和個人項目"
+      },
+      "professional": {
+        "name": "專業版",
+        "description": "適用於成長中的企業"
+      },
+      "enterprise": {
+        "name": "企業版",
+        "description": "適用於大型組織"
+      }
+    }
+  },
+  "contact": {
+    "heading": "聯繫我們",
+    "subheading": "我們很樂意聽取您的意見",
+    "name": "姓名",
+    "email": "電子郵件",
+    "message": "訊息",
+    "send": "發送訊息"
+  },
+  "blog": {
+    "heading": "博客",
+    "subheading": "最新消息和更新",
+    "readMore": "閱讀更多"
+  },
+  "login": {
+    "heading": "歡迎回來",
+    "subheading": "登入您的帳戶",
+    "email": "電子郵件",
+    "password": "密碼",
+    "forgotPassword": "忘記密碼？",
+    "submit": "登入",
+    "noAccount": "還沒有帳戶？",
+    "signUp": "註冊"
+  },
+  "signup": {
+    "heading": "創建帳戶",
+    "subheading": "開始使用 Everything AI",
+    "firstName": "名字",
+    "lastName": "姓氏",
+    "email": "電子郵件",
+    "password": "密碼",
+    "submit": "註冊",
+    "haveAccount": "已經有帳戶？",
+    "signIn": "登入"
+  },
+  "footer": {
+    "description": "Everything AI 是一個提供各種人工智能工具和服務的平台。",
+    "product": "產品",
+    "company": "公司",
+    "resources": "資源",
+    "legal": "法律",
+    "features": "功能",
+    "pricing": "定價",
+    "about": "關於",
+    "careers": "職業",
+    "blog": "博客",
+    "documentation": "文檔",
+    "privacy": "隱私政策",
+    "terms": "服務條款",
+    "copyright": "© 2024 Everything AI。版權所有。"
+  }
+}

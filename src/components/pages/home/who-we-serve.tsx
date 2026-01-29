@@ -135,7 +135,7 @@ const MiddleCard = () => {
               alt="LEAP by LLL"
               width={24}
               height={24}
-              className="size-6 animate-spin [animation-duration:3s]"
+              className="size-10"
             />
           </div>
         </div>

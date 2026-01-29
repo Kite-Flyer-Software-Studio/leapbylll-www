@@ -4,7 +4,7 @@ import { MobileNavbar } from "./mobile-navbar";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { useTranslations } from 'next-intl';
 import { usePathname } from '@/i18n/navigation';
-import { useRef, useState } from "react";
+import { useState } from "react";
 
 export function NavBar() {
   const t = useTranslations('nav');
@@ -34,11 +34,7 @@ export function NavBar() {
     },
   ];
 
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollY } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
+  const { scrollY } = useScroll();
   const [visible, setVisible] = useState<boolean>(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
@@ -50,7 +46,7 @@ export function NavBar() {
   });
 
   return (
-    <motion.nav ref={ref} className="w-full fixed top-0 inset-x-0 z-50">
+    <motion.nav className="w-full fixed top-0 inset-x-0 z-50">
       <div className="hidden lg:block w-full">
         <DesktopNavbar navItems={navItems} visible={visible} />
       </div>

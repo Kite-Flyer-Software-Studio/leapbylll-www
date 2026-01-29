@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 import { Container } from "@/components/container";
 import { Badge } from "@/components/badge";
 import { Heading } from "@/components/heading";
@@ -12,7 +13,6 @@ import {
   IconUser,
   IconRocket,
   IconBuildingSkyscraper,
-  IconSettings,
   IconBrain,
 } from "@tabler/icons-react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -130,7 +130,13 @@ const MiddleCard = () => {
           <div className="absolute inset-0 scale-[1.4] animate-spin rounded-full bg-gradient-conic from-transparent via-blue-500 via-20% to-transparent to-30% [animation-duration:2s]"></div>
           <div className="absolute inset-0 scale-[1.4] animate-spin rounded-full bg-gradient-conic from-transparent via-purple-500 via-20% to-transparent to-30% [animation-delay:1s] [animation-duration:2s]"></div>
           <div className="relative z-20 flex h-full w-full items-center justify-center rounded-[5px] bg-white dark:bg-neutral-900">
-            <IconSettings className="size-6 animate-spin [animation-duration:3s]" />
+            <Image
+              src="/logos/leapbylll-logo.png"
+              alt="LEAP by LLL"
+              width={24}
+              height={24}
+              className="size-6 animate-spin [animation-duration:3s]"
+            />
           </div>
         </div>
         <div className="mx-4 h-px w-12 bg-neutral-300 dark:bg-neutral-700"></div>

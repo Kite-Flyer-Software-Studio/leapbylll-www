@@ -2,8 +2,9 @@
 import { Link } from "@/i18n/navigation";
 import React from "react";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
-export const Logo = () => {
+export const Logo = ({ logoClassName }: { logoClassName?: string }) => {
   // const handleLogoClick = (e: React.MouseEvent) => {
   //   e.preventDefault();
   //   window.scrollTo({
@@ -15,14 +16,14 @@ export const Logo = () => {
     <Link
       href="/"
       // onClick={handleLogoClick}
-      className="font-normal flex items-center text-sm mr-4 px-2 py-1 relative z-20"
+      className={"font-normal flex items-center text-sm mr-4 px-2 py-1 relative z-20"}
     >
       <Image
         src="/logos/leapbylll-logo.png"
         alt="LEAP by LLL"
         width={120}
         height={40}
-        className="h-12 w-auto"
+        className={cn("h-12 w-auto", logoClassName)}
         priority
       />
     </Link>

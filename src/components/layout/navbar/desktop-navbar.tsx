@@ -50,7 +50,7 @@ export const DesktopNavbar = ({ navItems, visible }: Props) => {
         visible && "bg-white/80 dark:bg-neutral-950/80"
       )}
     >
-      <Logo />
+      <Logo logoClassName="pl-3" />
       <motion.div className="lg:flex flex-row flex-1 absolute inset-0 hidden items-center justify-center space-x-1 text-sm text-zinc-600 font-medium hover:text-zinc-800 transition duration-200">
         {navItems.map((navItem: any, idx: number) => (
           <Link

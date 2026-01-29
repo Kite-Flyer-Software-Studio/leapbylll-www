@@ -7,10 +7,9 @@ import {
   IconCalculator,
   IconChecklist,
   IconReceiptTax,
-  IconCircleCheck,
-  IconBuilding,
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 export const SkeletonAllInOne = () => {
   const t = useTranslations("skeletons.allInOne");
@@ -23,7 +22,13 @@ export const SkeletonAllInOne = () => {
       }}
     >
       <Circle className="flex items-center justify-center border-neutral-200 dark:border-neutral-700 shadow-sm">
-        <IconBuilding className="size-10 text-blue-500 dark:text-blue-400" />
+        <Image
+          src="/logos/leapbylll-logo.png"
+          alt="LEAP by LLL"
+          width={80}
+          height={80}
+          className="w-20 h-auto"
+        />
 
         {/* Incorporation */}
         <RevolvingCard className="[--initial-position:0deg] [--translate-position:140px] [--orbit-duration:30s] size-auto ring-0 shadow-none bg-transparent w-60">
@@ -80,7 +85,7 @@ export const SkeletonAllInOne = () => {
 };
 
 const SkeletonCard = ({
-  icon,
+  icon, 
   title,
   description,
   className,

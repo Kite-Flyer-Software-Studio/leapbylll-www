@@ -88,14 +88,14 @@ export const Hero = () => {
           duration: 0.5,
           delay: 0.4,
         }}
-        className="flex items-center gap-4 justify-center mt-6 relative z-10"
+        className="flex items-center gap-4 justify-center mt-6 relative z-10 px-4"
       >
-        <Button as={Link} href="/get-quote">{t('getStarted')}</Button>
+        <Button as={Link} href="/get-quote" className="text-center">{t('getStarted')}</Button>
         <Button
           variant="simple"
           as={Link}
           href="#services-pricing"
-          className="flex space-x-2 items-center group"
+          className="flex space-x-2 items-center group text-center"
         >
           <span>{t('contactUs')}</span>
           <HiArrowRight className="text-muted group-hover:translate-x-1 stroke-[1px] h-3 w-3 transition-transform duration-200 dark:text-muted-dark" />

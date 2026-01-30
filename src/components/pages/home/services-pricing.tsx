@@ -242,9 +242,9 @@ return (
       </div>
 
       {/* Two Column Layout: Services Left, Cost Estimate Right */}
-      <div className="mt-12 grid grid-cols-1 lg:grid-cols-[minmax(600px,2fr)_minmax(350px,1fr)] gap-8 w-full">
+      <div className="mt-12 grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8 w-full">
         {/* Left Column - Service Categories */}
-        <div className="space-y-4 w-full min-w-[600px] relative z-20">
+        <div className="space-y-4 w-full relative z-20">
           {categories.map((category) => (
             <CategorySection
               key={category.id}
@@ -258,8 +258,8 @@ return (
         </div>
 
         {/* Right Column - Cost Calculator Display */}
-        <div className="w-full min-w-[350px] relative z-10">
-          <div className="sticky top-24 w-full min-w-[350px]">
+        <div className="w-full relative z-10">
+          <div className="lg:sticky top-24 w-full">
             <AnimatePresence mode="wait">
               {hasSelectedServices ? (
                 <motion.div
@@ -270,7 +270,7 @@ return (
                   transition={{ duration: 0.2 }}
                   className="min-w-full"
                 >
-                  <div className="relative rounded-2xl border border-neutral-200 bg-white p-6 shadow-xl dark:border-neutral-800 dark:bg-neutral-900 w-full">
+                  <div className="relative rounded-2xl border border-neutral-200 bg-white p-4 sm:p-6 shadow-xl dark:border-neutral-800 dark:bg-neutral-900 w-full">
                     {/* Background gradient glow */}
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-green-500/5 rounded-2xl" />
 
@@ -353,7 +353,7 @@ return (
                   transition={{ duration: 0.2 }}
                   className="min-w-full"
                 >
-                  <div className="relative rounded-2xl border border-dashed border-neutral-300 bg-white p-6 shadow-xl dark:border-neutral-700 dark:bg-neutral-900 w-full">
+                  <div className="relative rounded-2xl border border-dashed border-neutral-300 bg-white p-4 sm:p-6 shadow-xl dark:border-neutral-700 dark:bg-neutral-900 w-full">
                     {/* Background gradient glow - same as cost display */}
                     <div className="absolute inset-0 bg-gradient-to-br from-neutral-500/5 via-neutral-500/5 to-neutral-500/5 rounded-2xl" />
 
@@ -435,102 +435,103 @@ const CategorySection = ({
       <button
         onClick={onToggle}
         className={cn(
-          "w-full px-6 py-5 flex items-center justify-between transition-colors",
-          "hover:bg-neutral-50 dark:hover:bg-neutral-800/50",
-          isExpanded && "bg-neutral-50 dark:bg-neutral-800/50"
+          "w-full px-4 sm:px-6 py-4 sm:py-5 flex items-center justify-between transition-colors",
+      "hover:bg-neutral-50 dark:hover:bg-neutral-800/50",
+      isExpanded && "bg-neutral-50 dark:bg-neutral-800/50"
         )}
       >
-        <div className="flex items-center gap-4 text-left min-w-0 flex-1">
-          <div className={cn(
-            "p-3 rounded-lg transition-colors",
-            hasSelectedService
-              ? "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400"
-              : "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
-          )}>
-            {category.icon}
-          </div>
-          <div>
-            <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 flex items-center gap-2">
-              {category.title}
-              {hasSelectedService && (
-                <span className="inline-flex items-center justify-center p-1 rounded-full bg-green-100 dark:bg-green-900/30">
-                  <IconCheck className="size-4 text-green-600 dark:text-green-400" />
-                </span>
-              )}
-            </h3>
-            <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">
-              {category.description}
-            </p>
-          </div>
+      <div className="flex items-center gap-3 sm:gap-4 text-left min-w-0 flex-1">
+        <div className={cn(
+          "p-2 sm:p-3 rounded-lg transition-colors shrink-0",
+          hasSelectedService
+            ? "bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400"
+            : "bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400"
+        )}>
+          {category.icon}
         </div>
-        <motion.div
-          animate={{ rotate: isExpanded ? 180 : 0 }}
-          transition={{ duration: 0.2 }}
-        >
-          <IconChevronDown className="size-5 text-neutral-400" />
-        </motion.div>
-      </button>
+        <div className="min-w-0 flex-1">
+          <h3 className="text-base sm:text-lg font-semibold text-neutral-900 dark:text-neutral-100 flex items-center gap-2 flex-wrap">
+            <span className="truncate">{category.title}</span>
+            {hasSelectedService && (
+              <span className="inline-flex items-center justify-center p-1 rounded-full bg-green-100 dark:bg-green-900/30 shrink-0">
+                <IconCheck className="size-4 text-green-600 dark:text-green-400" />
+              </span>
+            )}
+          </h3>
+          <p className="text-xs sm:text-sm text-neutral-600 dark:text-neutral-400 mt-1">
+            {category.description}
+          </p>
+        </div>
+      </div>
+      <motion.div
+        animate={{ rotate: isExpanded ? 180 : 0 }}
+        transition={{ duration: 0.2 }}
+        className="shrink-0 ml-2"
+      >
+        <IconChevronDown className="size-5 text-neutral-400" />
+      </motion.div>
+    </button>
 
-      {/* Category Content */}
-      <AnimatePresence>
-        {isExpanded && (
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="overflow-hidden w-full"
-          >
-            <div className="px-6 pb-6 pt-2 border-t border-neutral-200 dark:border-neutral-800 w-full">
-              {hasServices ? (
-                <div className="space-y-3 w-full">
-                  {category.services.map((service) => (
-                    <ServiceRow
-                      key={service.id}
-                      service={service}
-                      isSelected={selectedServices.has(service.id)}
-                      onToggle={() => onToggleService(service.id)}
-                    />
-                  ))}
-                </div>
-              ) : (
-                <div className="py-6 text-center">
-                  <p className="text-neutral-600 dark:text-neutral-400 mb-4">
-                    {t("categories.other.availableServices")}
-                  </p>
-                  <ul className="inline-block text-left space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
-                    <li className="flex items-center gap-2">
-                      <IconCheck className="size-4 text-green-600 dark:text-green-400" />
-                      {t("categories.other.services.item1")}
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <IconCheck className="size-4 text-green-600 dark:text-green-400" />
-                      {t("categories.other.services.item2")}
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <IconCheck className="size-4 text-green-600 dark:text-green-400" />
-                      {t("categories.other.services.item3")}
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <IconCheck className="size-4 text-green-600 dark:text-green-400" />
-                      {t("categories.other.services.item4")}
-                    </li>
-                  </ul>
-                </div>
-              )}
-
-              {category.customCTA && (
-                <div className="mt-6 pt-6 border-t border-neutral-200 dark:border-neutral-800">
-                  <Button variant="outline" className="w-full">
-                    {category.customCTA.text}
-                  </Button>
-                </div>
-              )}
+      {/* Category Content */ }
+  <AnimatePresence>
+    {isExpanded && (
+      <motion.div
+        initial={{ height: 0, opacity: 0 }}
+        animate={{ height: "auto", opacity: 1 }}
+        exit={{ height: 0, opacity: 0 }}
+        transition={{ duration: 0.3 }}
+        className="overflow-hidden w-full"
+      >
+        <div className="px-4 sm:px-6 pb-4 sm:pb-6 pt-2 border-t border-neutral-200 dark:border-neutral-800 w-full">
+          {hasServices ? (
+            <div className="space-y-3 w-full">
+              {category.services.map((service) => (
+                <ServiceRow
+                  key={service.id}
+                  service={service}
+                  isSelected={selectedServices.has(service.id)}
+                  onToggle={() => onToggleService(service.id)}
+                />
+              ))}
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+          ) : (
+            <div className="py-6 text-center">
+              <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+                {t("categories.other.availableServices")}
+              </p>
+              <ul className="inline-block text-left space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
+                <li className="flex items-center gap-2">
+                  <IconCheck className="size-4 text-green-600 dark:text-green-400" />
+                  {t("categories.other.services.item1")}
+                </li>
+                <li className="flex items-center gap-2">
+                  <IconCheck className="size-4 text-green-600 dark:text-green-400" />
+                  {t("categories.other.services.item2")}
+                </li>
+                <li className="flex items-center gap-2">
+                  <IconCheck className="size-4 text-green-600 dark:text-green-400" />
+                  {t("categories.other.services.item3")}
+                </li>
+                <li className="flex items-center gap-2">
+                  <IconCheck className="size-4 text-green-600 dark:text-green-400" />
+                  {t("categories.other.services.item4")}
+                </li>
+              </ul>
+            </div>
+          )}
+
+          {category.customCTA && (
+            <div className="mt-6 pt-6 border-t border-neutral-200 dark:border-neutral-800">
+              <Button variant="outline" className="w-full">
+                {category.customCTA.text}
+              </Button>
+            </div>
+          )}
+        </div>
+      </motion.div>
+    )}
+  </AnimatePresence>
+    </div >
   );
 };
 
@@ -568,14 +569,14 @@ const ServiceRow = ({
   return (
     <div
       className={cn(
-        "rounded-lg border p-4 transition-all cursor-pointer w-full",
+        "rounded-lg border p-3 sm:p-4 transition-all cursor-pointer w-full",
         isSelected
           ? "border-blue-500 bg-blue-50 dark:border-blue-600 dark:bg-blue-950/20"
           : "border-neutral-200 bg-neutral-50 hover:border-neutral-300 dark:border-neutral-800 dark:bg-neutral-900/50 dark:hover:border-neutral-700"
       )}
       onClick={onToggle}
     >
-      <div className="flex items-start gap-4 w-full">
+      <div className="flex items-start gap-3 sm:gap-4 w-full">
         {/* Checkbox */}
         <div className="mt-1 shrink-0">
           <div
@@ -592,7 +593,7 @@ const ServiceRow = ({
 
         {/* Service Details */}
         <div className="flex-1 min-w-0 w-full">
-          <div className="flex items-start justify-between gap-4 w-full">
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4 w-full">
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2 mb-1 flex-wrap">
                 <h4 className="font-semibold text-neutral-900 dark:text-neutral-100">
@@ -612,7 +613,7 @@ const ServiceRow = ({
               </p>
 
               {service.included && service.included.length > 0 && (
-                <ul className="space-y-1">
+                <ul className="space-y-1 mb-3 sm:mb-0">
                   {service.included.map((item, index) => (
                     <li
                       key={index}
@@ -627,8 +628,8 @@ const ServiceRow = ({
             </div>
 
             {/* Price */}
-            <div className="text-right shrink-0 w-32">
-              <div className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
+            <div className="text-left sm:text-right shrink-0 sm:w-32">
+              <div className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-neutral-100">
                 HK${service.price.toLocaleString()}
               </div>
               <div className="text-xs text-neutral-500 dark:text-neutral-400">
@@ -642,4 +643,4 @@ const ServiceRow = ({
       </div>
     </div>
   );
-};
+};  

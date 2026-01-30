@@ -301,10 +301,10 @@
         "annualAudit": "年度核數"
       },
       "prices": {
-        "incorporation": "港幣6,000元",
-        "companySecretary": "港幣3,500元/年",
-        "monthlyAccounting": "由港幣800元/月起",
-        "annualAudit": "由港幣10,000元起"
+        "incorporation": "一次性",
+        "companySecretary": "每年",
+        "monthlyAccounting": "每月",
+        "annualAudit": "每年"
       }
     },
     "allInOne": {

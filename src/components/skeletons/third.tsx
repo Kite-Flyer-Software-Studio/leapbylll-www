@@ -50,7 +50,9 @@ export const Row = ({
         <p className="text-muted dark:text-muted-dark text-xs shadow-aceternity dark:bg-neutral-700 px-1 py-0.5 rounded-md">
           {title}
         </p>
-        <p className="text-muted dark:text-muted-dark text-xs">{updatedAt}</p>
+        <p className="text-muted dark:text-muted-dark text-xs bg-neutral-100 dark:bg-neutral-700 px-2 py-0.5 rounded-full">
+          {updatedAt}
+        </p>
       </div>
       <div className="flex items-center space-x-1">
         <Switch checked={checked} setChecked={setChecked} />

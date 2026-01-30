@@ -301,10 +301,10 @@
         "annualAudit": "Annual Audit"
       },
       "prices": {
-        "incorporation": "HK$6,000",
-        "companySecretary": "HK$3,500/yr",
-        "monthlyAccounting": "From HK$800/mo",
-        "annualAudit": "From HK$10,000"
+        "incorporation": "One-time",
+        "companySecretary": "Annual",
+        "monthlyAccounting": "Monthly",
+        "annualAudit": "Annual"
       }
     },
     "allInOne": {

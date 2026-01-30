@@ -1,5 +1,4 @@
 import { cn } from "@/lib/utils";
-import { AnimationProps, MotionProps } from "framer-motion";
 import React from "react";
 import Balancer from "react-wrap-balancer";
 
@@ -12,9 +11,7 @@ export const Subheading = ({
   className?: string;
   as?: any;
   children: any;
-  props?: React.HTMLAttributes<HTMLHeadingElement | AnimationProps>;
-} & MotionProps &
-  React.HTMLAttributes<HTMLHeadingElement | AnimationProps>) => {
+} & React.HTMLAttributes<HTMLHeadingElement>) => {
   return (
     <Tag
       className={cn(

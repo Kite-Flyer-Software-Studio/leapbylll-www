@@ -619,8 +619,8 @@
     }
   },
   "features": {
-    "heading": "Packed with thousands of features",
-    "subheading": "From Image generation to video generation, Everything AI has APIs for literally everything. It can even create this website copy for you.",
+    "heading": "Comprehensive Business Solutions",
+    "subheading": "From company incorporation to tax advisory, Leap by LLL provides all-in-one professional services tailored to your business needs in Hong Kong.",
     "items": {
       "generateImages": {
         "title": "Generate images with text",
@@ -644,8 +644,8 @@
     "trustedBy": "Trusted by teams at"
   },
   "gridFeatures": {
-    "heading": "Scale your content generation with Everything AI",
-    "subheading": "From social media posts to long form blog posts, Everything AI can generate content that is indistinguishable from human written content.",
+    "heading": "Grow your business with Leap by LLL",
+    "subheading": "From startups to established enterprises, Leap by LLL provides professional accounting and business services that support your growth at every stage.",
     "items": {
       "generateContent": {
         "title": "Generate content at scale",
@@ -678,7 +678,7 @@
   },
   "cta": {
     "heading": "Ready to get started?",
-    "subheading": "Join thousands of teams already using Everything AI",
+    "subheading": "Join businesses across Hong Kong already partnering with Leap by LLL",
     "button": "Get Started"
   },
   "pricing": {
@@ -690,8 +690,8 @@
     "contactSales": "Contact Sales",
     "tiers": {
       "hobby": {
-        "name": "Hobby",
-        "description": "Perfect for trying out Everything AI"
+        "name": "Starter",
+        "description": "Perfect for new businesses and startups"
       },
       "starter": {
         "name": "Starter",
@@ -732,7 +732,7 @@
   },
   "signup": {
     "heading": "Create an account",
-    "subheading": "Get started with Everything AI",
+    "subheading": "Get started with Leap by LLL",
     "firstName": "First name",
     "lastName": "Last name",
     "email": "Email",

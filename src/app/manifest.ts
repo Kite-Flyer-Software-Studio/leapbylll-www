@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: 'Leap by LLL',
     short_name: 'Leap by LLL',
     description:
-      'Everything AI seamlessly integrated all the modern AI generation tools into one platform.',
+      'Professional accounting, audit, tax advisory, company incorporation, and secretarial services in Hong Kong.',
     start_url: '/',
     display: 'standalone',
     background_color: '#fff',

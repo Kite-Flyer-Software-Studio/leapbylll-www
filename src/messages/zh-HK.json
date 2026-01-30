@@ -619,8 +619,8 @@
     }
   },
   "features": {
-    "heading": "具備數千種功能",
-    "subheading": "從圖像生成到視頻生成，Everything AI 擁有幾乎所有功能的 API。它甚至可以為您創建此網站副本。",
+    "heading": "全面的商業解決方案",
+    "subheading": "從公司註冊到稅務諮詢，Leap by LLL 提供為您的香港業務需求量身定制的一站式專業服務。",
     "items": {
       "generateImages": {
         "title": "使用文本生成圖像",
@@ -644,8 +644,8 @@
     "trustedBy": "受到以下團隊的信任"
   },
   "gridFeatures": {
-    "heading": "使用 Everything AI 擴展您的內容生成",
-    "subheading": "從社交媒體帖子到長篇博客文章，Everything AI 可以生成與人工撰寫內容無異的內容。",
+    "heading": "與 Leap by LLL 一起發展您的業務",
+    "subheading": "從初創企業到成熟企業，Leap by LLL 提供專業的會計和商業服務，支持您在每個階段的成長。",
     "items": {
       "generateContent": {
         "title": "大規模生成內容",
@@ -678,7 +678,7 @@
   },
   "cta": {
     "heading": "準備開始了嗎？",
-    "subheading": "加入已在使用 Everything AI 的數千個團隊",
+    "subheading": "加入香港各地已與 Leap by LLL 合作的企業",
     "button": "開始使用"
   },
   "pricing": {
@@ -690,8 +690,8 @@
     "contactSales": "聯繫銷售",
     "tiers": {
       "hobby": {
-        "name": "愛好",
-        "description": "非常適合試用 Everything AI"
+        "name": "入門級",
+        "description": "非常適合新企業和初創公司"
       },
       "starter": {
         "name": "入門",
@@ -732,7 +732,7 @@
   },
   "signup": {
     "heading": "創建帳戶",
-    "subheading": "開始使用 Everything AI",
+    "subheading": "開始使用 Leap by LLL",
     "firstName": "名字",
     "lastName": "姓氏",
     "email": "電子郵件",

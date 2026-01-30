@@ -18,15 +18,15 @@ export function AuthLayout({ children }: { children: React.ReactNode }) {
                 "font-semibold text-xl text-center text-muted dark:text-muted-dark"
               )}
             >
-              Every AI is used by thousands of users
+              Trusted by businesses across Hong Kong
             </p>
             <p
               className={cn(
                 "font-normal text-base text-center text-neutral-500 dark:text-neutral-400 mt-8"
               )}
             >
-              With lots of AI applications around, Everything AI stands out with
-              its state of the art Shitposting capabilities.
+              Leap by LLL delivers professional accounting and business services
+              with a commitment to excellence, reliability, and personalized solutions.
             </p>
           </div>
           <HorizontalGradient className="top-20" />

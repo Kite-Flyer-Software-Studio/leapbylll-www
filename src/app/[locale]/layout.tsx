@@ -19,9 +19,9 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: "Leap by LLL - Everything AI",
+  title: "Leap by LLL - Professional Accounting & Business Services",
   description:
-    "Everything AI seamlessly integrated all the modern AI generation tools into one platform so that you can generate content with a single click.",
+    "Leap by LLL provides comprehensive accounting, audit, tax advisory, company incorporation, and secretarial services in Hong Kong. Professional, reliable, and tailored solutions for your business success.",
   openGraph: {
     images: ["/banner.png"],
   },

@@ -9,7 +9,7 @@ import { BlogCard } from "@/components/blog-card";
 export const metadata: Metadata = {
   title: "Blog - Leap by LLL",
   description:
-    "Everything AI seamlessly integrated all the modern AI generation tools into one platform so that you can generate content with a single click.",
+    "Stay informed with expert insights on accounting, tax, audit, and business management from Leap by LLL. Practical advice and industry updates for Hong Kong businesses.",
   openGraph: {
     images: ["/banner.png"],
   },

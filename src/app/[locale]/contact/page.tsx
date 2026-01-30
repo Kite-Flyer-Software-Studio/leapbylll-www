@@ -8,7 +8,7 @@ import { ContactForm } from "@/components/pages/contact/contact";
 export const metadata: Metadata = {
   title: "Contact Us - Leap by LLL",
   description:
-    "Everything AI seamlessly integrated all the modern AI generation tools into one platform so that you can generate content with a single click.",
+    "Get in touch with Leap by LLL for professional accounting, audit, tax advisory, and business services in Hong Kong. Our expert team is ready to help your business succeed.",
   openGraph: {
     images: ["/banner.png"],
   },
@@ -28,15 +28,15 @@ export default function ContactPage() {
                 "font-semibold text-xl text-center dark:text-muted-dark text-muted"
               )}
             >
-              Every AI is used by thousands of users
+              Trusted by businesses across Hong Kong
             </p>
             <p
               className={cn(
                 "font-normal text-base text-center text-neutral-500 dark:text-neutral-200 mt-8"
               )}
             >
-              With lots of AI applications around, Everything AI stands out with
-              its state of the art Shitposting capabilities.
+              Leap by LLL delivers professional accounting and business services
+              with a commitment to excellence, reliability, and personalized solutions.
             </p>
           </div>
           <HorizontalGradient className="top-20" />

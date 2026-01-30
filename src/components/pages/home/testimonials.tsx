@@ -10,10 +10,10 @@ import Image from "next/image";
 export const Testimonials = () => {
   return (
     <div className="relative z-20 py-10 md:py-40">
-      <Heading as="h2">Loved by people all over the universe</Heading>
+      <Heading as="h2">Trusted by businesses across Hong Kong</Heading>
       <Subheading className="text-center max-w-lg mx-auto">
-        Every AI is used by millions of people around the globe.Our APIs have
-        fan bases and people fight for us over twitter.
+        Leap by LLL serves businesses of all sizes with professional accounting,
+        audit, and advisory services that drive success and growth.
       </Subheading>
       <TestimonialGrid />
     </div>
@@ -31,7 +31,7 @@ const testimonials = [
   {
     name: "Manu Arora",
     quote:
-      "What a fantastic AI Every AI is, I just love it. It has completely transformed the way I approach problems and develop solutions.",
+      "Leap by LLL has been instrumental in helping our business grow. Their accounting expertise and personalized service have completely transformed how we manage our finances.",
     src: "https://i.pravatar.cc/150?img=1",
     designation: "Tech Innovator & Entrepreneur",
   },

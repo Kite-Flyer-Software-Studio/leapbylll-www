@@ -67,9 +67,9 @@ export const Companies = () => {
 
   return (
     <div className="relative z-20 py-10 md:py-40">
-      <Heading as="h2">Trusted by the best companies</Heading>
+      <Heading as="h2">Trusted by leading businesses</Heading>
       <Subheading className="text-center ">
-        Every AI is the choice of all the fortune 500 companies.
+        Leap by LLL provides professional services to businesses across various industries in Hong Kong.
       </Subheading>
 
       <div className="flex gap-10 flex-wrap justify-center md:gap-40 relative h-full w-full mt-20">

@@ -3,7 +3,7 @@
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { cn } from '@/lib/utils';
-import { IconLanguage } from '@tabler/icons-react';
+import { IconWorld } from '@tabler/icons-react';
 
 type Locale = 'en' | 'zh-HK';
 
@@ -39,9 +39,9 @@ export const LocaleSwitcher = ({ className }: { className?: string }) => {
       title={`Switch to ${nextLocale?.label}`}
       type="button"
     >
-      <IconLanguage className="size-5 pointer-events-none" />
+      <IconWorld className="size-5 pointer-events-none" />
       <span className="text-sm font-medium hidden sm:inline pointer-events-none">
-        {currentLocale?.label}
+        {nextLocale?.label}
       </span>
     </button>
   );

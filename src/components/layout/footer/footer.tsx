@@ -37,16 +37,16 @@ export const Footer = () => {
       href: "/contact-us",
     },
   ];
-  const legal = [
-    {
-      name: t("links.privacyPolicy"),
-      href: "#",
-    },
-    {
-      name: t("links.termsOfService"),
-      href: "#",
-    },
-  ];
+  // const legal = [
+  //   {
+  //     name: t("links.privacyPolicy"),
+  //     href: "#",
+  //   },
+  //   {
+  //     name: t("links.termsOfService"),
+  //     href: "#",
+  //   },
+  // ];
   const socials = [
     {
       name: t("links.linkedin"),
@@ -83,7 +83,7 @@ export const Footer = () => {
               <div className="text-xs sm:text-sm font-semibold text-neutral-900 dark:text-neutral-100 mb-2">
                 {t("legal")}
               </div>
-              {legal.map((link) => (
+              {/* {legal.map((link) => (
                 <Link
                   key={link.name}
                   className="transition-colors hover:text-black text-muted dark:text-muted-dark dark:hover:text-neutral-400 text-xs sm:text-sm"
@@ -91,7 +91,7 @@ export const Footer = () => {
                 >
                   {link.name}
                 </Link>
-              ))}
+              ))} */}
               {quickLinks.map((link) => (
                 <Link
                   key={link.name}

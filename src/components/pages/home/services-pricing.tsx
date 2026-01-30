@@ -423,6 +423,7 @@ const CategorySection = ({
   selectedServices: Set<string>;
   onToggleService: (serviceId: string) => void;
 }) => {
+  const t = useTranslations("servicesPricing");
   const hasServices = category.services.length > 0;
   const hasSelectedService = category.services.some(service =>
     selectedServices.has(service.id)
@@ -641,4 +642,4 @@ const ServiceRow = ({
       </div>
     </div>
   );
-}; 
+};

@@ -6,6 +6,7 @@ import { Features } from "@/components/pages/home/features";
 // import { Testimonials } from "@/components/pages/home/testimonials";
 import { CTA } from "@/components/pages/home/cta";
 import { WhoWeServe } from "@/components/pages/home/who-we-serve";
+import { AccountingIntelligence } from "@/components/pages/home/accounting-intelligence";
 import { HowItWorks } from "@/components/pages/home/how-it-works";
 import { ServicesPricing } from "@/components/pages/home/services-pricing";
 
@@ -19,6 +20,7 @@ export default function Home() {
         <Container className="flex min-h-screen flex-col items-center justify-between ">
           <Hero />
           <WhoWeServe />
+          <AccountingIntelligence />
           <Features />
           <HowItWorks />
           <ServicesPricing />

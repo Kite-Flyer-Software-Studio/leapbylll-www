@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "whoWeServe": "Who We Serve",
+    "accountingIntelligence": "Our Technology",
     "features": "Why Leap by LLL",
     "whyLeap": "Why Leap by LLL",
     "howItWorks": "How It Works",
@@ -76,6 +77,86 @@
         "filingsOnTime": "Filings On-Time",
         "clientSatisfaction": "Client Satisfaction",
         "complianceRate": "Compliance Rate"
+      }
+    }
+  },
+  "accountingIntelligence": {
+    "badge": "Our Accounting System",
+    "heading": "Smart accounting technology meets human expertise",
+    "subheading": "Our proprietary OCR-driven system transforms your receipts into strategic insights, powered by decades of Hong Kong accounting experience.",
+    "features": {
+      "ocrSystem": {
+        "title": "Proprietary OCR-Driven System",
+        "description": "Our in-house developed OCR technology automatically scans, extracts, and categorizes your receipts with exceptional accuracy, eliminating manual data entry errors."
+      },
+      "expertise": {
+        "title": "Hong Kong Expertise Since 1990",
+        "description": "Built on years of Hong Kong expertise, our system is specifically designed for today's ambitious businesses navigating the local regulatory landscape."
+      },
+      "receiptHandling": {
+        "title": "Effortless Receipt Management",
+        "description": "Simply pass your receipts to us and let us handle the rest. Upload via app, email, or WhatsApp – we process everything seamlessly."
+      },
+      "strategicAsset": {
+        "title": "Numbers as Strategic Assets",
+        "description": "We transform your financial data into strategic insights, helping you make informed decisions that drive business growth and profitability."
+      },
+      "auditReady": {
+        "title": "Audit-Ready Financial Reports",
+        "description": "Providing crystal-clear financial statements and management reports ready for audit and tax filing, giving you complete confidence in your numbers."
+      }
+    },
+    "skeletons": {
+      "ocrSystem": {
+        "scanning": "Scanning",
+        "extractedAmount": "Amount: HK$1,250.00",
+        "extractedVendor": "Vendor: Office Supplies Co.",
+        "extractedDate": "Date: 2026-02-01",
+        "extractedCategory": "Category: Office Expenses",
+        "clickToRestart": "Click to scan again"
+      },
+      "expertise": {
+        "year1990": "1990",
+        "year1990Label": "Firm established",
+        "year2000": "2000",
+        "year2000Label": "Digital transformation",
+        "year2010": "2010",
+        "year2010Label": "Cloud technology",
+        "year2026": "2026",
+        "year2026Label": "AI-powered accounting",
+        "badge": "35+ Years of Excellence"
+      },
+      "receiptHandling": {
+        "dropZoneText": "Drop receipts here",
+        "dropZoneSubtext": "or click to upload",
+        "uploaded": "Uploaded",
+        "receipts": "receipts",
+        "clickToUpload": "Click to upload receipts"
+      },
+      "strategicAsset": {
+        "rawData": "Raw Data",
+        "processing": "Analysis",
+        "insights": "Insights",
+        "revenue": "Revenue",
+        "expenses": "Expenses",
+        "profit": "Profit"
+      },
+      "auditReady": {
+        "checklistTitle": "Financial Compliance Checklist",
+        "item1": "Balance Sheet Reconciled",
+        "item2": "Revenue Recognition Verified",
+        "item3": "Expense Categorization Complete",
+        "item4": "Bank Statements Matched",
+        "item5": "Tax Provisions Calculated",
+        "item6": "Audit Trail Documented",
+        "progress": "Completion Progress",
+        "reportTitle": "Financial Report",
+        "reportSubtitle": "FY 2025 Annual",
+        "ready": "Ready",
+        "preparing": "Preparing",
+        "generateReport": "Generate Report",
+        "generating": "Generating...",
+        "auditReady": "Audit Ready"
       }
     }
   },
@@ -426,6 +507,7 @@
     "allRightsReserved": "All rights reserved",
     "links": {
       "whoWeServe": "Who We Serve",
+      "accountingIntelligence": "Our Technology",
       "whyLeap": "Why Leap by LLL",
       "howItWorks": "How It Works",
       "servicesPricing": "Services & Pricing",

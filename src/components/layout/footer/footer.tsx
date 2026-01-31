@@ -14,6 +14,10 @@ export const Footer = () => {
       href: "/#who-we-serve",
     },
     {
+      name: t("links.accountingIntelligence"),
+      href: "/#accounting-intelligence",
+    },
+    {
       name: t("links.whyLeap"),
       href: "/#why-leap",
     },

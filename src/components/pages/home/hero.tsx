@@ -116,7 +116,7 @@ export const Hero = () => {
         }} className="mt-10 relative z-10">
         <p
           className={twMerge(
-            "text-neutral-400 text-sm text-center ml-8 relative z-40",
+            "text-neutral-400 text-sm text-center relative z-40",
             "text-center"
           )}
         >

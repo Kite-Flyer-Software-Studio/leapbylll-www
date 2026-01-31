@@ -136,15 +136,31 @@ export const OCRSystemSkeleton = () => {
   );
 };
 
-// HK Expertise Skeleton - Shows timeline of years
+// HK Expertise Skeleton - Shows accumulated expertise and certifications
 export const ExpertiseSkeleton = () => {
   const t = useTranslations("accountingIntelligence.skeletons.expertise");
   const [activeYear, setActiveYear] = useState(0);
   const years = [
-    { year: t("year1990"), label: t("year1990Label") },
-    { year: t("year2000"), label: t("year2000Label") },
-    { year: t("year2010"), label: t("year2010Label") },
-    { year: t("year2026"), label: t("year2026Label") },
+    { 
+      year: "1990", 
+      label: t("year1990Label"),
+      percentage: 25
+    },
+    { 
+      year: "2000", 
+      label: t("year2000Label"),
+      percentage: 50
+    },
+    { 
+      year: "2010", 
+      label: t("year2010Label"),
+      percentage: 75
+    },
+    { 
+      year: "2026", 
+      label: t("year2026Label"),
+      percentage: 100
+    },
   ];
 
   useEffect(() => {
@@ -155,105 +171,158 @@ export const ExpertiseSkeleton = () => {
   }, [years.length]);
 
   return (
-    <div className="absolute inset-0 p-8 flex flex-col items-center justify-center">
-      {/* Hong Kong Skyline Silhouette */}
-      <div className="relative w-full max-w-xs mb-8">
-        <motion.div
-          className="flex items-end justify-center gap-1 h-20"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
-          {[40, 60, 45, 70, 55, 75, 50, 65, 55, 80, 60, 70].map((height, i) => (
-            <motion.div
-              key={i}
-              className="bg-gradient-to-t from-blue-600 to-blue-400 dark:from-blue-500 dark:to-blue-300 w-4 rounded-t"
-              style={{ height: `${height}%` }}
-              initial={{ height: 0 }}
-              animate={{ height: `${height}%` }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-            />
-          ))}
-        </motion.div>
-        
-        {/* Sun/Badge */}
-        <motion.div
-          className="absolute -top-4 right-8 w-10 h-10 bg-yellow-400 dark:bg-yellow-300 rounded-full"
-          animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.8, 1, 0.8],
-          }}
-          transition={{
-            duration: 3,
-            repeat: Infinity,
-          }}
-        />
-      </div>
+    <div className="absolute inset-0 p-6 flex flex-col items-center justify-center">
+      {/* Main Visual - Growing Bar Chart */}
+      <div className="relative w-full max-w-sm mb-6">
+        <div className="flex items-end justify-between h-32 gap-3">
+          {years.map((yearData, i) => {
+            const isActive = activeYear >= i;
+            const isCurrent = activeYear === i;
 
-      {/* Timeline */}
-      <div className="relative w-full max-w-xs">
-        {/* Timeline Line */}
-        <div className="absolute left-0 right-0 top-6 h-0.5 bg-neutral-200 dark:bg-neutral-700" />
-        
-        {/* Year Markers */}
-        <div className="relative flex justify-between">
-          {years.map((item, i) => (
-            <motion.div
-              key={i}
-              className="flex flex-col items-center cursor-pointer"
-              onClick={() => setActiveYear(i)}
-            >
-              <motion.div
-                className={cn(
-                  "w-3 h-3 rounded-full border-2 mb-2 transition-colors",
-                  activeYear === i
-                    ? "bg-blue-500 border-blue-500 scale-125"
-                    : "bg-white dark:bg-neutral-800 border-neutral-300 dark:border-neutral-600"
-                )}
-                animate={activeYear === i ? { scale: [1, 1.2, 1] } : {}}
-                transition={{ duration: 0.3 }}
-              />
-              <span
-                className={cn(
-                  "text-xs font-medium transition-colors",
-                  activeYear === i
-                    ? "text-blue-600 dark:text-blue-400"
-                    : "text-neutral-500 dark:text-neutral-500"
-                )}
-              >
-                {item.year}
-              </span>
-            </motion.div>
-          ))}
+            return (
+              <div key={i} className="flex-1 flex flex-col items-center gap-2">
+                {/* Bar */}
+                <motion.div
+                  className="w-full bg-neutral-100 dark:bg-neutral-800 rounded-t-lg overflow-hidden relative"
+                  style={{ height: "100%" }}
+                >
+                  <motion.div
+                    className={cn(
+                      "w-full rounded-t-lg relative",
+                      isCurrent
+                        ? "bg-gradient-to-t from-blue-600 to-blue-400"
+                        : isActive
+                        ? "bg-gradient-to-t from-green-600 to-green-400"
+                        : "bg-gradient-to-t from-neutral-300 to-neutral-200 dark:from-neutral-700 dark:to-neutral-600"
+                    )}
+                    initial={{ height: 0 }}
+                    animate={{ height: isActive ? `${yearData.percentage}%` : 0 }}
+                    transition={{
+                      duration: 0.8,
+                      ease: "easeOut",
+                      delay: i * 0.2
+                    }}
+                  >
+                    {/* Shine effect on active */}
+                    {isCurrent && (
+                      <motion.div
+                        className="absolute inset-0 bg-gradient-to-t from-transparent via-white/30 to-transparent"
+                        animate={{
+                          y: ["-100%", "200%"],
+                        }}
+                        transition={{
+                          duration: 1.5,
+                          repeat: Infinity,
+                          repeatDelay: 1,
+                        }}
+                      />
+                    )}
+                  </motion.div>
+                </motion.div>
+
+                {/* Year Label */}
+                <motion.div
+                  className={cn(
+                    "text-xs font-bold transition-colors",
+                    isCurrent
+                      ? "text-blue-600 dark:text-blue-400"
+                      : isActive
+                      ? "text-green-600 dark:text-green-400"
+                      : "text-neutral-400 dark:text-neutral-500"
+                  )}
+                  animate={isCurrent ? { scale: [1, 1.1, 1] } : {}}
+                  transition={{ duration: 0.5 }}
+                >
+                  {yearData.year}
+                </motion.div>
+              </div>
+            );
+          })}
         </div>
-
-        {/* Year Description */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeYear}
-            className="mt-6 text-center"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.3 }}
-          >
-            <p className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-              {years[activeYear].label}
-            </p>
-          </motion.div>
-        </AnimatePresence>
       </div>
 
-      {/* Badge */}
+      {/* Description */}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={activeYear}
+          className="text-center mb-6"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.3 }}
+        >
+          <p className="text-sm font-semibold text-neutral-700 dark:text-neutral-300 mb-1">
+            {years[activeYear].year}
+          </p>
+          <p className="text-xs text-neutral-600 dark:text-neutral-400">
+            {years[activeYear].label}
+          </p>
+        </motion.div>
+      </AnimatePresence>
+
+      {/* Key Metric */}
       <motion.div
-        className="mt-6 px-4 py-2 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-full"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        className="flex items-center gap-3 px-6 py-3 bg-white dark:bg-neutral-800 rounded-xl border-2 border-blue-100 dark:border-blue-900 shadow-lg"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.5 }}
       >
-        <span className="text-xs font-semibold text-blue-700 dark:text-blue-300">
-          {t("badge")}
-        </span>
+        <div className="flex items-center gap-2">
+          <motion.div
+            className="text-3xl"
+            animate={{ rotate: [0, 10, -10, 0] }}
+            transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+          >
+            🇭🇰
+          </motion.div>
+          <div>
+            <motion.div
+              className="text-2xl font-bold text-blue-600 dark:text-blue-400"
+              animate={{ scale: [1, 1.05, 1] }}
+              transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
+            >
+              35+
+            </motion.div>
+            <div className="text-[10px] text-neutral-600 dark:text-neutral-400 -mt-1">
+              Years in HK
+            </div>
+          </div>
+        </div>
+
+        <div className="h-8 w-px bg-neutral-200 dark:bg-neutral-700" />
+
+        <div className="text-center">
+          <motion.div
+            className="text-2xl font-bold text-green-600 dark:text-green-400"
+            animate={{ scale: [1, 1.05, 1] }}
+            transition={{ duration: 2, repeat: Infinity, repeatDelay: 1, delay: 0.3 }}
+          >
+            100%
+          </motion.div>
+          <div className="text-[10px] text-neutral-600 dark:text-neutral-400 -mt-1">
+            HK Expertise
+          </div>
+        </div>
       </motion.div>
+
+      {/* Progress Indicator */}
+      <div className="flex gap-1.5 mt-4">
+        {years.map((_, i) => (
+          <motion.div
+            key={i}
+            className={cn(
+              "h-1.5 rounded-full transition-all",
+              i === activeYear
+                ? "w-8 bg-blue-500"
+                : i < activeYear
+                ? "w-1.5 bg-green-500"
+                : "w-1.5 bg-neutral-300 dark:bg-neutral-600"
+            )}
+            animate={i === activeYear ? { width: [6, 32, 32] } : {}}
+            transition={{ duration: 0.3 }}
+          />
+        ))}
+      </div>
     </div>
   );
 };

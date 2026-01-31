@@ -1,7 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import { Link } from "@/i18n/navigation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import { Button } from "@/components/button";
 import { Logo } from "@/components/Logo";
@@ -19,7 +19,64 @@ type Props = {
 
 export const MobileNavbar = ({ navItems, visible }: Props) => {
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<number | null>(null);
   const t = useTranslations('nav');
+
+  useEffect(() => {
+    // Extract section IDs from navItems
+    const sectionIds = navItems
+      .map(item => {
+        const match = item.link.match(/#(.+)$/);
+        return match ? match[1] : null;
+      })
+      .filter(Boolean) as string[];
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '-20% 0px -60% 0px', // Trigger when section is in the middle of viewport
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          const index = sectionIds.indexOf(sectionId);
+          if (index !== -1) {
+            setActiveSection(index);
+          }
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    // Observe all sections
+    sectionIds.forEach((id) => {
+      const element = document.getElementById(id);
+      if (element) {
+        observer.observe(element);
+      }
+    });
+
+    // Handle scroll to detect if we're at the hero (top of page)
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      // If we're near the top (within first 100px), clear active section
+      if (scrollPosition < 100) {
+        setActiveSection(null);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    // Initial check
+    handleScroll();
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [navItems]);
 
   return (
     <>
@@ -99,16 +156,25 @@ export const MobileNavbar = ({ navItems, visible }: Props) => {
               {/* <div className="w-full border-b border-neutral-200 dark:border-neutral-800 pb-4 mb-4">
                 <LocaleSwitcher className="w-full justify-start" />
               </div> */}
-              {navItems.map((navItem: any, idx: number) => (
-                <Link
-                  key={`link=${idx}`}
-                  href={navItem.link}
-                  onClick={() => setOpen(false)}
-                  className="relative text-neutral-600 dark:text-neutral-300"
-                >
-                  <motion.span className="block">{navItem.title}</motion.span>
-                </Link>
-              ))}
+              {navItems.map((navItem: any, idx: number) => {
+                const isActive = activeSection === idx;
+
+                return (
+                  <Link
+                    key={`link=${idx}`}
+                    href={navItem.link}
+                    onClick={() => setOpen(false)}
+                    className={cn(
+                      "relative w-full px-3 py-2 rounded-lg transition-colors duration-200",
+                      isActive
+                        ? "text-neutral-900 dark:text-neutral-100 font-semibold bg-gray-100 dark:bg-neutral-800"
+                        : "text-neutral-600 dark:text-neutral-300 hover:bg-gray-50 dark:hover:bg-neutral-800/50"
+                    )}
+                  >
+                    <motion.span className="block">{navItem.title}</motion.span>
+                  </Link>
+                );
+              })}
 
               <Button
                 as={Link}

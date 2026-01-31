@@ -51,18 +51,21 @@ export const MobileNavbar = ({ navItems, visible }: Props) => {
             <LocaleSwitcher className="scale-90" />
             <button
               onClick={() => setOpen(!open)}
-              className="p-1 -m-1 cursor-pointer"
+              className="p-1 -m-1 cursor-pointer relative"
               aria-label={open ? "Close menu" : "Open menu"}
             >
-              {open ? (
-                <IconX
-                  className="text-black dark:text-white"
-                />
-              ) : (
-                <IconMenu2
-                  className="text-black dark:text-white"
-                />
-              )}
+              <IconX
+                className={cn(
+                  "text-black dark:text-white transition-all duration-200 pointer-events-none",
+                  open ? "opacity-100 scale-100" : "opacity-0 scale-0 absolute inset-0"
+                )}
+              />
+              <IconMenu2
+                className={cn(
+                  "text-black dark:text-white transition-all duration-200 pointer-events-none",
+                  !open ? "opacity-100 scale-100" : "opacity-0 scale-0 absolute inset-0"
+                )}
+              />
             </button>
           </div>
         </div>

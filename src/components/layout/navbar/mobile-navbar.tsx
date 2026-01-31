@@ -23,6 +23,22 @@ export const MobileNavbar = ({ navItems, visible }: Props) => {
 
   return (
     <>
+      {/* Fixed CTA Button at bottom - Mobile only */}
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.5 }}
+        className="fixed bottom-0 left-0 right-0 lg:hidden z-40 p-4 pb-safe"
+      >
+        <Button
+          as={Link}
+          href="/get-quote"
+          className="w-full shadow-lg text-center justify-center"
+        >
+          {t('bookConsult')}
+        </Button>
+      </motion.div>
+
       <motion.div
         animate={{
           backdropFilter: visible ? "blur(10px)" : "none",

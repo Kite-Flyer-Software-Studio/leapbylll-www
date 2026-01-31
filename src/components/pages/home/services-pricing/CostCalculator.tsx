@@ -6,9 +6,10 @@ import { CostPlaceholder } from "./CostPlaceholder";
 interface CostCalculatorProps {
   costs: CostBreakdown;
   hasSelectedServices: boolean;
+  hasIncorporationPackage: boolean;
 }
 
-export const CostCalculator = ({ costs, hasSelectedServices }: CostCalculatorProps) => {
+export const CostCalculator = ({ costs, hasSelectedServices, hasIncorporationPackage }: CostCalculatorProps) => {
   return (
     <div className="w-full relative z-10">
       <div className="lg:sticky top-24 w-full">
@@ -22,7 +23,7 @@ export const CostCalculator = ({ costs, hasSelectedServices }: CostCalculatorPro
               transition={{ duration: 0.2 }}
               className="min-w-full"
             >
-              <CostDisplay costs={costs} />
+              <CostDisplay costs={costs} hasIncorporationPackage={hasIncorporationPackage} />
             </motion.div>
           ) : (
             <motion.div

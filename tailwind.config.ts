@@ -17,7 +17,7 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'conic': 'conic-gradient(var(--tw-gradient-stops))',
+        conic: 'conic-gradient(var(--tw-gradient-stops))',
       },
       colors: {
         primary: {
@@ -138,7 +138,7 @@ const config: Config = {
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme('colors'));
   let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
   );
 
   addBase({

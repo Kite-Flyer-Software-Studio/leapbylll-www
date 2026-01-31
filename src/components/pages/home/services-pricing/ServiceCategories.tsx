@@ -69,6 +69,7 @@ export const ServiceCategories = ({
           description: t("categories.incorporation.packageDescription"),
           price: 6500,
           period: "one-time",
+          priceNote: "+ Gov't Fees",
           included: [
             t("categories.incorporation.included.item1"),
             t("categories.incorporation.included.item2"),

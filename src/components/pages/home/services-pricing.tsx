@@ -58,11 +58,11 @@ export const ServicesPricing = () => {
     let oneTime = 0;
 
     // Service pricing data
-    const servicePrices: Record<string, { price: number; period: "monthly" | "yearly" | "one-time" }> = {
+    const servicePrices: Record<string, { price: number; period: "monthly" | "yearly" | "one-time"; hasNote?: boolean }> = {
       "accounting-small": { price: 800, period: "monthly" },
       "accounting-medium": { price: 1200, period: "monthly" },
       "accounting-large": { price: 1600, period: "monthly" },
-      "incorporation-package": { price: 6500, period: "one-time" },
+      "incorporation-package": { price: 6500, period: "one-time", hasNote: true },
       "secretarial-annual": { price: 3500, period: "yearly" },
       "audit-basic": { price: 10000, period: "yearly" },
     };
@@ -85,6 +85,7 @@ export const ServicesPricing = () => {
 
   const costs = calculateCosts();
   const hasSelectedServices = selectedServices.size > 0;
+  const hasIncorporationPackage = selectedServices.has("incorporation-package");
 
   return (
     <div id="services-pricing" className="py-20">
@@ -114,6 +115,7 @@ export const ServicesPricing = () => {
           <CostCalculator
             costs={costs}
             hasSelectedServices={hasSelectedServices}
+            hasIncorporationPackage={hasIncorporationPackage}
           />
         </div>
 

@@ -7,6 +7,7 @@ export interface Service {
   price?: number;
   period: PricingPeriod;
   included?: string[];
+  priceNote?: string;
 }
 
 export interface ServiceCategory {

@@ -98,12 +98,18 @@ export const ServiceRow = ({ service, isSelected, onToggle }: ServiceRowProps) =
               <div className="text-left sm:text-right shrink-0 sm:w-32">
                 <div className="text-xl sm:text-2xl font-bold text-neutral-900 dark:text-neutral-100">
                   HK${service.price.toLocaleString()}
+                  {service.priceNote && (
+                    <div className="text-lg text-neutral-800 dark:text-neutral-400 font-medium mt-0">
+                      {service.priceNote}
+                    </div>
+                  )}
                 </div>
                 <div className="text-xs text-neutral-500 dark:text-neutral-400">
                   {service.period === "monthly" && t("calculator.perMonth")}
                   {service.period === "yearly" && t("calculator.perYear")}
                   {service.period === "one-time" && t("calculator.oneTimeLabel")}
                 </div>
+
               </div>
             )}
           </div>

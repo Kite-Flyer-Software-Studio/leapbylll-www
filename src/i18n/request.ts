@@ -13,5 +13,5 @@ export default getRequestConfig(
       messages: (await import(`../messages/${locale}.json`)).default,
       timeZone: 'Asia/Hong_Kong',
     };
-  },
+  }
 );

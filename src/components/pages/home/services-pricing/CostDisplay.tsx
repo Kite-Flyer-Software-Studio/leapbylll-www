@@ -6,9 +6,10 @@ import { CostBreakdown } from "./types";
 
 interface CostDisplayProps {
   costs: CostBreakdown;
+  hasIncorporationPackage: boolean;
 }
 
-export const CostDisplay = ({ costs }: CostDisplayProps) => {
+export const CostDisplay = ({ costs, hasIncorporationPackage }: CostDisplayProps) => {
   const t = useTranslations("servicesPricing");
 
   return (
@@ -68,6 +69,11 @@ export const CostDisplay = ({ costs }: CostDisplayProps) => {
                 <span className="text-2xl font-bold text-neutral-900 dark:text-neutral-100">
                   HK${costs.oneTime.toLocaleString()}
                 </span>
+                {hasIncorporationPackage && (
+                  <span className="text-sm font-medium text-neutral-600 dark:text-neutral-400 ml-2">
+                    + Gov&apos;t Fees
+                  </span>
+                )}
               </div>
             </div>
           )}

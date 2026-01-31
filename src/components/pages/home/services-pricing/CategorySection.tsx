@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Button } from "@/components/button";
 import { ServiceCategory } from "./types";
 import { ServiceRow } from "./ServiceRow";
+import { Link } from "@/i18n/navigation";
 
 interface CategorySectionProps {
   category: ServiceCategory;
@@ -94,33 +95,62 @@ export const CategorySection = ({
                 </div>
               ) : (
                 <div className="py-6 text-center">
-                  <p className="text-neutral-600 dark:text-neutral-400 mb-4">
-                    {t("categories.other.availableServices")}
-                  </p>
-                  <ul className="inline-block text-left space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
-                    <li className="flex items-center gap-2">
-                      <IconCheck className="size-4 text-green-600 dark:text-green-400" />
-                      {t("categories.other.services.item1")}
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <IconCheck className="size-4 text-green-600 dark:text-green-400" />
-                      {t("categories.other.services.item2")}
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <IconCheck className="size-4 text-green-600 dark:text-green-400" />
-                      {t("categories.other.services.item3")}
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <IconCheck className="size-4 text-green-600 dark:text-green-400" />
-                      {t("categories.other.services.item4")}
-                    </li>
-                  </ul>
+                  {category.id === "audit" ? (
+                    <>
+                      <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+                        {t("categories.audit.serviceDescription")}
+                      </p>
+                      <ul className="inline-block text-left space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
+                        <li className="flex items-center gap-2">
+                          <IconCheck className="size-4 text-green-600 dark:text-green-400" />
+                          {t("categories.audit.included.item1")}
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <IconCheck className="size-4 text-green-600 dark:text-green-400" />
+                          {t("categories.audit.included.item2")}
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <IconCheck className="size-4 text-green-600 dark:text-green-400" />
+                          {t("categories.audit.included.item3")}
+                        </li>
+                      </ul>
+                    </>
+                  ) : (
+                    <>
+                      <p className="text-neutral-600 dark:text-neutral-400 mb-4">
+                        {t("categories.other.availableServices")}
+                      </p>
+                      <ul className="inline-block text-left space-y-2 text-sm text-neutral-700 dark:text-neutral-300">
+                        <li className="flex items-center gap-2">
+                          <IconCheck className="size-4 text-green-600 dark:text-green-400" />
+                          {t("categories.other.services.item1")}
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <IconCheck className="size-4 text-green-600 dark:text-green-400" />
+                          {t("categories.other.services.item2")}
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <IconCheck className="size-4 text-green-600 dark:text-green-400" />
+                          {t("categories.other.services.item3")}
+                        </li>
+                        <li className="flex items-center gap-2">
+                          <IconCheck className="size-4 text-green-600 dark:text-green-400" />
+                          {t("categories.other.services.item4")}
+                        </li>
+                      </ul>
+                    </>
+                  )}
                 </div>
               )}
 
               {category.customCTA && (
                 <div className="mt-6 pt-6 border-t border-neutral-200 dark:border-neutral-800">
-                  <Button variant="outline" className="w-full">
+                  <Button 
+                    as={Link}
+                    href={category.customCTA.action}
+                    variant="outline" 
+                    className="w-full"
+                  >
                     {category.customCTA.text}
                   </Button>
                 </div>

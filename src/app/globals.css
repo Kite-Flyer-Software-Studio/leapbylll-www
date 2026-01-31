@@ -26,6 +26,10 @@ html {
   .text-balance {
     text-wrap: balance;
   }
+  
+  .bg-conic {
+    background-image: conic-gradient(from 0deg, transparent, transparent);
+  }
 }
 
 /* Orbit animation for revolving elements */

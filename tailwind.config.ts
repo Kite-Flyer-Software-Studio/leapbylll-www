@@ -17,6 +17,7 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'conic': 'conic-gradient(var(--tw-gradient-stops))',
       },
       colors: {
         primary: {
@@ -183,6 +184,10 @@ function addMaskUtilities({ addUtilities }: any) {
     '.mask-radial-at-center': {
       maskPosition: 'center',
       WebkitMaskPosition: 'center',
+    },
+    '.mask-radial-from-10%': {
+      maskImage: 'radial-gradient(circle, transparent 10%, white 100%)',
+      WebkitMaskImage: 'radial-gradient(circle, transparent 10%, white 100%)',
     },
   });
 }

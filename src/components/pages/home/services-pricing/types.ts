@@ -4,7 +4,7 @@ export interface Service {
   id: string;
   name: string;
   description: string;
-  price: number;
+  price?: number;
   period: PricingPeriod;
   included?: string[];
 }

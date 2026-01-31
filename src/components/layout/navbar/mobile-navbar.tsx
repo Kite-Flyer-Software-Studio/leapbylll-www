@@ -7,7 +7,7 @@ import { Button } from "@/components/button";
 import { Logo } from "@/components/Logo";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from 'next-intl';
-import { LocaleSwitcher } from "./locale-switcher";
+// import { LocaleSwitcher } from "./locale-switcher";
 
 type Props = {
   navItems: {
@@ -64,7 +64,7 @@ export const MobileNavbar = ({ navItems, visible }: Props) => {
         <div className="flex flex-row justify-between items-center w-full">
           <Logo />
           <div className="flex items-center gap-2 relative z-[60]">
-            <LocaleSwitcher className="scale-90" />
+            {/* <LocaleSwitcher className="scale-90" /> */}
             <button
               onClick={() => setOpen(!open)}
               className="p-1 -m-1 cursor-pointer relative"

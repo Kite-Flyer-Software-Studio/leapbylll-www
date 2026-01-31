@@ -62,7 +62,7 @@ export const ServicesPricing = () => {
       "accounting-small": { price: 800, period: "monthly" },
       "accounting-medium": { price: 1200, period: "monthly" },
       "accounting-large": { price: 1600, period: "monthly" },
-      "incorporation-package": { price: 6000, period: "one-time" },
+      "incorporation-package": { price: 6500, period: "one-time" },
       "secretarial-annual": { price: 3500, period: "yearly" },
       "audit-basic": { price: 10000, period: "yearly" },
     };

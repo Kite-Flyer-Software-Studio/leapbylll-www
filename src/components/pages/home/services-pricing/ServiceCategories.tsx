@@ -67,13 +67,14 @@ export const ServiceCategories = ({
           id: "incorporation-package",
           name: t("categories.incorporation.packageName"),
           description: t("categories.incorporation.packageDescription"),
-          price: 6000,
+          price: 6500,
           period: "one-time",
           included: [
             t("categories.incorporation.included.item1"),
             t("categories.incorporation.included.item2"),
             t("categories.incorporation.included.item3"),
             t("categories.incorporation.included.item4"),
+            t("categories.incorporation.included.item5"),
           ],
         },
       ],
@@ -94,7 +95,6 @@ export const ServiceCategories = ({
             t("categories.secretarial.included.item1"),
             t("categories.secretarial.included.item2"),
             t("categories.secretarial.included.item3"),
-            t("categories.secretarial.included.item4"),
           ],
         },
       ],
@@ -104,24 +104,10 @@ export const ServiceCategories = ({
       title: t("categories.audit.title"),
       description: t("categories.audit.description"),
       icon: <IconFileCheck className="size-6" />,
-      services: [
-        {
-          id: "audit-basic",
-          name: t("categories.audit.serviceName"),
-          description: t("categories.audit.serviceDescription"),
-          price: 10000,
-          period: "yearly",
-          included: [
-            t("categories.audit.included.item1"),
-            t("categories.audit.included.item2"),
-            t("categories.audit.included.item3"),
-            t("categories.audit.included.item4"),
-          ],
-        },
-      ],
+      services: [],
       customCTA: {
         text: t("categories.audit.cta"),
-        action: "/contact-us?service=audit",
+        action: "/get-quote",
       },
     },
     {
@@ -132,7 +118,7 @@ export const ServiceCategories = ({
       services: [],
       customCTA: {
         text: t("categories.other.cta"),
-        action: "/contact-us",
+        action: "/get-quote",
       },
     },
   ];

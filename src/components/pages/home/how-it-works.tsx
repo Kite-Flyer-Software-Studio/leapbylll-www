@@ -122,7 +122,7 @@ export const StepBadge = ({
   step: number;
 }) => {
   return (
-    <div className="absolute -top-3 -right-3 z-10">
+    <div className="absolute -top-3 -left-3 z-10">
       <div className={cn(
         "flex items-center justify-center w-12 h-12 rounded-full font-semibold text-base shadow-sm border-2",
         "bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 border-neutral-200 dark:border-neutral-700"

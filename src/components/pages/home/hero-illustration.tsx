@@ -12,6 +12,7 @@ import {
   IconSparkles,
   IconBuildingBank,
   IconChartBar,
+  IconFileSearch,
 } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
 
@@ -76,7 +77,7 @@ export const HeroIllustration = () => {
         {/* Top Row - Service Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
           <InteractiveCard
-            icon={<IconCalculator className="w-6 h-6" />}
+            icon={<IconBuildingBank className="w-6 h-6" />}
             title={t("cards.smartAccounting")}
             isActive={activeCard === "accounting"}
             onHover={() => setActiveCard("accounting")}
@@ -92,7 +93,7 @@ export const HeroIllustration = () => {
             delay={0.2}
           />
           <InteractiveCard
-            icon={<IconBuildingBank className="w-6 h-6" />}
+            icon={<IconCalculator className="w-6 h-6" />}
             title={t("cards.taxAdvisory")}
             isActive={activeCard === "tax"}
             onHover={() => setActiveCard("tax")}
@@ -100,7 +101,7 @@ export const HeroIllustration = () => {
             delay={0.3}
           />
           <InteractiveCard
-            icon={<IconRocket className="w-6 h-6" />}
+            icon={<IconFileSearch className="w-6 h-6" />}
             title={t("cards.growthReady")}
             isActive={activeCard === "growth"}
             onHover={() => setActiveCard("growth")}

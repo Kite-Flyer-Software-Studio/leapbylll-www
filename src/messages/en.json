@@ -2,8 +2,8 @@
   "nav": {
     "home": "Home",
     "whoWeServe": "Who We Serve",
-    "features": "Why LEAP",
-    "whyLeap": "Why LEAP",
+    "features": "Why Leap by LLL",
+    "whyLeap": "Why Leap by LLL",
     "howItWorks": "How It Works",
     "servicesPricing": "Services & Pricing",
     "contact": "Contact Us",
@@ -15,16 +15,16 @@
   "hero": {
     "badge": "Backed by Legacy, Built for Starters.",
     "title": "Your Accountant from start to growth.",
-    "subtitle": "LEAP by LLL gives Hong Kong founders a dedicated CPA, smart cloud accounting, and stress‑free compliance, so you can focus on building – not chasing deadlines.",
+    "subtitle": "Leap by LLL gives Hong Kong founders a dedicated CPA, smart cloud accounting, and stress‑free compliance, so you can focus on building – not chasing deadlines.",
     "getStarted": "Book a free consultation",
     "contactUs": "See services & pricing",
     "backedBy": "Powered by Louis Lai & Luk CPA Limited, an established Hong Kong CPA firm.",
     "illustration": {
       "cards": {
-        "smartAccounting": "Smart Accounting",
-        "compliance": "Compliance",
-        "taxAdvisory": "Tax Advisory",
-        "growthReady": "Growth Ready"
+        "smartAccounting": "Business Setup",
+        "compliance": "Handling of Ongoing Governmental Paperwork",
+        "taxAdvisory": "Insightful Accounting",
+        "growthReady": "Statutory Audit & Tax Filing"
       },
       "growth": {
         "title": "Business Growth",
@@ -45,38 +45,24 @@
   },
   "whoWeServe": {
     "badge": "Who We Serve",
-    "heading": "Built for founders who can't afford compliance mistakes",
-    "subheading": "From missed deadlines to fragmented providers, we understand the compliance chaos that founders face. LEAP by LLL transforms these pain points into predictable, manageable processes.",
-    "painPoints": {
-      "deadlineDisasters": {
-        "title": "Deadline disasters",
-        "description": "Emails ignored, questions unanswered until penalty notices arrive"
-      },
-      "fragmentedProviders": {
-        "title": "Fragmented providers",
-        "description": "No one takes ownership – your accountant, secretary, and auditor keep pointing fingers."
-      },
-      "yearEndShocks": {
-        "title": "Year-end shocks",
-        "description": "Missed deadlines, penalty letters, and messy records you have to clean up later."
-      }
-    },
+    "heading": "Empowering a new generation of business founders.",
+    "subheading": "We offer the seasoned guidance of a legacy firm, with the speed, digital tools, and partner-minded approach that today’s businesses demand.",
     "targets": {
       "soloEntrepreneurs": {
         "title": "Solo entrepreneurs",
-        "description": "Solo entrepreneurs launching their first business"
+        "description": "You're the visionary, the engine, and the entire team. We're here to take the number-crunching and paperwork off your plate, so you can focus on your craft and your clients."
       },
       "startupCompanies": {
-        "title": "Start-up companies",
-        "description": "Start-up companies needing structure and investor-ready numbers"
+        "title": "Micro-Small Businesses",
+        "description": "You've moved past the startup phase. We become your compliance and financial partner, providing the support to maintain a sustainable operation."
       },
       "growingSMEs": {
         "title": "Growing SMEs",
-        "description": "Growing SMEs preparing for larger teams, funding, or expansion"
+        "description": "Growth is exciting, but it brings new complexities. We provide the advanced support, reporting, and advisory insights to help you scale."
       }
     },
     "middleCard": {
-      "managed": "Managed",
+      "managed": "We Manage",
       "dashboard": "Dashboard",
       "statuses": {
         "deadlineTracked": "Deadline tracked",
@@ -91,8 +77,8 @@
     }
   },
   "whyLeap": {
-    "badge": "Why LEAP",
-    "heading": "Why Hong Kong founders choose LEAP",
+    "badge": "Why Leap by LLL",
+    "heading": "Why Hong Kong founders choose us",
     "subheading": "More than just accounting – we're your compliance partner who understands startups, speaks your language, and keeps your business on track from day one.",
     "features": {
       "dedicatedCPA": {
@@ -123,7 +109,7 @@
         "description": "We start with a short call to learn your business model, transaction volume, and goals – so we can recommend the right bundle."
       },
       "step2": {
-        "title": "Set up your LEAP stack",
+        "title": "Set up your Leap by LLL stack",
         "description": "We handle onboarding to our smart accounting system, gather initial documents, and align your compliance calendar for the year."
       },
       "step3": {
@@ -142,8 +128,8 @@
     "subheading": "Our listed prices are benchmarks for standard engagements. Service bundles tailored to your needs are available. Your final quote will be customized after a brief discussion about your business.",
     "categories": {
       "accounting": {
-        "title": "Accounting",
-        "description": "Professional bookkeeping and financial record management",
+        "title": "Accounting & Financial Reporting",
+        "description": "From fragmented receipts to clear financial reports",
         "services": {
           "small": {
             "name": "Annual Revenue < HK$500,000",
@@ -165,36 +151,35 @@
         "packageName": "Company Incorporation Package",
         "packageDescription": "Everything you need to incorporate your Hong Kong company",
         "included": {
-          "item1": "Incorporation application to the Companies Registry",
-          "item2": "Certificate of Incorporation",
-          "item3": "Articles of Association",
-          "item4": "Business Registration with Inland Revenue Department"
+          "item1": "Handling of all governmental filings",
+          "item2": "Articles of Association",
+          "item3": "Certification of Incorporation",
+          "item4": "Business Registration Certificate",
+          "item5": "Professional Company Launch Kit"
         }
       },
       "secretarial": {
-        "title": "Company Secretarial Services",
-        "description": "Ongoing statutory compliance and corporate secretary support",
+        "title": "Company Secretarial Service",
+        "description": "Ongoing statutory compliance and corporate secretarial support",
         "serviceName": "Annual Secretarial Services",
         "serviceDescription": "Complete company secretarial support for the year",
         "included": {
-          "item1": "Preparation of Annual General Meeting documents",
-          "item2": "Annual Returns Filing (NAR1)",
-          "item3": "Corporate secretary support",
-          "item4": "Compliance calendar management"
+          "item1": "Annual Returns Filing (NAR1)",
+          "item2": "Preparation of Annual General Meeting documents",
+          "item3": "Add on services available – provision of Registered Office address, correspondence address, change of business particulars"
         }
       },
       "audit": {
-        "title": "Audit & Profits Tax Return Filing",
+        "title": "Audit & Profits Tax Filing",
         "description": "Independent, thorough audits that meet statutory requirements",
         "serviceName": "Audit Services",
-        "serviceDescription": "Statutory audit considering your business nature, transaction complexity, and reporting deadlines",
+        "serviceDescription": "Statutory audit and optimized tax filing.",
         "included": {
-          "item1": "Independent audit",
-          "item2": "Statutory compliance",
-          "item3": "Auditor's report",
-          "item4": "Profits tax return filing"
+          "item1": "Single point of contact & coordination",
+          "item2": "Audit by our CPA parent firm with decades of experience",
+          "item3": "Profits tax computation for accurate, optimised tax filing"
         },
-        "cta": "Schedule an audit consultation"
+        "cta": "Contact us for a clear proposal for a seamless Audit and Tax Filing engagement."
       },
       "other": {
         "title": "Other Services",
@@ -245,7 +230,7 @@
       "directMessaging": "Direct messaging with your CPA",
       "messageSubtext": "Ask about cap tables, cash flow, or tax planning",
       "whatsapp": {
-        "leapCpaTeam": "LEAP CPA Team",
+        "leapCpaTeam": "Leap by LLL CPA Team",
         "online": "online",
         "greeting": "Hi! 👋 Thanks for reaching out. Tell us about your business model",
         "userResponse1": "We're a SaaS startup, around 50 transactions per month",
@@ -316,7 +301,7 @@
     },
     "howItWorks": {
       "step1": {
-        "leapSetup": "LEAP Setup",
+        "leapSetup": "Leap by LLL Setup",
         "onboardingInProgress": "Onboarding in progress",
         "complete": "Complete",
         "smartAccountingSystem": {
@@ -423,22 +408,22 @@
   },
   "whatsapp": {
     "tooltip": "Contact us on WhatsApp",
-    "message": "Hello! I'm interested in learning more about LEAP's professional accounting services. I would like to inquire about:"
+    "message": "Hello! I'm interested in learning more about Leap by LLL's professional accounting services. I would like to inquire about:"
   },
   "email": {
     "tooltip": "Email us",
-    "subject": "Inquiry about LEAP Services"
+    "subject": "Inquiry about Leap by LLL Services"
   },
   "footer": {
-    "description": "LEAP by LLL provides Hong Kong founders with dedicated CPA services, smart cloud accounting, and stress-free compliance.",
+    "description": "Leap by LLL provides Hong Kong founders with dedicated CPA services, smart cloud accounting, and stress-free compliance.",
     "navigation": "Quick Links",
     "legal": "Contact",
     "social": "Social Media",
-    "copyright": "© 2026 LEAP by LLL. All rights reserved.",
+    "copyright": "© 2026 Leap by LLL. All rights reserved.",
     "allRightsReserved": "All rights reserved",
     "links": {
       "whoWeServe": "Who We Serve",
-      "whyLeap": "Why LEAP",
+      "whyLeap": "Why Leap by LLL",
       "howItWorks": "How It Works",
       "servicesPricing": "Services & Pricing",
       "contactUs": "Contact Us",

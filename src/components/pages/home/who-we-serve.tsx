@@ -22,27 +22,6 @@ import { useTranslations } from "next-intl";
 export const WhoWeServe = () => {
   const t = useTranslations("whoWeServe");
 
-  const painPoints = [
-    {
-      title: t("painPoints.deadlineDisasters.title"),
-      description: t("painPoints.deadlineDisasters.description"),
-      icon: <IconAlertTriangle className="size-6" />,
-      type: "pain" as const,
-    },
-    {
-      title: t("painPoints.fragmentedProviders.title"),
-      description: t("painPoints.fragmentedProviders.description"),
-      icon: <IconUsers className="size-6" />,
-      type: "pain" as const,
-    },
-    {
-      title: t("painPoints.yearEndShocks.title"),
-      description: t("painPoints.yearEndShocks.description"),
-      icon: <IconFileAlert className="size-6" />,
-      type: "pain" as const,
-    },
-  ];
-
   const targets = [
     {
       title: t("targets.soloEntrepreneurs.title"),
@@ -77,12 +56,7 @@ export const WhoWeServe = () => {
             {t("subheading")}
           </Subheading>
         </div>
-        <div className="mt-20 grid grid-cols-1 gap-4 md:grid-cols-3">
-          <div className="grid grid-cols-1 gap-4">
-            {painPoints.map((item) => (
-              <FeatureCard key={item.title} {...item} />
-            ))}
-          </div>
+        <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-2">
           <MiddleCard />
           <div className="grid grid-cols-1 gap-4">
             {targets.map((item) => (
@@ -106,10 +80,10 @@ const MiddleCard = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setActiveText((prev) => (prev + 1) % 3);
+      setActiveText((prev) => (prev + 1) % texts.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [texts.length]);
 
   const metrics = [
     { label: t("metrics.filingsOnTime"), width: 98 },
@@ -119,52 +93,50 @@ const MiddleCard = () => {
 
   return (
     <div className="relative flex min-h-40 flex-col justify-end overflow-hidden rounded-lg bg-neutral-50 p-4 md:p-5 dark:bg-neutral-900">
-      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#404040_1px,transparent_1px)] [background-size:10px_10px]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] dark:bg-[radial-gradient(#404040_1px,transparent_1px)] mask-radial-from-10% [background-size:10px_10px] shadow-xl"></div>
 
-      <div className="relative z-20 flex items-center justify-center">
+      <div className="flex items-center justify-center">
         <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-white p-3 shadow-lg dark:border-neutral-700 dark:bg-neutral-800">
-          <IconBrain className="size-8" />
+          <IconBrain className="size-6" />
         </div>
-        <div className="mx-4 h-px w-12 bg-neutral-300 dark:bg-neutral-700"></div>
+        <div className="mx-6 h-px w-16 bg-neutral-300 dark:bg-neutral-700"></div>
         <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-md bg-neutral-200 p-px shadow-xl dark:bg-neutral-700">
-          <div className="absolute inset-0 scale-[1.4] animate-spin rounded-full bg-gradient-conic from-transparent via-blue-500 via-20% to-transparent to-30% [animation-duration:2s]"></div>
-          <div className="absolute inset-0 scale-[1.4] animate-spin rounded-full bg-gradient-conic from-transparent via-purple-500 via-20% to-transparent to-30% [animation-delay:1s] [animation-duration:2s]"></div>
+          <div className="absolute inset-0 scale-[1.4] animate-spin rounded-full bg-conic [background-image:conic-gradient(at_center,transparent,rgb(59_130_246)_20%,transparent_30%)] [animation-duration:2s]"></div>
+          <div className="absolute inset-0 scale-[1.4] animate-spin rounded-full bg-conic [background-image:conic-gradient(at_center,transparent,rgb(168_85_247)_20%,transparent_30%)] [animation-delay:1s] [animation-duration:2s]"></div>
           <div className="relative z-20 flex h-full w-full items-center justify-center rounded-[5px] bg-white dark:bg-neutral-900">
             <Image
               src="/logos/leapbylll-logo.png"
               alt="LEAP by LLL"
-              width={24}
-              height={24}
-              className="size-10"
+              width={32}
+              height={32}
+              className="size-8"
             />
           </div>
         </div>
-        <div className="mx-4 h-px w-12 bg-neutral-300 dark:bg-neutral-700"></div>
+        <div className="mx-6 h-px w-16 bg-neutral-300 dark:bg-neutral-700"></div>
         <div className="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-md border border-neutral-200 bg-white p-3 shadow-lg dark:border-neutral-700 dark:bg-neutral-800">
-          <IconRocket className="size-8" />
+          <IconRocket className="size-6" />
         </div>
       </div>
-
-      <div className="relative z-20 mt-4 flex flex-col items-center justify-center">
-        <div className="mb-2 h-8 w-px bg-neutral-300 dark:bg-neutral-700"></div>
-        <div className="rounded-sm border border-blue-500 bg-blue-50 px-2 py-0.5 text-xs text-blue-500 dark:bg-blue-900/30 dark:text-blue-400">
+      <div className="relative z-20 flex flex-col items-center justify-center">
+        <div className="mb-3 h-10 w-px bg-neutral-300 dark:bg-neutral-700"></div>
+        <div className="rounded-sm border border-blue-500 bg-blue-50 px-2 py-0.5 text-xs text-blue-500 dark:bg-blue-900 dark:text-white">
           {t("managed")}
         </div>
       </div>
-
-      <div className="mt-4 h-60 w-full translate-x-10 translate-y-10 overflow-hidden rounded-md border border-neutral-200 bg-white p-px shadow-xl dark:border-neutral-700 dark:bg-neutral-800">
-        <div className="absolute inset-0 scale-[1.4] animate-spin rounded-full bg-gradient-conic from-transparent via-blue-500 via-20% to-transparent to-30% blur-2xl [animation-duration:4s]"></div>
-        <div className="absolute inset-0 scale-[1.4] animate-spin rounded-full bg-gradient-conic from-transparent via-purple-500 via-20% to-transparent to-30% blur-2xl [animation-delay:2s] [animation-duration:4s]"></div>
+      <div className="h-60 w-full translate-x-10 translate-y-10 overflow-hidden rounded-md bg-neutral-200 p-px shadow-xl dark:bg-neutral-700">
+        <div className="absolute inset-0 scale-[1.4] animate-spin rounded-full bg-conic from-transparent via-blue-500 via-20% to-transparent to-30% blur-2xl [animation-duration:4s]"></div>
+        <div className="absolute inset-0 scale-[1.4] animate-spin rounded-full bg-conic from-transparent via-purple-500 via-20% to-transparent to-30% blur-2xl [animation-delay:2s] [animation-duration:4s]"></div>
         <div className="relative z-20 h-full w-full rounded-[5px] bg-white dark:bg-neutral-900">
-          <div className="flex items-center justify-between border-b border-neutral-200 p-4 dark:border-neutral-800">
-            <div className="flex gap-1.5">
-              <div className="size-2.5 rounded-full bg-red-400"></div>
-              <div className="size-2.5 rounded-full bg-yellow-400"></div>
-              <div className="size-2.5 rounded-full bg-green-400"></div>
+          <div className="flex items-center justify-between p-4">
+            <div className="flex gap-1">
+              <div className="size-2 rounded-full bg-red-400"></div>
+              <div className="size-2 rounded-full bg-yellow-400"></div>
+              <div className="size-2 rounded-full bg-green-400"></div>
             </div>
             <AnimatePresence mode="wait">
               <motion.div
-                className="flex items-center gap-1.5 rounded-sm border border-neutral-200 bg-white px-2 py-1 text-xs text-neutral-600 shadow-sm dark:border-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"
+                className="shadow-aceternity mr-2 flex items-center gap-1 rounded-sm bg-white px-2 py-1 text-xs text-neutral-500 dark:bg-neutral-700 dark:text-white"
                 key={activeText}
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -176,18 +148,19 @@ const MiddleCard = () => {
               </motion.div>
             </AnimatePresence>
           </div>
+          <div className="h-px w-full bg-neutral-200 dark:bg-neutral-800"></div>
           <div className="flex h-full flex-row">
-            <div className="h-full w-14 border-r border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-neutral-900" />
+            <div className="h-full w-14 bg-neutral-200 dark:bg-neutral-800" />
             <motion.div className="w-full gap-y-4 p-4">
               <h2 className="text-sm font-semibold text-neutral-800 dark:text-neutral-300">
                 {t("dashboard")}
               </h2>
 
-              <div className="mt-4 flex flex-col gap-y-3">
+              <div className="mt-4 flex flex-col gap-y-3 mask-b-from-50%">
                 {metrics.map((item, index) => (
                   <div key={item.label} className="space-y-1">
                     <div className="flex items-center justify-between text-xs">
-                      <span className="text-muted dark:text-muted-dark">
+                      <span className="text-neutral-600 dark:text-neutral-400">
                         {item.label}
                       </span>
                     </div>
@@ -200,7 +173,7 @@ const MiddleCard = () => {
                           delay: 0.4 + index * 0.1,
                           ease: "easeOut",
                         }}
-                        className="h-full rounded-full bg-blue-500 dark:bg-blue-600"
+                        className="h-full rounded-full bg-neutral-300 dark:bg-neutral-400"
                       />
                     </div>
                   </div>

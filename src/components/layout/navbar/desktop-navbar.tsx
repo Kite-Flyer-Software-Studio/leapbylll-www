@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { useState } from "react";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from 'next-intl';
-import { LocaleSwitcher } from "./locale-switcher";
+// import { LocaleSwitcher } from "./locale-switcher";
 
 type Props = {
   navItems: {
@@ -70,7 +70,7 @@ export const DesktopNavbar = ({ navItems, visible }: Props) => {
         ))}
       </motion.div>
       <div className="flex items-center gap-2">
-        <LocaleSwitcher />
+        {/* <LocaleSwitcher /> */}
         <AnimatePresence mode="popLayout" initial={false}>
           {!visible && (
             <motion.div

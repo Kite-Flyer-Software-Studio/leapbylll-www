@@ -26,18 +26,21 @@ export const WhoWeServe = () => {
     {
       title: t("targets.soloEntrepreneurs.title"),
       description: t("targets.soloEntrepreneurs.description"),
+      description2: t("targets.soloEntrepreneurs.description2"),
       icon: <IconUser className="size-6" />,
       type: "solution" as const,
     },
     {
       title: t("targets.startupCompanies.title"),
       description: t("targets.startupCompanies.description"),
+      description2: t("targets.startupCompanies.description2"),
       icon: <IconRocket className="size-6" />,
       type: "solution" as const,
     },
     {
       title: t("targets.growingSMEs.title"),
       description: t("targets.growingSMEs.description"),
+      description2: t("targets.growingSMEs.description2"),
       icon: <IconBuildingSkyscraper className="size-6" />,
       type: "solution" as const,
     },
@@ -173,7 +176,7 @@ const MiddleCard = () => {
                           delay: 0.4 + index * 0.1,
                           ease: "easeOut",
                         }}
-                        className="h-full rounded-full bg-neutral-300 dark:bg-neutral-400"
+                        className="h-full rounded-full bg-emerald-400 dark:bg-emerald-500"
                       />
                     </div>
                   </div>
@@ -190,10 +193,11 @@ const MiddleCard = () => {
 const FeatureCard = (props: {
   title: string;
   description: string;
+  description2?: string;
   icon: React.ReactNode;
   type: "pain" | "solution";
 }) => {
-  const { title, description, icon, type } = props;
+  const { title, description, description2, icon, type } = props;
 
   const isPain = type === "pain";
   const bgColor = isPain
@@ -228,6 +232,9 @@ const FeatureCard = (props: {
         {title}
       </h3>
       <p className="text-sm text-muted dark:text-muted-dark">{description}</p>
+      {description2 && (
+        <p className="text-sm text-muted dark:text-muted-dark mt-2">{description2}</p>
+      )}
     </div>
   );
 };

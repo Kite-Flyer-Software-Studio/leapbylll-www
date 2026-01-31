@@ -50,15 +50,18 @@
     "targets": {
       "soloEntrepreneurs": {
         "title": "Solo entrepreneurs",
-        "description": "You're the visionary, the engine, and the entire team. We're here to take the number-crunching and paperwork off your plate, so you can focus on your craft and your clients."
+        "description": "You're the visionary, the engine, and the entire team.",
+        "description2": "We're here to take the number-crunching and paperwork off your plate, so you can focus on your craft and your clients."
       },
       "startupCompanies": {
         "title": "Micro-Small Businesses",
-        "description": "You've moved past the startup phase. We become your compliance and financial partner, providing the support to maintain a sustainable operation."
+        "description": "You've moved past the startup phase.",
+        "description2": "We become your compliance and financial partner, providing the support to maintain a sustainable operation."
       },
       "growingSMEs": {
         "title": "Growing SMEs",
-        "description": "Growth is exciting, but it brings new complexities. We provide the advanced support, reporting, and advisory insights to help you scale."
+        "description": "Growth is exciting, but it brings new complexities.",
+        "description2": "We provide the advanced support, reporting, and advisory insights to help you scale."
       }
     },
     "middleCard": {

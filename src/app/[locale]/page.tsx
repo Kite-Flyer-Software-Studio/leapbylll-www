@@ -20,8 +20,8 @@ export default function Home() {
         <Container className="flex min-h-screen flex-col items-center justify-between ">
           <Hero />
           <WhoWeServe />
-          <AccountingIntelligence />
           <Features />
+          <AccountingIntelligence />
           <HowItWorks />
           <ServicesPricing />
         </Container>

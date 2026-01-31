@@ -31,7 +31,7 @@ export const MobileNavbar = ({ navItems, visible }: Props) => {
             : "none",
           width: visible ? "90%" : "100%",
           y: visible ? 20 : 0,
-          borderRadius: open ? "4px" : "2rem",
+          borderRadius: "2rem",
           paddingRight: visible ? "12px" : "0px",
           paddingLeft: visible ? "12px" : "0px",
         }}
@@ -47,19 +47,23 @@ export const MobileNavbar = ({ navItems, visible }: Props) => {
       >
         <div className="flex flex-row justify-between items-center w-full">
           <Logo />
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 relative z-[60]">
             <LocaleSwitcher className="scale-90" />
-            {open ? (
-              <IconX
-                className="text-black dark:text-white"
-                onClick={() => setOpen(!open)}
-              />
-            ) : (
-              <IconMenu2
-                className="text-black dark:text-white"
-                onClick={() => setOpen(!open)}
-              />
-            )}
+            <button
+              onClick={() => setOpen(!open)}
+              className="p-1 -m-1 cursor-pointer"
+              aria-label={open ? "Close menu" : "Open menu"}
+            >
+              {open ? (
+                <IconX
+                  className="text-black dark:text-white"
+                />
+              ) : (
+                <IconMenu2
+                  className="text-black dark:text-white"
+                />
+              )}
+            </button>
           </div>
         </div>
 
@@ -73,9 +77,9 @@ export const MobileNavbar = ({ navItems, visible }: Props) => {
               exit={{ opacity: 0 }}
               className="flex rounded-lg absolute top-16 bg-white dark:bg-neutral-950 inset-x-0 z-50 flex-col items-start justify-start gap-4 w-full px-4 py-8 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             >
-              <div className="w-full border-b border-neutral-200 dark:border-neutral-800 pb-4 mb-4">
+              {/* <div className="w-full border-b border-neutral-200 dark:border-neutral-800 pb-4 mb-4">
                 <LocaleSwitcher className="w-full justify-start" />
-              </div>
+              </div> */}
               {navItems.map((navItem: any, idx: number) => (
                 <Link
                   key={`link=${idx}`}
@@ -91,7 +95,7 @@ export const MobileNavbar = ({ navItems, visible }: Props) => {
                 as={Link}
                 onClick={() => setOpen(false)}
                 href="/get-quote"
-                className="block md:hidden w-full"
+                className="block md:hidden w-full text-center"
               >
                 {t('bookConsult')}
               </Button>

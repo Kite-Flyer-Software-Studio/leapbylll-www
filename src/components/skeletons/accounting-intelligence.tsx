@@ -141,23 +141,23 @@ export const ExpertiseSkeleton = () => {
   const t = useTranslations("accountingIntelligence.skeletons.expertise");
   const [activeYear, setActiveYear] = useState(0);
   const years = [
-    { 
-      year: "1990", 
+    {
+      year: "1990",
       label: t("year1990Label"),
       percentage: 25
     },
-    { 
-      year: "2000", 
+    {
+      year: "2000",
       label: t("year2000Label"),
       percentage: 50
     },
-    { 
-      year: "2010", 
+    {
+      year: "2010",
       label: t("year2010Label"),
       percentage: 75
     },
-    { 
-      year: "2026", 
+    {
+      year: "2026",
       label: t("year2026Label"),
       percentage: 100
     },
@@ -174,7 +174,7 @@ export const ExpertiseSkeleton = () => {
     <div className="absolute inset-0 p-6 flex flex-col items-center justify-center">
       {/* Main Visual - Growing Bar Chart */}
       <div className="relative w-full max-w-sm mb-6">
-        <div className="flex items-end justify-between h-32 gap-3">
+        <div className="flex items-end justify-between h-1 gap-3">
           {years.map((yearData, i) => {
             const isActive = activeYear >= i;
             const isCurrent = activeYear === i;
@@ -192,8 +192,8 @@ export const ExpertiseSkeleton = () => {
                       isCurrent
                         ? "bg-gradient-to-t from-blue-600 to-blue-400"
                         : isActive
-                        ? "bg-gradient-to-t from-green-600 to-green-400"
-                        : "bg-gradient-to-t from-neutral-300 to-neutral-200 dark:from-neutral-700 dark:to-neutral-600"
+                          ? "bg-gradient-to-t from-green-600 to-green-400"
+                          : "bg-gradient-to-t from-neutral-300 to-neutral-200 dark:from-neutral-700 dark:to-neutral-600"
                     )}
                     initial={{ height: 0 }}
                     animate={{ height: isActive ? `${yearData.percentage}%` : 0 }}
@@ -227,8 +227,8 @@ export const ExpertiseSkeleton = () => {
                     isCurrent
                       ? "text-blue-600 dark:text-blue-400"
                       : isActive
-                      ? "text-green-600 dark:text-green-400"
-                      : "text-neutral-400 dark:text-neutral-500"
+                        ? "text-green-600 dark:text-green-400"
+                        : "text-neutral-400 dark:text-neutral-500"
                   )}
                   animate={isCurrent ? { scale: [1, 1.1, 1] } : {}}
                   transition={{ duration: 0.5 }}
@@ -315,8 +315,8 @@ export const ExpertiseSkeleton = () => {
               i === activeYear
                 ? "w-8 bg-blue-500"
                 : i < activeYear
-                ? "w-1.5 bg-green-500"
-                : "w-1.5 bg-neutral-300 dark:bg-neutral-600"
+                  ? "w-1.5 bg-green-500"
+                  : "w-1.5 bg-neutral-300 dark:bg-neutral-600"
             )}
             animate={i === activeYear ? { width: [6, 32, 32] } : {}}
             transition={{ duration: 0.3 }}

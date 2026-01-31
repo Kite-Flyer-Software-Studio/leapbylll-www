@@ -23,7 +23,7 @@ export const Logo = ({ logoClassName }: { logoClassName?: string }) => {
         alt="LEAP by LLL"
         width={120}
         height={40}
-        className={cn("h-12 w-auto", logoClassName)}
+        className={cn("h-16 w-auto", logoClassName)}
         priority
       />
     </Link>

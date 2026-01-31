@@ -25,7 +25,7 @@ export const Features = () => {
 
       <Container>
         <div className="grid grid-cols-1 md:grid-cols-2 border-y border-neutral-200 dark:border-neutral-800 divide-neutral-200 dark:divide-neutral-800 mt-12">
-          <div className="md:border-r border-b border-neutral-200 dark:border-neutral-800">
+          <div className="md:border-r border-neutral-200 dark:border-neutral-800">
             <CardContent>
               <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
                 {t("features.dedicatedCPA.title")}
@@ -38,7 +38,7 @@ export const Features = () => {
               <SkeletonOne />
             </CardSkeleton>
           </div>
-          <div className="border-b border-neutral-200 dark:border-neutral-800">
+          <div className="border-t border-neutral-200 dark:border-neutral-800">
             <CardContent>
               <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
                 {t("features.smartAccounting.title")}
@@ -51,7 +51,7 @@ export const Features = () => {
               <SkeletonTwo />
             </CardSkeleton>
           </div>
-          <div className="md:border-r border-neutral-200 dark:border-neutral-800">
+          <div className="md:border-r border-t border-neutral-200 dark:border-neutral-800">
             <CardContent>
               <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
                 {t("features.flexiblePricing.title")}
@@ -64,7 +64,7 @@ export const Features = () => {
               <SkeletonThree />
             </CardSkeleton>
           </div>
-          <div className="dark:border-neutral-800">
+          <div className="border-t border-neutral-200 dark:border-neutral-800">
             <CardContent>
               <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
                 {t("features.allInOne.title")}

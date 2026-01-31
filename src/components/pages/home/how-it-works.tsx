@@ -12,10 +12,7 @@ import { useTranslations } from "next-intl";
 import {
   IconCheck,
   IconClock,
-  IconExclamationCircle,
   IconLoader2,
-  IconPrison,
-  IconRipple,
   IconFileText,
   IconCalendarDue,
   IconSend,
@@ -125,7 +122,7 @@ export const StepBadge = ({
     <div className="absolute -top-3 -left-3 z-10">
       <div className={cn(
         "flex items-center justify-center w-12 h-12 rounded-full font-semibold text-base shadow-sm border-2",
-        "bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 border-neutral-200 dark:border-neutral-700"
+        "bg-green-100 dark:bg-green-900 text-green-700 dark:text-green-300 border-green-200 dark:border-green-700"
       )}>
         {step}
       </div>

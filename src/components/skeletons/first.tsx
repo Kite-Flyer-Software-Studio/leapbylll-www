@@ -30,127 +30,129 @@ export const SkeletonOne = () => {
   const t = useTranslations("skeletons.first");
 
   return (
-    <div className="w-full h-full p-4 bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-700 rounded-xl">
-      {/* Dashboard Header */}
-      <motion.div
-        initial={{ opacity: 0, y: -10 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
-        className="flex items-center gap-2 mb-6"
-      >
-        <div className="flex gap-2">
-          <motion.div
-            whileHover={{ scale: 1.2 }}
-            className="w-3 h-3 rounded-full bg-[#FF5F57]"
-          ></motion.div>
-          <motion.div
-            whileHover={{ scale: 1.2 }}
-            className="w-3 h-3 rounded-full bg-[#FEBC2E]"
-          ></motion.div>
-          <motion.div
-            whileHover={{ scale: 1.2 }}
-            className="w-3 h-3 rounded-full bg-[#28C840]"
-          ></motion.div>
-        </div>
-      </motion.div>
-
-      {/* Dashboard Content */}
-      <div className="flex flex-col md:flex-row h-full gap-4">
-        {/* Left Panel - CPA Profile */}
+    <div className="flex-1 rounded-t-3xl gap-2 flex flex-col bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 mx-auto w-full h-full absolute inset-x-10 inset-y-2 pt-2 px-2">
+      <div className="shadow-black/10 gap-4 border bg-white dark:bg-neutral-900 border-transparent ring-1 rounded-tl-[16px] ring-black/10 flex flex-col items-start flex-1">
+        {/* Dashboard Header */}
         <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          whileHover={{ scale: 1.02 }}
-          className="flex-shrink-0 bg-neutral-50 dark:bg-neutral-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          className="flex items-center gap-2 border-b w-full py-2 px-4"
         >
-          <div className="flex items-center gap-4">
-            <div className="relative">
-              <motion.div
-                whileHover={{ scale: 1.1 }}
-                className="rounded-full overflow-hidden ring-2 ring-white dark:ring-neutral-700 w-14 h-14"
-              >
-                <Image
-                  src="/natluk.jpeg"
-                  alt="Natalie Luk, CPA"
-                  width={56}
-                  height={56}
-                  className="w-14 h-14 object-cover"
-                />
-              </motion.div>
-              <motion.div
-                animate={{ scale: [1, 1.2, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white dark:border-neutral-800"
-              />
-            </div>
+          <div className="flex gap-2">
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              className="space-y-1"
-            >
-              <div className="text-[10px] md:text-xs font-medium text-neutral-400 tracking-wider">
-                {t("yourDedicatedAdvisor")}
-              </div>
-              <div className="text-xs md:text-lg font-semibold bg-gradient-to-r from-neutral-800 to-neutral-600 dark:from-neutral-200 dark:to-neutral-400 bg-clip-text text-transparent">
-                {t("cpaName")}
-              </div>
-            </motion.div>
+              whileHover={{ scale: 1.2 }}
+              className="w-3 h-3 rounded-full bg-[#FF5F57]"
+            ></motion.div>
+            <motion.div
+              whileHover={{ scale: 1.2 }}
+              className="w-3 h-3 rounded-full bg-[#FEBC2E]"
+            ></motion.div>
+            <motion.div
+              whileHover={{ scale: 1.2 }}
+              className="w-3 h-3 rounded-full bg-[#28C840]"
+            ></motion.div>
           </div>
         </motion.div>
 
-        {/* Right Panel - Messaging Interface */}
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-          whileHover={{ scale: 1.02 }}
-          className="flex-1 bg-neutral-50 dark:bg-neutral-800 relative p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
-        >
+        {/* Dashboard Content */}
+        <div className="flex flex-col md:flex-row w-full gap-4 px-4 pb-4">
+          {/* Left Panel - CPA Profile */}
           <motion.div
-            whileHover={{ x: -5 }}
-            className="flex items-center text-neutral-300 dark:text-neutral-600 mx-2 absolute top-4 left-0"
-          >
-            <IconCircleArrowLeft className="w-6 h-6 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors cursor-pointer" />
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="flex flex-col h-full justify-center items-center text-neutral-400"
+            whileHover={{ scale: 1.02 }}
+            className="flex-shrink-0 bg-neutral-50 dark:bg-neutral-800 p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
+          >
+            <div className="flex items-center gap-4">
+              <div className="relative">
+                <motion.div
+                  whileHover={{ scale: 1.1 }}
+                  className="rounded-full overflow-hidden ring-2 ring-white dark:ring-neutral-700 w-14 h-14"
+                >
+                  <Image
+                    src="/natluk.jpeg"
+                    alt="Natalie Luk, CPA"
+                    width={56}
+                    height={56}
+                    className="w-14 h-14 object-cover"
+                  />
+                </motion.div>
+                <motion.div
+                  animate={{ scale: [1, 1.2, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white dark:border-neutral-800"
+                />
+              </div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="space-y-1"
+              >
+                <div className="text-[10px] md:text-xs font-medium text-neutral-400 tracking-wider">
+                  {t("yourDedicatedAdvisor")}
+                </div>
+                <div className="text-xs md:text-lg font-semibold bg-gradient-to-r from-neutral-800 to-neutral-600 dark:from-neutral-200 dark:to-neutral-400 bg-clip-text text-transparent">
+                  {t("cpaName")}
+                </div>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* Right Panel - Messaging Interface */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            whileHover={{ scale: 1.02 }}
+            className="flex-1 bg-neutral-50 dark:bg-neutral-800 relative p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow"
           >
             <motion.div
-              whileHover={{ scale: 1.1 }}
-              transition={{ type: "spring", stiffness: 400 }}
+              whileHover={{ x: -5 }}
+              className="flex items-center text-neutral-300 dark:text-neutral-600 mx-2 absolute top-4 left-0"
             >
-              <Logo />
+              <IconCircleArrowLeft className="w-6 h-6 hover:text-neutral-600 dark:hover:text-neutral-400 transition-colors cursor-pointer" />
             </motion.div>
             <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              className="text-sm text-center mt-2"
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="flex flex-col h-full justify-center items-center text-neutral-400"
             >
-              {t("directMessaging")}
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
-              className="text-xs text-neutral-400 dark:text-neutral-500 text-center mt-1"
-            >
-              {t("messageSubtext")}
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
+                <Logo />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, ease: "easeOut" }}
+                className="text-sm text-center mt-2"
+              >
+                {t("directMessaging")}
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2, ease: "easeOut" }}
+                className="text-xs text-neutral-400 dark:text-neutral-500 text-center mt-4"
+              >
+                {t("messageSubtext")}
+              </motion.div>
             </motion.div>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

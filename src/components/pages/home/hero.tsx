@@ -18,25 +18,6 @@ export const Hero = () => {
 
   return (
     <div className="flex flex-col min-h-screen pt-20 md:pt-40 relative overflow-hidden">
-      <motion.div
-        initial={{
-          y: 40,
-          opacity: 0,
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-        }}
-        transition={{
-          ease: "easeOut",
-          duration: 0.5,
-        }}
-        className="flex justify-center"
-      >
-        <Badge>
-          {t('badge')}
-        </Badge>
-      </motion.div>
       <motion.h1
         initial={{
           y: 40,
@@ -50,10 +31,30 @@ export const Hero = () => {
           ease: "easeOut",
           duration: 0.5,
         }}
-        className="text-2xl md:text-4xl lg:text-8xl font-semibold max-w-6xl mx-auto text-center mt-6 relative z-10"
+        className="text-2xl md:text-4xl lg:text-8xl font-semibold max-w-6xl mx-auto text-center relative z-10"
       >
         <Balancer>{t('title')}</Balancer>
       </motion.h1>
+      <motion.p
+        initial={{
+          y: 40,
+          opacity: 0,
+        }}
+        animate={{
+          y: 0,
+          opacity: 1,
+        }}
+        transition={{
+          ease: "easeOut",
+          duration: 0.5,
+          delay: 0.1,
+        }}
+        className="text-center mt-4 text-lg md:text-2xl font-medium text-neutral-700 dark:text-neutral-300 max-w-4xl mx-auto relative z-10"
+      >
+        <Balancer>
+          {t('badge')}
+        </Balancer>
+      </motion.p>
       <motion.p
         initial={{
           y: 40,

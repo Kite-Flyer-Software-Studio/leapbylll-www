@@ -263,12 +263,14 @@
           "item2": "Audit by our CPA parent firm with decades of experience",
           "item3": "Profits tax computation for accurate, optimised tax filing"
         },
-        "cta": "Contact us for a clear proposal for a seamless Audit and Tax Filing engagement."
+        "cta": "Contact Us",
+        "ctaHelp": "Get a clear proposal for a seamless Audit and Tax Filing engagement."
       },
       "other": {
         "title": "Other Services",
         "description": "Additional support services tailored to your needs",
-        "cta": "Contact us for a confidential discussion",
+        "cta": "Contact Us",
+        "ctaHelp": "Schedule a confidential consultation to explore how we can support your unique business needs.",
         "services": {
           "item1": "Bank account opening assistance",
           "item2": "Individual Tax Returns",

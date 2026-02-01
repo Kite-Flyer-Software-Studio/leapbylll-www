@@ -145,6 +145,9 @@ export const CategorySection = ({
 
               {category.customCTA && (
                 <div className="mt-6 pt-6 border-t border-neutral-200 dark:border-neutral-800 text-center">
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-4">
+                    {t(`categories.${category.id}.ctaHelp`)}
+                  </p>
                   <Button
                     as={Link}
                     href={category.customCTA.action}

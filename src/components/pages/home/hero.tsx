@@ -14,6 +14,7 @@ import { useRouter } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from 'next-intl';
 import { HeroIllustration } from "./hero-illustration";
+import { FlipWords } from "@/components/ui/flip-words";
 
 export const Hero = () => {
   const router = useRouter();
@@ -83,7 +84,7 @@ export const Hero = () => {
           {t('badge')}
         </Balancer>
       </motion.p>
-      <motion.p
+      <motion.div
         initial={{
           y: 40,
           opacity: 0,
@@ -100,9 +101,30 @@ export const Hero = () => {
         className="text-center mt-6 text-base md:text-xl text-muted dark:text-muted-dark max-w-3xl mx-auto relative z-10"
       >
         <Balancer>
-          {t('subtitle')}
+          <RoughNotationGroup show={isTitleInView}>
+            <>
+              {t('subtitle.prefix')}{" "}
+              <FlipWords
+                words={t.raw('subtitle.businessTypes')}
+                duration={3000}
+                className="font-semibold text-neutral-900 dark:text-neutral-100"
+              />{" "}
+              {t('subtitle.suffix1')}{" "}
+              <RoughNotation
+                type="box"
+                animationDuration={1500}
+                iterations={1}
+                color="#22c55e"
+                strokeWidth={2}
+              >
+                {t('subtitle.location')}
+              </RoughNotation>,
+              <br />
+              {t('subtitle.suffix2')}
+            </>
+          </RoughNotationGroup>
         </Balancer>
-      </motion.p>
+      </motion.div>
       <motion.div
         initial={{
           y: 80,

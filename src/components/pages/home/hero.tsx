@@ -17,7 +17,7 @@ export const Hero = () => {
   const t = useTranslations('hero');
 
   return (
-    <div className="flex flex-col min-h-screen pt-20 md:pt-40 relative overflow-hidden">
+    <div className="flex flex-col min-h-screen pt-24 md:pt-40 relative overflow-hidden">
       <motion.h1
         initial={{
           y: 40,
@@ -31,7 +31,7 @@ export const Hero = () => {
           ease: "easeOut",
           duration: 0.5,
         }}
-        className="text-2xl md:text-4xl lg:text-8xl font-semibold max-w-6xl mx-auto text-center relative z-10"
+        className="text-3xl md:text-4xl lg:text-8xl font-semibold max-w-6xl mx-auto text-center relative z-10"
       >
         <Balancer>{t('title')}</Balancer>
       </motion.h1>

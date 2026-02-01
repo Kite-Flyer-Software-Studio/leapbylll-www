@@ -144,11 +144,11 @@ export const CategorySection = ({
               )}
 
               {category.customCTA && (
-                <div className="mt-6 pt-6 border-t border-neutral-200 dark:border-neutral-800">
-                  <Button 
+                <div className="mt-6 pt-6 border-t border-neutral-200 dark:border-neutral-800 text-center">
+                  <Button
                     as={Link}
                     href={category.customCTA.action}
-                    variant="outline" 
+                    variant="outline"
                     className="w-full"
                   >
                     {category.customCTA.text}

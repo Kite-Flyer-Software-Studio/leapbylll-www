@@ -38,7 +38,7 @@ export const CTA = () => {
               </p>
 
               <div className="relative z-10 mx-auto flex justify-center mt-6">
-                <Button>{t("button")}</Button>
+                <Button as={Link} href="/get-quote">{t("button")}</Button>
               </div>
             </div>
           </div>

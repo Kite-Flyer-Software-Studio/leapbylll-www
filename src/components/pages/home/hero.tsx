@@ -84,100 +84,87 @@ export const Hero = () => {
           {t('badge')}
         </Balancer>
       </motion.p>
-      <motion.div
-        initial={{
-          y: 40,
-          opacity: 0,
-        }}
-        animate={{
-          y: 0,
-          opacity: 1,
-        }}
-        transition={{
-          ease: "easeOut",
-          duration: 0.5,
-          delay: 0.2,
-        }}
-        className="text-center mt-6 text-base md:text-xl text-muted dark:text-muted-dark max-w-3xl mx-auto relative z-10"
-      >
-        <Balancer>
-          <RoughNotationGroup show={isTitleInView}>
-            <>
-              {t('subtitle.prefix')}{" "}
-              <FlipWords
-                words={t.raw('subtitle.businessTypes')}
-                duration={3000}
-                className="font-semibold text-neutral-900 dark:text-neutral-100"
-              />{" "}
-              {t('subtitle.suffix1')}{" "}
-              <RoughNotation
-                type="box"
-                animationDuration={1500}
-                iterations={1}
-                color="#22c55e"
-                strokeWidth={2}
-              >
-                {t('subtitle.location')}
-              </RoughNotation>,
-              <br />
-              {t('subtitle.suffix2')}
-            </>
-          </RoughNotationGroup>
-        </Balancer>
-      </motion.div>
-      <motion.div
-        initial={{
+        <motion.div
+          initial={{
+            y: 40,
+            opacity: 0,
+          }}
+          animate={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            ease: "easeOut",
+            duration: 0.5,
+            delay: 0.2,
+          }}
+          className="text-center mt-6 text-base md:text-xl text-muted dark:text-muted-dark max-w-3xl mx-auto relative z-10"
+        >
+          <Balancer>
+            {t('subtitle.prefix')}{" "}
+            <FlipWords
+              words={t.raw('subtitle.businessTypes')}
+              duration={3000}
+              className="font-semibold text-neutral-900 dark:text-neutral-100"
+            />{" "}
+            {t('subtitle.suffix1')}
+            <br />
+            {t('subtitle.suffix2')}
+          </Balancer>
+        </motion.div>
+        <motion.div
+          initial={{
+            y: 80,
+            opacity: 0,
+          }}
+          animate={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            ease: "easeOut",
+            duration: 0.5,
+            delay: 0.4,
+          }}
+          className="flex items-center gap-4 justify-center mt-6 relative z-10 px-4"
+        >
+          <Button as={Link} href="/get-quote" className="text-center">{t('getStarted')}</Button>
+          <Button
+            variant="simple"
+            as={Link}
+            href="#services-pricing"
+            className="flex space-x-2 items-center group text-center"
+          >
+            <span>{t('contactUs')}</span>
+            <HiArrowRight className="text-muted group-hover:translate-x-1 stroke-[1px] h-3 w-3 transition-transform duration-200 dark:text-muted-dark" />
+          </Button>
+        </motion.div>
+        <motion.div initial={{
           y: 80,
           opacity: 0,
         }}
-        animate={{
-          y: 0,
-          opacity: 1,
-        }}
-        transition={{
-          ease: "easeOut",
-          duration: 0.5,
-          delay: 0.4,
-        }}
-        className="flex items-center gap-4 justify-center mt-6 relative z-10 px-4"
-      >
-        <Button as={Link} href="/get-quote" className="text-center">{t('getStarted')}</Button>
-        <Button
-          variant="simple"
-          as={Link}
-          href="#services-pricing"
-          className="flex space-x-2 items-center group text-center"
-        >
-          <span>{t('contactUs')}</span>
-          <HiArrowRight className="text-muted group-hover:translate-x-1 stroke-[1px] h-3 w-3 transition-transform duration-200 dark:text-muted-dark" />
-        </Button>
-      </motion.div>
-      <motion.div initial={{
-        y: 80,
-        opacity: 0,
-      }}
-        animate={{
-          y: 0,
-          opacity: 1,
-        }}
-        transition={{
-          ease: "easeOut",
-          duration: 0.5,
-          delay: 0.6,
-        }} className="mt-10 relative z-10">
-        <p
-          className={twMerge(
-            "text-neutral-400 text-sm text-center relative z-40",
-            "text-center"
-          )}
-        >
-          {t('backedBy')}
-        </p>
-      </motion.div>
-      <div className="mt-20 relative">
-        <HeroIllustration />
-        <div className="absolute inset-x-0 bottom-0 h-40 w-full bg-gradient-to-b from-transparent via-white to-white dark:via-black/50 dark:to-black scale-[1.1] pointer-events-none" />
-      </div>
+          animate={{
+            y: 0,
+            opacity: 1,
+          }}
+          transition={{
+            ease: "easeOut",
+            duration: 0.5,
+            delay: 0.6,
+          }} className="mt-10 relative z-10">
+          <p
+            className={twMerge(
+              "text-neutral-400 text-sm text-center relative z-40",
+              "text-center"
+            )}
+          >
+            {t('backedBy')}
+          </p>
+        </motion.div>
+        <div className="mt-20 relative">
+          <HeroIllustration />
+          <div className="absolute inset-x-0 bottom-0 h-40 w-full bg-gradient-to-b from-transparent via-white to-white dark:via-black/50 dark:to-black scale-[1.1] pointer-events-none" />
+        </div>
     </div >
-  );
+  ); 
 };

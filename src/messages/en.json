@@ -25,8 +25,7 @@
     "subtitle": {
       "prefix": "Whether you are a",
       "businessTypes": ["sole entrepreneur", "growing business"],
-      "suffix1": "in",
-      "location": "Hong Kong",
+      "suffix1": "in Hong Kong,",
       "suffix2": "Leap by LLL provides all accounting and compliance support you need."
     },
     "getStarted": "Book a free consultation",

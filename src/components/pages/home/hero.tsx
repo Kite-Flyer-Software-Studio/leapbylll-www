@@ -6,6 +6,9 @@ import { HiArrowRight } from "react-icons/hi2";
 import { Badge } from "@/components/badge";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
+import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
+import { useRef } from "react";
+import { useInView } from "framer-motion";
 
 import { useRouter } from "next/navigation";
 import { Link } from "@/i18n/navigation";
@@ -15,10 +18,13 @@ import { HeroIllustration } from "./hero-illustration";
 export const Hero = () => {
   const router = useRouter();
   const t = useTranslations('hero');
+  const titleRef = useRef(null);
+  const isTitleInView = useInView(titleRef, { once: true, margin: "-100px" });
 
   return (
     <div className="flex flex-col min-h-screen pt-24 md:pt-40 relative overflow-hidden">
       <motion.h1
+        ref={titleRef}
         initial={{
           y: 40,
           opacity: 0,
@@ -33,7 +39,29 @@ export const Hero = () => {
         }}
         className="text-3xl md:text-4xl lg:text-8xl font-semibold max-w-6xl mx-auto text-center relative z-10"
       >
-        <Balancer>{t('title')}</Balancer>
+        <Balancer>
+          <RoughNotationGroup show={isTitleInView}>
+            {t('title.part1')}{" "}
+            <RoughNotation
+              type="highlight"
+              animationDuration={2000}
+              iterations={3}
+              color="#22c55e80"
+              multiline
+            >
+              <span className="text-currentColor">{t('title.accountant')}</span>
+            </RoughNotation>{" "}
+            {t('title.part2')}{" "}
+            <RoughNotation
+              type="underline"
+              animationDuration={2000}
+              iterations={10}
+              color="#22c55e"
+            >
+              {t('title.startToGrowth')}
+            </RoughNotation>.
+          </RoughNotationGroup>
+        </Balancer>
       </motion.h1>
       <motion.p
         initial={{
@@ -49,7 +77,7 @@ export const Hero = () => {
           duration: 0.5,
           delay: 0.1,
         }}
-        className="text-center mt-4 text-lg md:text-2xl font-medium text-neutral-700 dark:text-neutral-300 max-w-4xl mx-auto relative z-10"
+        className="text-center mt-12 text-lg md:text-2xl font-medium text-neutral-700 dark:text-neutral-300 max-w-4xl mx-auto relative z-10"
       >
         <Balancer>
           {t('badge')}

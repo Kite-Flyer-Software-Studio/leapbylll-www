@@ -164,7 +164,7 @@ const CardItem = ({
 }) => {
   return (
     <div className="flex justify-between items-center w-full pl-4 relative overflow-hidden">
-      <div className="items-center gap-2 flex">
+      <div className="items-center gap-2 flex mr-1">
         <div
           className={cn(
             "size-5 rounded-sm bg-blue-500 text-white flex items-center justify-center",
@@ -173,12 +173,12 @@ const CardItem = ({
         >
           {icon}
         </div>
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
+        <p className="text-xs md:text-sm text-neutral-600 dark:text-neutral-400">
           {title}
         </p>
         {badge}
       </div>
-      <motion.p className="text-sm text-neutral-500 dark:text-neutral-400 flex-nowrap max-w-[16rem] w-full text-left whitespace-nowrap">
+      <motion.p className="text-xs md:text-sm text-neutral-500 dark:text-neutral-400 flex-nowrap max-w-[16rem] w-full text-left whitespace-nowrap">
         {description.split("").map((item, idx) => (
           <motion.span
             initial={{ opacity: 0 }}

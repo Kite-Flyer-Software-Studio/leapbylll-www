@@ -2,12 +2,9 @@ import { Container } from "@/components/container";
 import { Hero } from "@/components/pages/home/hero";
 import { Background } from "@/components/background";
 import { Features } from "@/components/pages/home/features";
-// import { GridFeatures } from "@/components/pages/home/grid-features";
-// import { Testimonials } from "@/components/pages/home/testimonials";
 import { CTA } from "@/components/pages/home/cta";
 import { WhoWeServe } from "@/components/pages/home/who-we-serve";
 import { AccountingIntelligence } from "@/components/pages/home/accounting-intelligence";
-import { HowItWorks } from "@/components/pages/home/how-it-works";
 import { ServicesPricing } from "@/components/pages/home/services-pricing";
 
 export default function Home() {
@@ -22,7 +19,6 @@ export default function Home() {
           <WhoWeServe />
           <Features />
           <AccountingIntelligence />
-          {/* <HowItWorks /> */}
           <ServicesPricing />
         </Container>
         <div className="relative">

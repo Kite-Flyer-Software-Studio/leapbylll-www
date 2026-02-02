@@ -22,7 +22,7 @@ export default function Home() {
           <WhoWeServe />
           <Features />
           <AccountingIntelligence />
-          <HowItWorks />
+          {/* <HowItWorks /> */}
           <ServicesPricing />
         </Container>
         <div className="relative">

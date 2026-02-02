@@ -59,14 +59,14 @@ export const WhoWeServe = () => {
             {t("subheading")}
           </Subheading>
         </div>
-        <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-2">
+        {/* <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-2">
           <MiddleCard />
           <div className="grid grid-cols-1 gap-4">
             {targets.map((item) => (
               <FeatureCard key={item.title} {...item} />
             ))}
           </div>
-        </div>
+        </div> */}
       </Container>
     </div>
   );

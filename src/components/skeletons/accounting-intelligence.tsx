@@ -142,7 +142,7 @@ export const ExpertiseSkeleton = () => {
   const [activeYear, setActiveYear] = useState(0);
   const years = [
     {
-      year: "1990",
+      year: "1983",
       label: t("year1990Label"),
       percentage: 25
     },
@@ -281,7 +281,7 @@ export const ExpertiseSkeleton = () => {
               animate={{ scale: [1, 1.05, 1] }}
               transition={{ duration: 2, repeat: Infinity, repeatDelay: 1 }}
             >
-              35+
+              40+
             </motion.div>
             <div className="text-[10px] text-neutral-600 dark:text-neutral-400 -mt-1">
               Years in HK

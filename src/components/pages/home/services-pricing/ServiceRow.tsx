@@ -1,7 +1,7 @@
 import { cn } from "@/lib/utils";
 import { IconCheck } from "@tabler/icons-react";
 import { useTranslations } from "next-intl";
-import { Service, PricingPeriod } from "./types";
+import { Service } from "./types";
 
 interface ServiceRowProps {
   service: Service;
@@ -12,25 +12,6 @@ interface ServiceRowProps {
 export const ServiceRow = ({ service, isSelected, onToggle }: ServiceRowProps) => {
   const t = useTranslations("servicesPricing");
 
-  const getPeriodBadge = (period: PricingPeriod) => {
-    const badges = {
-      monthly: {
-        text: t("badges.monthly"),
-        color: "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400",
-      },
-      yearly: {
-        text: t("badges.yearly"),
-        color: "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400",
-      },
-      "one-time": {
-        text: t("badges.oneTime"),
-        color: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400",
-      },
-    };
-    return badges[period];
-  };
-
-  const badge = getPeriodBadge(service.period);
 
   return (
     <div
@@ -65,14 +46,6 @@ export const ServiceRow = ({ service, isSelected, onToggle }: ServiceRowProps) =
                 <h4 className="font-semibold text-neutral-900 dark:text-neutral-100">
                   {service.name}
                 </h4>
-                <span
-                  className={cn(
-                    "px-2 py-0.5 rounded text-xs font-medium shrink-0",
-                    badge.color
-                  )}
-                >
-                  {badge.text}
-                </span>
               </div>
               <p className="text-sm text-neutral-600 dark:text-neutral-400 mb-3">
                 {service.description}

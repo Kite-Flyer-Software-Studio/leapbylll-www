@@ -86,8 +86,8 @@ export function HowWeSupport() {
       content: (
         <div>
           <div className="mb-6 flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30">
-              <IconSettings className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-green-300 dark:bg-blue-900/30">
+              <IconSettings className="h-5 w-5 text-green-700 dark:text-blue-400" />
             </div>
             <h3 className="text-xl font-bold text-neutral-800 md:text-2xl dark:text-neutral-200">
               The Engine Room of Your Business
@@ -147,8 +147,8 @@ export function HowWeSupport() {
       content: (
         <div>
           <div className="mb-6 flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-purple-100 dark:bg-purple-900/30">
-              <IconChecklist className="h-5 w-5 text-purple-600 dark:text-purple-400" />
+            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-700 dark:bg-purple-900/30">
+              <IconChecklist className="h-5 w-5 text-white dark:text-purple-400" />
             </div>
             <h3 className="text-xl font-bold text-neutral-800 md:text-2xl dark:text-neutral-200">
               Validate, Comply, and Look Ahead

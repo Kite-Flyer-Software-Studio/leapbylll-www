@@ -482,11 +482,13 @@
   },
   "whatsapp": {
     "tooltip": "Contact us on WhatsApp",
-    "message": "Hello! I'm interested in learning more about Leap by LLL's professional accounting services. I would like to inquire about:"
+    "message": "Hello! I'm interested in learning more about Leap by LLL's professional accounting services. I would like to inquire about:",
+    "button": "WhatsApp Us"
   },
   "email": {
     "tooltip": "Email us",
-    "subject": "Inquiry about Leap by LLL Services"
+    "subject": "Inquiry about Leap by LLL Services",
+    "button": "Email Us"
   },
   "footer": {
     "description": "Leap by LLL provides Hong Kong founders with dedicated CPA services, smart cloud accounting, and stress-free compliance.",

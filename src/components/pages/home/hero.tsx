@@ -14,7 +14,6 @@ import { useRouter } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from 'next-intl';
 import { HeroIllustration } from "./hero-illustration";
-import { FlipWords } from "@/components/ui/flip-words";
 
 export const Hero = () => {
   const router = useRouter();
@@ -47,8 +46,8 @@ export const Hero = () => {
               type="highlight"
               animationDuration={2000}
               iterations={3}
-              // color="#abdf86"
-              color="#22c55e"
+              color="#abdf86"
+              // color="#22c55e"
               multiline
             >
               <span className="text-currentColor">{t('title.accountant')}</span>
@@ -80,7 +79,8 @@ export const Hero = () => {
               type="underline"
               animationDuration={2000}
               iterations={10}
-              color="#22c55e"
+              color="#abdf86"
+            // color="#22c55e"
             >
               <span className="text-currentColor">{t('subtitle.suffix')}</span>
             </RoughNotation>

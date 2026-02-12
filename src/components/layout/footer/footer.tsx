@@ -9,21 +9,13 @@ export const Footer = () => {
   const t = useTranslations("footer");
 
   const navigation = [
-    {
-      name: t("links.whoWeServe"),
-      href: "/#who-we-serve",
-    },
-    {
-      name: t("links.accountingIntelligence"),
-      href: "/#accounting-intelligence",
-    },
+    // {
+    //   name: t("links.accountingIntelligence"),
+    //   href: "/#accounting-intelligence",
+    // },
     {
       name: t("links.whyLeap"),
       href: "/#why-leap",
-    },
-    {
-      name: t("links.howItWorks"),
-      href: "/#how-it-works",
     },
     {
       name: t("links.servicesPricing"),
@@ -41,16 +33,7 @@ export const Footer = () => {
       href: "/contact-us",
     },
   ];
-  // const legal = [
-  //   {
-  //     name: t("links.privacyPolicy"),
-  //     href: "#",
-  //   },
-  //   {
-  //     name: t("links.termsOfService"),
-  //     href: "#",
-  //   },
-  // ];
+
   const socials = [
     {
       name: t("links.linkedin"),

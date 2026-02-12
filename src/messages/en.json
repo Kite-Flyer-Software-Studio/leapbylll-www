@@ -188,28 +188,10 @@
       }
     }
   },
-  "howItWorks": {
-    "badge": "How It Works",
-    "heading": "Four simple steps to compliant, investor-ready finances",
-    "subheading": "From your first call to ongoing monthly support, we make compliance predictable and painless – so you can stay focused on building your business.",
-    "steps": {
-      "step1": {
-        "title": "Understand your business",
-        "description": "We start with a short call to learn your business model, transaction volume, and goals – so we can recommend the right bundle."
-      },
-      "step2": {
-        "title": "Set up your Leap by LLL stack",
-        "description": "We handle onboarding to our smart accounting system, gather initial documents, and align your compliance calendar for the year."
-      },
-      "step3": {
-        "title": "Run your business, we handle the rest",
-        "description": "Each month we keep your books up‑to‑date, track deadlines, and answer questions, while you focus on customers and product."
-      },
-      "step4": {
-        "title": "Review, refine, and grow",
-        "description": "We review your numbers with you, flag risks, and suggest improvements, so your finances stay investor‑ and bank‑ready."
-      }
-    }
+  "howWeSupport": {
+    "badge": "How We Support",
+    "heading": "Support for Your Company From Our Family",
+    "subheading": "From your first call to ongoing monthly support, we make compliance predictable and painless – so you can stay focused on building your business."
   },
   "servicesPricing": {
     "badge": "Pricing",

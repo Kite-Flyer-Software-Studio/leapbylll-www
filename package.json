@@ -41,6 +41,7 @@
     "react-hook-form": "^7.51.5",
     "react-icons": "^5.2.1",
     "react-rough-notation": "^1.0.8",
+    "react-use-measure": "^2.1.7",
     "react-wrap-balancer": "^1.1.1",
     "reading-time": "^1.5.0",
     "remark-gfm": "^4.0.0",

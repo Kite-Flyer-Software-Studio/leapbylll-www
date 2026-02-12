@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Home",
+    "about": "About Us",
     "whoWeServe": "Who We Serve",
     "accountingIntelligence": "Our Technology",
     "features": "Why Leap by LLL",
@@ -84,6 +85,33 @@
         "filingsOnTime": "Filings On-Time",
         "clientSatisfaction": "Client Satisfaction",
         "complianceRate": "Compliance Rate"
+      }
+    }
+  },
+  "aboutIntro": {
+    "badge": "Why We Built Leap by LLL",
+    "heading": "Family-Run Excellence Meets Modern Innovation",
+    "description": {
+      "part1": "Since 1986, our family CPA firm has helped Hong Kong businesses thrive. But we saw a gap. The fast-paced world of startups and modern SMEs needed something different: agility, tech-forward tools, and strategic partnership from day one—without losing the trusted expertise and in-house accountability we're known for.",
+      "part2": "So, we created <strong>Leap by LLL</strong>.",
+      "part3": "It's a purpose-built platform that combines professional business expertise of our legacy with the energy, pricing, and focus you deserve. You get a direct line to a team that is dedicated to providing you with a seamless, end-to-end solution – a true partner for your business."
+    },
+    "imageAlt": "About Leap by LLL",
+    "featuredIn": "Trusted by businesses across"
+  },
+  "aboutFaqs": {
+    "badge": "FAQs",
+    "heading": "Frequently Asked Questions",
+    "subheading": "Find answers to common questions about our services. Can't find what you're looking for? Feel free to reach out.",
+    "contactButton": "Contact Us",
+    "items": {
+      "0": {
+        "question": "How are you different from other online accounting services?",
+        "answer": "Great question. While we do not have the marketing budget of other service providers, our business models are fundamentally different in ways that matter deeply for your business's security and success.\n\nSome service providers are tech platforms that often outsource the actual accounting work. This can mean your financial data is sent to offshore teams or freelance bookkeepers you'll never meet. You interact with a customer service agent, not your accountant.\n\nWe are a Hong Kong-based, family-run CPA firm. Every piece of work—from a receipt scanned in our system to your annual tax filing—is performed in-house by our own, local team of CPAs and accountants. Your dedicated advisor sits in our Hong Kong office, knows the local market intimately, and is directly accountable for your work.\n\nIn short, we offer a true professional partnership, not a faceless, outsourced service. You get the efficiency of modern technology with the security, accountability, and strategic insight of a local expert partner."
+      },
+      "1": {
+        "question": "What's the advantage of using one firm for everything?",
+        "answer": "Imagine building a house where the architect, builder, and inspector never speak. That's the risk with fragmented business services. Some service providers do not hold the license or qualification to provide the end-to-end solution that we offer. As for us, we have a fully qualified in-house team to handle all your business needs, from company secretarial services, to accounting, to audit and tax filings. This eliminates errors, saves you time managing multiple relationships, and allows for truly strategic, holistic advice."
       }
     }
   },

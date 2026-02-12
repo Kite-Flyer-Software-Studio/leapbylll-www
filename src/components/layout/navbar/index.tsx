@@ -14,11 +14,11 @@ export function NavBar() {
   const navItems = [
     {
       title: t('features'),
-      link: pathname === '/contact-us' || pathname === '/get-quote' ? "/#why-leap" : "#why-leap",
+      link: pathname === '/contact-us' || pathname === '/get-quote' || pathname === '/about' ? "/#why-leap" : "#why-leap",
     },
     {
       title: t('howWeSupport'),
-      link: pathname === '/contact-us' || pathname === '/get-quote' ? "/#how-we-support" : "#how-we-support",
+      link: pathname === '/contact-us' || pathname === '/get-quote' || pathname === '/about' ? "/#how-we-support" : "#how-we-support",
     },
     // {
     //   title: t('accountingIntelligence'),
@@ -26,7 +26,11 @@ export function NavBar() {
     // },
     {
       title: t('servicesPricing'),
-      link: pathname === '/contact-us' || pathname === '/get-quote' ? "/#services-pricing" : "#services-pricing",
+      link: pathname === '/contact-us' || pathname === '/get-quote' || pathname === '/about' ? "/#services-pricing" : "#services-pricing",
+    },
+    {
+      title: t('about'),
+      link: '/about',
     },
     {
       title: t('contactUs'),

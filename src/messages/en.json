@@ -14,23 +14,14 @@
     "bookConsult": "Book a free consult"
   },
   "hero": {
-    "badge": "Backed by Legacy, Built for Starters.",
     "title": {
-      "part1": "Your",
-      "accountant": "Accountant",
-      "part2": "from",
-      "startToGrowth": "Start to Growth",
-      "full": "Your Accountant from Start to Growth."
+      "part1": "Hong Kong's",
+      "accountant": "Family-Run",
+      "startToGrowth": "Accounting Firm"
     },
     "subtitle": {
-      "prefix": "Whether you are a",
-      "businessTypes": [
-        "solo entrepreneur",
-        "growing SME",
-        "micro-small business"
-      ],
-      "suffix1": "in Hong Kong,",
-      "suffix2": "Leap by LLL provides all accounting and compliance support you need."
+      "prefix": "Company Secretary, Accounting, Audit & Tax – ",
+      "suffix": "All Handled Under One Roof"
     },
     "getStarted": "Book a free consultation",
     "contactUs": "See services & pricing",
@@ -222,9 +213,9 @@
     }
   },
   "servicesPricing": {
-    "badge": "Services & Pricing",
+    "badge": "Pricing",
     "heading": "Transparent pricing that scales with your business",
-    "subheading": "Our listed prices are benchmarks for standard engagements. Service bundles tailored to your needs are available. Your final quote will be customized after a brief discussion about your business.",
+    "subheading": "Pay only for what you use. Service bundles tailored to your needs are available. Your final quote will be customized after a brief discussion about your business.",
     "categories": {
       "accounting": {
         "title": "Accounting & Financial Reporting",
@@ -806,26 +797,5 @@
     "heading": "Blog",
     "subheading": "Latest news and updates",
     "readMore": "Read more"
-  },
-  "login": {
-    "heading": "Welcome back",
-    "subheading": "Sign in to your account",
-    "email": "Email",
-    "password": "Password",
-    "forgotPassword": "Forgot password?",
-    "submit": "Sign in",
-    "noAccount": "Don't have an account?",
-    "signUp": "Sign up"
-  },
-  "signup": {
-    "heading": "Create an account",
-    "subheading": "Get started with Leap by LLL",
-    "firstName": "First name",
-    "lastName": "Last name",
-    "email": "Email",
-    "password": "Password",
-    "submit": "Sign up",
-    "haveAccount": "Already have an account?",
-    "signIn": "Sign in"
   }
 }

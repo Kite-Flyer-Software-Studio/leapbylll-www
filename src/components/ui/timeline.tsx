@@ -50,7 +50,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               </div>
               <h3 className="hidden text-xl md:pl-20 md:text-5xl font-bold text-[#4e8d6f] dark:text-neutral-500 md:flex flex-col gap-2">
                 <span>{item.title}</span>
-                <span className="text-lg mb-4 text-left font-bold text-[#abdf86] dark:text-neutral-500">
+                <span className="text-lg mb-4 text-left font-bold text-[#4e8d6f]/60 dark:text-neutral-500">
                   {item.subtitle}
                 </span>
               </h3>
@@ -59,7 +59,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
             <div className="relative pl-20 pr-4 md:pl-4 w-full">
               <h3 className="md:hidden flex flex-col gap-2 text-2xl mb-4 text-left font-bold text-[#4e8d6f] dark:text-neutral-500">
                 <span>{item.title}</span>
-                <span className="text-lg mb-4 text-left font-bold text-[#abdf86] dark:text-neutral-500">
+                <span className="text-lg mb-4 text-left font-bold text-[#4e8d6f]/60 dark:text-neutral-500">
                   {item.subtitle}
                 </span>
               </h3>

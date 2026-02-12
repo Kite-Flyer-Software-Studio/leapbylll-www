@@ -18,6 +18,10 @@ export const Footer = () => {
       href: "/#why-leap",
     },
     {
+      name: t("links.howWeSupport"),
+      href: "/#how-we-support",
+    },
+    {
       name: t("links.servicesPricing"),
       href: "/#services-pricing",
     },

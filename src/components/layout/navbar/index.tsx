@@ -16,6 +16,10 @@ export function NavBar() {
       title: t('features'),
       link: pathname === '/contact-us' || pathname === '/get-quote' ? "/#why-leap" : "#why-leap",
     },
+    {
+      title: t('howWeSupport'),
+      link: pathname === '/contact-us' || pathname === '/get-quote' ? "/#how-we-support" : "#how-we-support",
+    },
     // {
     //   title: t('accountingIntelligence'),
     //   link: pathname === '/contact-us' || pathname === '/get-quote' ? "/#accounting-intelligence" : "#accounting-intelligence",

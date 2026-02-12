@@ -5,6 +5,7 @@
     "accountingIntelligence": "Our Technology",
     "features": "Why Leap by LLL",
     "whyLeap": "Why Leap by LLL",
+    "howWeSupport": "How We Support",
     "howItWorks": "How It Works",
     "servicesPricing": "Services & Pricing",
     "contact": "Contact Us",
@@ -189,9 +190,9 @@
     }
   },
   "howWeSupport": {
-    "badge": "How We Support",
+    "badge": "How We Support You",
     "heading": "Support for Your Company From Our Family",
-    "subheading": "From your first call to ongoing monthly support, we make compliance predictable and painless – so you can stay focused on building your business."
+    "subheading": "From business incorporation to annual audit & tax filing, we take out the hassle and stress – so you can stay focused on building your business."
   },
   "servicesPricing": {
     "badge": "Pricing",
@@ -498,7 +499,7 @@
       "whoWeServe": "Who We Serve",
       "accountingIntelligence": "Our Technology",
       "whyLeap": "Why Leap by LLL",
-      "howItWorks": "How It Works",
+      "howWeSupport": "How We Support",
       "servicesPricing": "Services & Pricing",
       "contactUs": "Contact Us",
       "getQuote": "Get Quote",

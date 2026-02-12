@@ -15,12 +15,12 @@ export const CostDisplay = ({ costs, hasIncorporationPackage }: CostDisplayProps
   return (
     <div className="relative rounded-2xl border border-neutral-200 bg-white p-4 sm:p-6 shadow-xl dark:border-neutral-800 dark:bg-neutral-900 w-full">
       {/* Background gradient glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-purple-500/5 to-green-500/5 rounded-2xl" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#abdf86]/5 via-[#2b5d46]/7 to-[#4e8d6f]/5 rounded-2xl" />
 
       <div className="relative z-10">
         <div className="flex items-center gap-3 mb-6">
-          <div className="p-2 rounded-lg bg-blue-100 dark:bg-blue-900/30">
-            <IconCurrencyDollar className="size-6 text-blue-600 dark:text-blue-400" />
+          <div className="p-2 rounded-lg bg-emerald-100 dark:bg-blue-900/30">
+            <IconCurrencyDollar className="size-6 text-emerald-700 dark:text-blue-400" />
           </div>
           <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-100">
             {t("calculator.title")}

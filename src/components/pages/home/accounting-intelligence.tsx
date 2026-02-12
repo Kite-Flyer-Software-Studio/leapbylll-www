@@ -7,19 +7,19 @@ import { Subheading } from "@/components/subheading";
 import { Container } from "@/components/container";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
-import { 
-  OCRSystemSkeleton, 
-  ExpertiseSkeleton, 
+import {
+  OCRSystemSkeleton,
+  ExpertiseSkeleton,
   ReceiptHandlingSkeleton,
   StrategicAssetSkeleton,
-  AuditReadySkeleton 
+  AuditReadySkeleton
 } from "@/components/skeletons/accounting-intelligence";
 
 export const AccountingIntelligence = () => {
   const t = useTranslations("accountingIntelligence");
 
   return (
-    <div id="accounting-intelligence" className="relative z-20 py-10 lg:py-40 overflow-hidden flex flex-col items-center">
+    <div id="accounting-intelligence" className="relative z-20 py-10 lg:py-20 overflow-hidden flex flex-col items-center">
       <Badge>{t("badge")}</Badge>
       <Heading className="mt-4" as="h2">{t("heading")}</Heading>
       <Subheading className="text-center">

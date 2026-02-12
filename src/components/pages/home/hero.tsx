@@ -47,18 +47,12 @@ export const Hero = () => {
               type="highlight"
               animationDuration={2000}
               iterations={3}
-              color="#22c55e80"
+              // color="#abdf86"
+              color="#22c55e"
               multiline
             >
               <span className="text-currentColor">{t('title.accountant')}</span>
             </RoughNotation>{" "}
-            {/* <RoughNotation
-              type="underline"
-              animationDuration={2000}
-              iterations={10}
-              color="#22c55e"
-            > */}
-            {/* </RoughNotation>. */}
           </RoughNotationGroup>
         </Balancer>
         <span>{` ${t('title.startToGrowth')}`}</span>

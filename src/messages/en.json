@@ -87,7 +87,7 @@
     }
   },
   "accountingIntelligence": {
-    "badge": "Our Accounting System",
+    "badge": "What We Have Built",
     "heading": "Smart accounting technology meets human expertise",
     "subheading": "Our proprietary OCR-driven system transforms your receipts into strategic insights, powered by decades of Hong Kong accounting experience.",
     "features": {
@@ -168,8 +168,7 @@
   },
   "whyLeap": {
     "badge": "Why Leap by LLL",
-    "heading": "Why Hong Kong founders choose us",
-    "subheading": "More than just accounting – we're your compliance partner who understands startups, speaks your language, and keeps your business on track from day one.",
+    "heading": "We offer what new providers can't, and what traditional firms won't",
     "features": {
       "dedicatedCPA": {
         "title": "Dedicated CPA advisor",

@@ -13,20 +13,12 @@ export function NavBar() {
   // Navigation items - adjust links based on current page
   const navItems = [
     {
-      title: t('whoWeServe'),
-      link: pathname === '/contact-us' || pathname === '/get-quote' ? "/#who-we-serve" : "#who-we-serve",
-    },
-    {
       title: t('features'),
       link: pathname === '/contact-us' || pathname === '/get-quote' ? "/#why-leap" : "#why-leap",
     },
     {
       title: t('accountingIntelligence'),
       link: pathname === '/contact-us' || pathname === '/get-quote' ? "/#accounting-intelligence" : "#accounting-intelligence",
-    },
-    {
-      title: t('howItWorks'),
-      link: pathname === '/contact-us' || pathname === '/get-quote' ? "/#how-it-works" : "#how-it-works",
     },
     {
       title: t('servicesPricing'),

@@ -655,7 +655,7 @@
       "errorPhoneTooLong": "Phone number is too long",
       "errorSelectService": "Please select at least one service",
       "successTitle": "Consultation Request Received!",
-      "successMessage": "Thank you for your consultation request. We have received your information and will get back to you within 1 business day with a personalized consultation.",
+      "successMessage": "Thank you for your consultation request. We have received your information and will get back to you as soon as possible.",
       "successBackButton": "Back to Home",
       "errorTitle": "Something Went Wrong",
       "errorMessage": "We encountered an error sending your consultation request. Please try again or contact us directly at leap@lll.com.hk",

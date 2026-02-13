@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { EmailPayload, QuoteFormData } from '@/types/quote-form';
 
 /**
- * API Route for sending quote request emails using Nodemailer with SMTP
+ * API Route for sending consultation request emails using Nodemailer with SMTP
  *
  * Required Environment Variables:
  * - MAIL_HOST=smtp.example.com (your SMTP server)
@@ -78,7 +78,7 @@ function formatFormDataForEmail(data: QuoteFormData): string {
   };
 
   return `
-New Quote Request - LEAP by LLL
+New Consultation Request - LEAP by LLL
 
 ═══════════════════════════════════════
 CLIENT INFORMATION
@@ -102,10 +102,16 @@ Selected Services:   ${selectedServices}
 BUSINESS DETAILS
 ═══════════════════════════════════════
 
-Transactions/Month:  ${transactionLabels[data.transactionsPerMonth] || data.transactionsPerMonth}
-Bank Accounts:       ${bankAccountLabels[data.numberOfBankAccounts] || data.numberOfBankAccounts}
+Transactions/Month:  ${
+    transactionLabels[data.transactionsPerMonth] || data.transactionsPerMonth
+  }
+Bank Accounts:       ${
+    bankAccountLabels[data.numberOfBankAccounts] || data.numberOfBankAccounts
+  }
 Employees:           ${data.numberOfEmployees}
-Annual Turnover:     ${turnoverLabels[data.annualTurnover] || data.annualTurnover}
+Annual Turnover:     ${
+    turnoverLabels[data.annualTurnover] || data.annualTurnover
+  }
   `.trim();
 }
 
@@ -145,7 +151,7 @@ export async function POST(request: NextRequest) {
 
     const emailBody =
       formatFormDataForEmail(formData) + formatFeeEstimates(payload);
-    const subject = `New Quote Request - ${formData.companyName} - LEAP by LLL`;
+    const subject = `New Consultation Request - ${formData.companyName} - LEAP by LLL`;
 
     // Send email using Nodemailer
     const info = await transporter.sendMail({
@@ -163,23 +169,23 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: 'Quote request sent successfully',
+      message: 'Consultation request sent successfully',
     });
   } catch (error) {
-    console.error('Error processing quote request:', error);
+    console.error('Error processing consultation request:', error);
 
     // More specific error handling for email errors
     if (error instanceof Error) {
       console.error('Error details:', error.message);
       return NextResponse.json(
         { success: false, error: `Failed to send email: ${error.message}` },
-        { status: 500 },
+        { status: 500 }
       );
     }
 
     return NextResponse.json(
       { success: false, error: 'Internal server error' },
-      { status: 500 },
+      { status: 500 }
     );
   }
 }

@@ -25,6 +25,14 @@ export const Footer = () => {
       name: t("links.servicesPricing"),
       href: "/#services-pricing",
     },
+    {
+      name: t("links.about"),
+      href: "/about",
+    },
+    {
+      name: t("links.faqs"),
+      href: "/about#faqs",
+    }
   ];
 
   const quickLinks = [
@@ -51,6 +59,14 @@ export const Footer = () => {
           <div>
             <div className="mr-4  md:flex mb-4">
               <Logo />
+            </div>
+            <div className="mb-6 space-y-1 text-xs sm:text-sm">
+              <div>9/F., Surson Commercial Building,</div>
+              <div>140-142 Austin Road,</div>
+              <div>Tsim Sha Tsui, Hong Kong</div>
+              <br />
+              <div className="mt-2">Tel. +852 2314 3668</div>
+              <div>Fax +852 2314 3113</div>
             </div>
             <div>{t("copyright")}</div>
             <div className="mt-2">{t("allRightsReserved")}</div>

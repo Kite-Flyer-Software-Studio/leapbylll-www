@@ -147,7 +147,7 @@ export const AboutFAQs = () => {
   ];
 
   return (
-    <div className="relative z-20 py-10 lg:py-20 w-full">
+    <div id="faqs" className="relative z-20 py-10 lg:py-20 w-full">
       <Container>
         <div className="flex flex-col items-center">
           <Badge>{t("badge")}</Badge>

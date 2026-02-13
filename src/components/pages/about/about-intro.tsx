@@ -12,7 +12,7 @@ export const AboutIntro = () => {
   const t = useTranslations("aboutIntro");
 
   return (
-    <div className="flex flex-col pt-24 md:pt-40 pb-40 relative overflow-hidden">
+    <div id="about" className="flex flex-col pt-24 md:pt-40 pb-40 relative overflow-hidden">
       <div className="grid grid-cols-1 gap-20 md:grid-cols-2">
         <div className="flex flex-col items-start justify-start">
           <Badge>{t("badge")}</Badge>

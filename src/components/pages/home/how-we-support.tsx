@@ -169,7 +169,8 @@ export function HowWeSupport() {
                   <IconCheck className="h-3 w-3 text-green-600 dark:text-green-400" />
                 </div>
                 <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                  <strong>Profits Tax Return Filing</strong>
+                  <strong>Annual Audit with Independent Auditor&apos;s Report</strong>
+
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -177,7 +178,7 @@ export function HowWeSupport() {
                   <IconCheck className="h-3 w-3 text-green-600 dark:text-green-400" />
                 </div>
                 <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                  <strong>Annual Audit with Independent Auditor&apos;s Report</strong>
+                  <strong>Profits Tax Return Filing</strong>
                 </span>
               </li>
             </ul>

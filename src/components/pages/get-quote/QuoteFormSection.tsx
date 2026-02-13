@@ -257,7 +257,7 @@ export default function QuoteFormSection() {
               </div>
               <Heading as="h2">{t("successTitle")}</Heading>
               <Subheading className="mt-4">{t("successMessage")}</Subheading>
-              <div className="mt-8">
+              <div className="mt-8 flex justify-center">
                 <Button as={Link} href="/">
                   {t("successBackButton")}
                 </Button>
@@ -313,212 +313,212 @@ export default function QuoteFormSection() {
       <Container>
         <div className="mx-auto max-w-4xl">
           <div className="text-center">
-          <Badge>{tPage("title")}</Badge>
-          <Heading as="h1" className="mt-4">
-            {tPage("subtitle")}
-          </Heading>
-          <Subheading className="mt-4">{tPage("description")}</Subheading>
-        </div>
-
-        <form onSubmit={handleSubmit} className="mt-12 space-y-12">
-          {/* Section 1: Company Information */}
-          <div className="rounded-2xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900 md:p-8">
-            <h2 className="mb-6 text-xl font-semibold text-neutral-900 dark:text-neutral-100">
-              {t("section1Title")}
-            </h2>
-            <div className="grid gap-6 md:grid-cols-2">
-              <FormInput
-                label={t("companyName")}
-                value={formData.companyName}
-                onChange={(val) => handleInputChange("companyName", val)}
-                error={errors.companyName}
-                required
-              />
-              <FormInput
-                label={t("natureOfBusiness")}
-                value={formData.natureOfBusiness}
-                onChange={(val) => handleInputChange("natureOfBusiness", val)}
-                error={errors.natureOfBusiness}
-                required
-              />
-              <FormSelect
-                label={t("companyType")}
-                value={formData.companyType}
-                onChange={(val) => handleInputChange("companyType", val)}
-                error={errors.companyType}
-                options={[
-                  {
-                    value: "newly-incorporated",
-                    label: t("companyTypeOptions.newlyIncorporated"),
-                  },
-                  {
-                    value: "active-sme",
-                    label: t("companyTypeOptions.activeSME"),
-                  },
-                  {
-                    value: "established",
-                    label: t("companyTypeOptions.established"),
-                  },
-                ]}
-                required
-              />
-              <FormInput
-                label={t("contactPerson")}
-                value={formData.contactPerson}
-                onChange={(val) => handleInputChange("contactPerson", val)}
-                error={errors.contactPerson}
-                required
-              />
-              <FormInput
-                label={t("position")}
-                value={formData.position}
-                onChange={(val) => handleInputChange("position", val)}
-                error={errors.position}
-                required
-              />
-              <FormInput
-                label={t("email")}
-                type="email"
-                value={formData.email}
-                onChange={(val) => handleInputChange("email", val)}
-                error={errors.email}
-                required
-              />
-              <FormInput
-                label={t("phone")}
-                type="tel"
-                value={formData.phone}
-                onChange={(val) => handleInputChange("phone", val)}
-                error={errors.phone}
-                required
-              />
-            </div>
+            <Badge>{tPage("title")}</Badge>
+            <Heading as="h1" className="mt-4">
+              {tPage("subtitle")}
+            </Heading>
+            <Subheading className="mt-4">{tPage("description")}</Subheading>
           </div>
 
-          {/* Section 2: Service Requirements */}
-          <div className="rounded-2xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900 md:p-8">
-            <h2 className="mb-6 text-xl font-semibold text-neutral-900 dark:text-neutral-100">
-              {t("section2Title")}
-            </h2>
-            <div className="space-y-4">
-              <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
-                {t("services")} *
-              </div>
-              {Object.keys(formData.services).map((service) => (
-                <FormCheckbox
-                  key={service}
-                  label={t(`servicesList.${service}`)}
-                  checked={
-                    formData.services[
-                    service as keyof typeof formData.services
-                    ]
-                  }
-                  onChange={(checked) =>
-                    handleServiceChange(
-                      service as keyof typeof formData.services,
-                      checked
-                    )
-                  }
+          <form onSubmit={handleSubmit} className="mt-12 space-y-12">
+            {/* Section 1: Company Information */}
+            <div className="rounded-2xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900 md:p-8">
+              <h2 className="mb-6 text-xl font-semibold text-neutral-900 dark:text-neutral-100">
+                {t("section1Title")}
+              </h2>
+              <div className="grid gap-6 md:grid-cols-2">
+                <FormInput
+                  label={t("companyName")}
+                  value={formData.companyName}
+                  onChange={(val) => handleInputChange("companyName", val)}
+                  error={errors.companyName}
+                  required
                 />
-              ))}
-              {errors.services && (
-                <p className="mt-2 text-sm text-red-600 dark:text-red-400">
-                  {errors.services}
-                </p>
-              )}
-              {formData.services.other && (
-                <div className="mt-4">
-                  <FormInput
-                    label={t("otherServiceDetails")}
-                    value={formData.otherServiceDetails}
-                    onChange={(val) =>
-                      handleInputChange("otherServiceDetails", val)
-                    }
-                    error={errors.otherServiceDetails}
-                    required
-                  />
+                <FormInput
+                  label={t("natureOfBusiness")}
+                  value={formData.natureOfBusiness}
+                  onChange={(val) => handleInputChange("natureOfBusiness", val)}
+                  error={errors.natureOfBusiness}
+                  required
+                />
+                <FormSelect
+                  label={t("companyType")}
+                  value={formData.companyType}
+                  onChange={(val) => handleInputChange("companyType", val)}
+                  error={errors.companyType}
+                  options={[
+                    {
+                      value: "newly-incorporated",
+                      label: t("companyTypeOptions.newlyIncorporated"),
+                    },
+                    {
+                      value: "active-sme",
+                      label: t("companyTypeOptions.activeSME"),
+                    },
+                    {
+                      value: "established",
+                      label: t("companyTypeOptions.established"),
+                    },
+                  ]}
+                  required
+                />
+                <FormInput
+                  label={t("contactPerson")}
+                  value={formData.contactPerson}
+                  onChange={(val) => handleInputChange("contactPerson", val)}
+                  error={errors.contactPerson}
+                  required
+                />
+                <FormInput
+                  label={t("position")}
+                  value={formData.position}
+                  onChange={(val) => handleInputChange("position", val)}
+                  error={errors.position}
+                  required
+                />
+                <FormInput
+                  label={t("email")}
+                  type="email"
+                  value={formData.email}
+                  onChange={(val) => handleInputChange("email", val)}
+                  error={errors.email}
+                  required
+                />
+                <FormInput
+                  label={t("phone")}
+                  type="tel"
+                  value={formData.phone}
+                  onChange={(val) => handleInputChange("phone", val)}
+                  error={errors.phone}
+                  required
+                />
+              </div>
+            </div>
+
+            {/* Section 2: Service Requirements */}
+            <div className="rounded-2xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900 md:p-8">
+              <h2 className="mb-6 text-xl font-semibold text-neutral-900 dark:text-neutral-100">
+                {t("section2Title")}
+              </h2>
+              <div className="space-y-4">
+                <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300">
+                  {t("services")} *
                 </div>
-              )}
+                {Object.keys(formData.services).map((service) => (
+                  <FormCheckbox
+                    key={service}
+                    label={t(`servicesList.${service}`)}
+                    checked={
+                      formData.services[
+                      service as keyof typeof formData.services
+                      ]
+                    }
+                    onChange={(checked) =>
+                      handleServiceChange(
+                        service as keyof typeof formData.services,
+                        checked
+                      )
+                    }
+                  />
+                ))}
+                {errors.services && (
+                  <p className="mt-2 text-sm text-red-600 dark:text-red-400">
+                    {errors.services}
+                  </p>
+                )}
+                {formData.services.other && (
+                  <div className="mt-4">
+                    <FormInput
+                      label={t("otherServiceDetails")}
+                      value={formData.otherServiceDetails}
+                      onChange={(val) =>
+                        handleInputChange("otherServiceDetails", val)
+                      }
+                      error={errors.otherServiceDetails}
+                      required
+                    />
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
 
-          {/* Section 3: Business Details */}
-          <div className="rounded-2xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900 md:p-8">
-            <h2 className="mb-6 text-xl font-semibold text-neutral-900 dark:text-neutral-100">
-              {t("section3Title")}
-            </h2>
-            <div className="grid gap-6 md:grid-cols-2">
-              <FormSelect
-                label={t("transactionsPerMonth")}
-                value={formData.transactionsPerMonth}
-                onChange={(val) =>
-                  handleInputChange("transactionsPerMonth", val)
-                }
-                error={errors.transactionsPerMonth}
-                options={[
-                  {
-                    value: "up-to-25",
-                    label: t("transactionsOptions.upTo25"),
-                  },
-                  {
-                    value: "up-to-100",
-                    label: t("transactionsOptions.upTo100"),
-                  },
-                  {
-                    value: "more-than-100",
-                    label: t("transactionsOptions.moreThan100"),
-                  },
-                ]}
-                required
-              />
-              <FormSelect
-                label={t("numberOfBankAccounts")}
-                value={formData.numberOfBankAccounts}
-                onChange={(val) =>
-                  handleInputChange("numberOfBankAccounts", val)
-                }
-                error={errors.numberOfBankAccounts}
-                options={[
-                  { value: "1", label: t("bankAccountsOptions.one") },
-                  { value: "up-to-3", label: t("bankAccountsOptions.upTo3") },
-                  {
-                    value: "more-than-3",
-                    label: t("bankAccountsOptions.moreThan3"),
-                  },
-                ]}
-                required
-              />
-              <FormInput
-                label={t("numberOfEmployees")}
-                type="number"
-                value={formData.numberOfEmployees}
-                onChange={(val) => handleInputChange("numberOfEmployees", val)}
-                error={errors.numberOfEmployees}
-                required
-              />
-              <FormSelect
-                label={t("annualTurnover")}
-                value={formData.annualTurnover}
-                onChange={(val) => handleInputChange("annualTurnover", val)}
-                error={errors.annualTurnover}
-                options={[
-                  { value: "1m", label: t("turnoverOptions.upTo1m") },
-                  { value: "1-10m", label: t("turnoverOptions.1to10m") },
-                  { value: "10-50m", label: t("turnoverOptions.10to50m") },
-                  { value: "50m+", label: t("turnoverOptions.50mPlus") },
-                ]}
-                required
-              />
+            {/* Section 3: Business Details */}
+            <div className="rounded-2xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-900 md:p-8">
+              <h2 className="mb-6 text-xl font-semibold text-neutral-900 dark:text-neutral-100">
+                {t("section3Title")}
+              </h2>
+              <div className="grid gap-6 md:grid-cols-2">
+                <FormSelect
+                  label={t("transactionsPerMonth")}
+                  value={formData.transactionsPerMonth}
+                  onChange={(val) =>
+                    handleInputChange("transactionsPerMonth", val)
+                  }
+                  error={errors.transactionsPerMonth}
+                  options={[
+                    {
+                      value: "up-to-25",
+                      label: t("transactionsOptions.upTo25"),
+                    },
+                    {
+                      value: "up-to-100",
+                      label: t("transactionsOptions.upTo100"),
+                    },
+                    {
+                      value: "more-than-100",
+                      label: t("transactionsOptions.moreThan100"),
+                    },
+                  ]}
+                  required
+                />
+                <FormSelect
+                  label={t("numberOfBankAccounts")}
+                  value={formData.numberOfBankAccounts}
+                  onChange={(val) =>
+                    handleInputChange("numberOfBankAccounts", val)
+                  }
+                  error={errors.numberOfBankAccounts}
+                  options={[
+                    { value: "1", label: t("bankAccountsOptions.one") },
+                    { value: "up-to-3", label: t("bankAccountsOptions.upTo3") },
+                    {
+                      value: "more-than-3",
+                      label: t("bankAccountsOptions.moreThan3"),
+                    },
+                  ]}
+                  required
+                />
+                <FormInput
+                  label={t("numberOfEmployees")}
+                  type="number"
+                  value={formData.numberOfEmployees}
+                  onChange={(val) => handleInputChange("numberOfEmployees", val)}
+                  error={errors.numberOfEmployees}
+                  required
+                />
+                <FormSelect
+                  label={t("annualTurnover")}
+                  value={formData.annualTurnover}
+                  onChange={(val) => handleInputChange("annualTurnover", val)}
+                  error={errors.annualTurnover}
+                  options={[
+                    { value: "1m", label: t("turnoverOptions.upTo1m") },
+                    { value: "1-10m", label: t("turnoverOptions.1to10m") },
+                    { value: "10-50m", label: t("turnoverOptions.10to50m") },
+                    { value: "50m+", label: t("turnoverOptions.50mPlus") },
+                  ]}
+                  required
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="flex justify-center">
-            <Button type="submit" disabled={status === "submitting"}>
-              {status === "submitting" ? t("submitting") : t("submit")}
-            </Button>
-          </div>
-        </form>
-    </div>
+            <div className="flex justify-center">
+              <Button type="submit" disabled={status === "submitting"}>
+                {status === "submitting" ? t("submitting") : t("submit")}
+              </Button>
+            </div>
+          </form>
+        </div>
       </Container >
     </div >
   );

@@ -162,7 +162,7 @@ export default function ContactFormSection() {
               </div>
               <Heading as="h2">{t("successTitle")}</Heading>
               <Subheading className="mt-4">{t("successMessage")}</Subheading>
-              <div className="mt-8">
+              <div className="mt-8 flex justify-center">
                 <Button onClick={() => setStatus("idle")}>
                   {t("successBackButton")}
                 </Button>

@@ -70,7 +70,7 @@ export const Hero = () => {
           duration: 0.5,
           delay: 0.2,
         }}
-        className="text-center mt-6 text-base md:text-xl text-muted dark:text-muted-dark max-w-3xl mx-auto relative z-10"
+        className="text-center mt-6 text-lg md:text-2xl lg:text-4xl text-muted dark:text-muted-dark max-w-3xl mx-auto relative z-10"
       >
         <Balancer>
           <RoughNotationGroup show={isTitleInView}>
@@ -101,7 +101,7 @@ export const Hero = () => {
           duration: 0.5,
           delay: 0.4,
         }}
-        className="flex items-center gap-4 justify-center mt-6 relative z-10 px-4"
+        className="flex items-center gap-4 justify-center mt-8 relative z-10 px-4"
       >
         <Button as={Link} href="/get-quote" className="text-center">{t('getStarted')}</Button>
         <Button

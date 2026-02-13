@@ -38,7 +38,7 @@ export function HowWeSupport() {
           </p>
 
           <div className="mb-6">
-            <h4 className="mb-3 text-sm font-semibold text-neutral-700 dark:text-neutral-300">
+            <h4 className="mb-3 text-sm text-neutral-700 dark:text-neutral-300">
               Services Included:
             </h4>
             <ul className="space-y-2">
@@ -47,7 +47,7 @@ export function HowWeSupport() {
                   <IconCheck className="h-3 w-3 text-green-600 dark:text-green-400" />
                 </div>
                 <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                  Business Incorporation (Company Formation)
+                  <strong>Business Incorporation</strong> (Company Formation)
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -55,7 +55,7 @@ export function HowWeSupport() {
                   <IconCheck className="h-3 w-3 text-green-600 dark:text-green-400" />
                 </div>
                 <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                  Initial Business Registration & IRD Advice
+                  <strong>Initial Business Registration & IRD Advice</strong>
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -63,7 +63,7 @@ export function HowWeSupport() {
                   <IconCheck className="h-3 w-3 text-green-600 dark:text-green-400" />
                 </div>
                 <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                  Post-Incorporation Guidance (Banking, initial accounting setup)
+                  <strong>Post-Incorporation Guidance</strong> (Banking, initial accounting setup)
                 </span>
               </li>
             </ul>
@@ -99,7 +99,7 @@ export function HowWeSupport() {
           </p>
 
           <div className="mb-6">
-            <h4 className="mb-3 text-sm font-semibold text-neutral-700 dark:text-neutral-300">
+            <h4 className="mb-3 text-sm text-neutral-700 dark:text-neutral-300">
               Services Included:
             </h4>
             <ul className="space-y-2">
@@ -108,7 +108,7 @@ export function HowWeSupport() {
                   <IconCheck className="h-3 w-3 text-green-600 dark:text-green-400" />
                 </div>
                 <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                  Accounting & Bookkeeping (with our proprietary OCR software)
+                  <strong>Accounting & Bookkeeping</strong> (with our proprietary OCR software)
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -116,7 +116,7 @@ export function HowWeSupport() {
                   <IconCheck className="h-3 w-3 text-green-600 dark:text-green-400" />
                 </div>
                 <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                  Company Secretarial Services (Ongoing statutory filings)
+                  <strong>Company Secretarial Services</strong> (Ongoing statutory filings)
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -124,7 +124,7 @@ export function HowWeSupport() {
                   <IconCheck className="h-3 w-3 text-green-600 dark:text-green-400" />
                 </div>
                 <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                  Payroll & MPF Administration
+                  <strong>Payroll & MPF Administration</strong>
                 </span>
               </li>
             </ul>
@@ -151,7 +151,7 @@ export function HowWeSupport() {
               <IconChecklist className="h-5 w-5 text-white dark:text-purple-400" />
             </div>
             <h3 className="text-xl font-bold text-neutral-800 md:text-2xl dark:text-neutral-200">
-              Validate, Comply, and Look Ahead
+              Yearly Compliance with Ease
             </h3>
           </div>
 
@@ -160,7 +160,7 @@ export function HowWeSupport() {
           </p>
 
           <div className="mb-6">
-            <h4 className="mb-3 text-sm font-semibold text-neutral-700 dark:text-neutral-300">
+            <h4 className="mb-3 text-sm text-neutral-700 dark:text-neutral-300">
               Services Included:
             </h4>
             <ul className="space-y-2">
@@ -169,7 +169,7 @@ export function HowWeSupport() {
                   <IconCheck className="h-3 w-3 text-green-600 dark:text-green-400" />
                 </div>
                 <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                  Profits Tax Filing & Optimization
+                  <strong>Profits Tax Return Filing</strong>
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -177,7 +177,7 @@ export function HowWeSupport() {
                   <IconCheck className="h-3 w-3 text-green-600 dark:text-green-400" />
                 </div>
                 <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                  Annual Audit
+                  <strong>Annual Audit with Independent Auditor&apos;s Report</strong>
                 </span>
               </li>
             </ul>

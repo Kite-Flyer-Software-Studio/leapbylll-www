@@ -60,6 +60,8 @@ export const ScrollContent = ({
     [1, 1, 1, 1, 0],
   );
 
+  const isEven = index % 2 === 0;
+  
   return (
     <motion.div
       ref={ref}
@@ -67,36 +69,73 @@ export const ScrollContent = ({
       key={item.title + index}
       className="relative my-20 grid grid-cols-2 gap-8"
     >
-      <div className="w-full">
-        <motion.div
-          style={{ y: translate, opacity: index === 0 ? opacityContent : 1 }}
-          className=""
-        >
-          <motion.h2 className="mt-2 inline-block max-w-md bg-gradient-to-b from-white to-white bg-clip-text text-left text-2xl md:text-4xl font-bold text-black dark:text-whitelg:text-4xl">
-            {item.title}
-          </motion.h2>
+      {isEven ? (
+        <>
+          <div className="w-full">
+            <motion.div
+              style={{ y: translate, opacity: index === 0 ? opacityContent : 1 }}
+              className=""
+            >
+              <motion.h2 className="mt-2 inline-block max-w-md bg-gradient-to-b from-white to-white bg-clip-text text-left text-2xl md:text-4xl font-bold text-black dark:text-whitelg:text-4xl">
+                {item.title}
+              </motion.h2>
 
-          <ul className="mt-4 space-y-3">
-            {item.valueProps.map((prop, i) => (
-              <li key={i} className="flex items-start gap-3 max-w-sm">
-                <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
-                  <IconCheck className="w-4 h-4 text-green-600 dark:text-green-400" />
-                </div>
-                <span className="text-lg text-neutral-500">
-                  {prop}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
-      </div>
-      <motion.div
-        key={item.title + index}
-        style={{ y: translateContent, opacity: opacity }}
-        className="h-full w-full self-start rounded-md"
-      >
-        {item.content && item.content}
-      </motion.div>
+              <ul className="mt-4 space-y-3">
+                {item.valueProps.map((prop, i) => (
+                  <li key={i} className="flex items-start gap-3 max-w-sm">
+                    <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+                      <IconCheck className="w-4 h-4 text-green-600 dark:text-green-400" />
+                    </div>
+                    <span className="text-lg text-neutral-500">
+                      {prop}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+          <motion.div
+            key={item.title + index}
+            style={{ y: translateContent, opacity: opacity }}
+            className="h-full w-full self-start rounded-md"
+          >
+            {item.content && item.content}
+          </motion.div>
+        </>
+      ) : (
+        <>
+          <motion.div
+            key={item.title + index}
+            style={{ y: translateContent, opacity: opacity }}
+            className="h-full w-full self-start rounded-md"
+          >
+            {item.content && item.content}
+          </motion.div>
+          <div className="w-full">
+            <motion.div
+              style={{ y: translate, opacity: index === 0 ? opacityContent : 1 }}
+              className=""
+            >
+              <motion.h2 className="mt-2 inline-block max-w-md bg-gradient-to-b from-white to-white bg-clip-text text-left text-2xl md:text-4xl font-bold text-black dark:text-whitelg:text-4xl">
+                {item.title}
+              </motion.h2>
+
+              <ul className="mt-4 space-y-3">
+                {item.valueProps.map((prop, i) => (
+                  <li key={i} className="flex items-start gap-3 max-w-sm">
+                    <div className="mt-1 flex-shrink-0 w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+                      <IconCheck className="w-4 h-4 text-green-600 dark:text-green-400" />
+                    </div>
+                    <span className="text-lg text-neutral-500">
+                      {prop}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          </div>
+        </>
+      )}
     </motion.div>
   );
 };

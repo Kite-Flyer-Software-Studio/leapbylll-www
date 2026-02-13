@@ -13,7 +13,7 @@
     "contactUs": "Contact Us",
     "login": "Login",
     "signup": "Sign Up",
-    "bookConsult": "Book a free consult"
+    "bookConsult": "Let's have a chat"
   },
   "hero": {
     "title": {
@@ -125,7 +125,7 @@
         "description": "Our in-house developed OCR technology automatically scans, extracts, and categorizes your receipts with exceptional accuracy, eliminating manual data entry errors."
       },
       "expertise": {
-        "title": "Hong Kong Expertise Since 1983",
+        "title": "Hong Kong Expertise Since 1986",
         "description": "Built on years of Hong Kong expertise, our system is specifically designed for today's ambitious businesses navigating the local regulatory landscape."
       },
       "receiptHandling": {
@@ -233,15 +233,15 @@
         "services": {
           "small": {
             "name": "Annual Revenue < HK$500,000",
-            "description": "Ideal for solo entrepreneurs and early-stage startups"
+            "description": "Ideal for early-stage or small business"
           },
           "medium": {
             "name": "Annual Revenue < HK$1,500,000",
-            "description": "Perfect for growing businesses with moderate complexity"
+            "description": "Perfect for growing businesses"
           },
           "large": {
             "name": "Annual Revenue HK$1,500,000+",
-            "description": "For established businesses with complex operations"
+            "description": "For established companies"
           }
         }
       },
@@ -276,7 +276,7 @@
         "serviceDescription": "Statutory audit and optimized tax filing.",
         "included": {
           "item1": "Single point of contact & coordination",
-          "item2": "Audit by our CPA parent firm with decades of experience",
+          "item2": "Audit by our licensed CPA team with decades of experience",
           "item3": "Profits tax computation for accurate, optimised tax filing"
         },
         "cta": "Contact Us",

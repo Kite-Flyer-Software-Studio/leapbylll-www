@@ -49,19 +49,102 @@ export const AboutFAQs = () => {
     });
   };
 
-  // Get FAQ items count dynamically
-  const faqCount = 10; // Maximum expected FAQs
-  const faqs = [];
-  for (let i = 0; i < faqCount; i++) {
-    if (t.has(`items.${i}.question`)) {
-      faqs.push({
-        question: t(`items.${i}.question`),
-        answer: t(`items.${i}.answer`),
-      });
-    } else {
-      break;
-    }
-  }
+  const faqs = [
+    {
+      question: "Are you a licensed firm in Hong Kong?",
+      answer: (
+        <>
+          Our team holds the <strong>Practising Certificate</strong> issued by the Accounting and Financial Reporting Council to CPA firms in Hong Kong and the <strong>TCSP License</strong> issued by the Companies Registry in Hong Kong.
+          <br /><br />
+          We are fully licensed, regulated, accountable, and fully qualified to handle every aspect of your business&apos;s financial and corporate compliance.
+          <br /><br />
+          You deal with one integrated team. We handle the regulatory complexity behind the scenes. All you experience is seamless, compliant, expert service.
+        </>
+      ),
+    },
+    {
+      question: "Where are you based? Do you have an office I can visit?",
+      answer: (
+        <>
+          We are proudly Hong Kong-based. Our team works from our office at Tsim Sha Tsui, and we welcome clients to visit. Unlike platforms that operate entirely virtually or outsource offshore, we believe in being accessible. You&apos;re not just a ticket number—you&apos;re our partner, and we&apos;re your neighbours.
+        </>
+      ),
+    },
+    {
+      question: "How are you different from other online accounting services?",
+      answer: (
+        <>
+          Great question. While we do not have the marketing budget of other service providers, our business models are fundamentally different in ways that matter deeply for your business&apos;s security and success.
+          <br /><br />
+          Some service providers are tech platforms that often outsource the actual accounting work. This can mean your financial data is sent to offshore teams or freelance bookkeepers you&apos;ll never meet. You interact with a customer service agent, not your accountant.
+          <br /><br />
+          We are a Hong Kong-based, family-run CPA firm. Every piece of work—from a receipt scanned in our system to your annual tax filing—is performed in-house by our own, local team of CPAs and accountants. Your dedicated advisor sits in our Hong Kong office, knows the local market intimately, and is directly accountable for your work.
+          <br /><br />
+          In short, we offer a true professional partnership, not a faceless, outsourced service. You get the efficiency of modern technology with the security, accountability, and strategic insight of a local expert partner.
+        </>
+      ),
+    },
+    {
+      question: "What's the advantage of using one firm for everything?",
+      answer: (
+        <>
+          Imagine building a house where the architect, builder, and inspector never speak. That&apos;s the risk with fragmented business services. Some service providers do not hold the license or qualification to provide the end-to-end solution that we offer. As for us, we have a fully qualified in-house team to handle all your business needs, from company secretarial services, to accounting, to audit and tax filings. This eliminates errors, saves you time managing multiple relationships, and allows for truly strategic, holistic advice.
+        </>
+      ),
+    },
+    {
+      question: "Your website shows starting prices. Are these fixed, or do fees vary?",
+      answer: (
+        <>
+          Our website shows starting from pricing because every business is different—and we believe you shouldn&apos;t pay for services you don&apos;t need or be squeezed into a rigid box that doesn&apos;t fit.
+          <br /><br />
+          Your actual fee depends on three main factors:
+          <ul className="list-disc pl-6 mt-2 mb-2 space-y-1">
+            <li>Transaction volume: A business with 50 monthly receipts requires less time than one with 500. We price fairly based on the actual work required.</li>
+            <li>Complexity: Do you have multiple entities? Inventory? Multi-currency transactions? Cross-border operations? These factors influence the depth of work and expertise required.</li>
+            <li>Service scope: We customise each engagement to your actual needs.</li>
+          </ul>
+          Here&apos;s what doesn&apos;t change:
+          <ul className="list-disc pl-6 mt-2 mb-2 space-y-1">
+            <li>You receive a clear, fixed-fee proposal before we start. No hourly billing surprises.</li>
+            <li>We review your pricing annually. As your business evolves, we adjust together—fairly and transparently.</li>
+          </ul>
+          You pay for what you need, not a one-size-fits-none template.
+          <br /><br />
+          Contact us for a custom proposal. We&apos;ll listen first, then recommend a scope and fee that makes sense for your specific business.
+        </>
+      ),
+    },
+    {
+      question: "Why can't you post your audit fees on the website?",
+      answer: (
+        <>
+          Because an audit isn&apos;t a product—it&apos;s a professional engagement tailored to your specific business.
+          <br /><br />
+          Audit fees are driven by complexity, not revenue alone. Factors include:
+          <ul className="list-disc pl-6 mt-2 mb-2 space-y-1">
+            <li>Number of entities and inter-company transactions</li>
+            <li>Inventory valuation and physical stocktake requirements</li>
+            <li>Quality and timeliness of your financial records</li>
+            <li>Specific reporting deadlines or shareholder requirements</li>
+          </ul>
+          We provide clear, fixed-fee proposals after a brief discovery discussion. You&apos;ll know exactly what you&apos;re investing before any work begins. No hourly billing surprises. No scope creep.
+        </>
+      ),
+    },
+    {
+      question: "How do I switch from my current accountant or platform?",
+      answer: (
+        <>
+          <strong>We handle the transition:</strong> Once you engage us, we coordinate directly with your current provider to obtain necessary records and open items.
+          <br /><br />
+          <strong>No disruption:</strong> We ensure your ongoing compliance deadlines are met during the switch.
+          <br /><br />
+          <strong>Clean handover:</strong> Our team reviews your historical data and cleans any inconsistencies, so you start fresh with accurate, organized books.
+        </>
+      ),
+    },
+  ];
 
   return (
     <div className="relative z-20 py-10 lg:py-20 w-full">
@@ -114,7 +197,7 @@ const AccordionItem = ({
 }: {
   index: number;
   question: string;
-  answer: string;
+  answer: React.ReactNode;
   isOpen: boolean;
   onToggle: () => void;
 }) => {
@@ -161,7 +244,7 @@ const AccordionItem = ({
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -6, opacity: 0 }}
                 transition={{ duration: 0.25 }}
-                className="text-neutral-600 dark:text-neutral-400 whitespace-pre-line"
+                className="text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed"
               >
                 {answer}
               </motion.div>

@@ -6,7 +6,9 @@ import { Heading } from "@/components/heading";
 import { Subheading } from "@/components/subheading";
 import { Container } from "@/components/container";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
+
+const LLL_OFFICE_VIDEO_URL =
+  "https://tbguskbayvt1d7md.public.blob.vercel-storage.com/dad-luk-nat-luk.mp4";
 
 export const AboutIntro = () => {
   const t = useTranslations("aboutIntro");
@@ -34,13 +36,16 @@ export const AboutIntro = () => {
           </Subheading>
         </div>
         <div className="rounded-3xl border border-neutral-200 dark:border-neutral-800 p-2">
-          <Image
-            src="/people-working-lll.png"
-            alt={t("imageAlt")}
-            width={1000}
-            height={1000}
-            className="h-full rounded-2xl object-cover"
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="aspect-square xs:h-[300px] xs:w-[300px] sm:h-[450px] sm:w-[450px] lg:h-[600px] lg:w-[600px] rounded-2xl object-cover"
+            aria-label={t("imageAlt")}
+          >
+            <source src={LLL_OFFICE_VIDEO_URL} type="video/mp4" />
+          </video>
         </div>
       </div>
     </div>

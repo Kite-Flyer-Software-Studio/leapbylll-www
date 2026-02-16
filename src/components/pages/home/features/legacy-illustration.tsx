@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "motion/react";
 import { IconBuildingSkyscraper } from "@tabler/icons-react";
 import { DottedGlowBackground } from "@/components/ui/dotted-glow-background";
@@ -16,7 +15,7 @@ export const LegacyIllustration = () => (
       glowColor="rgba(171, 223, 134, 0.7)"
       darkGlowColor="rgba(171, 223, 134, 0.5)"
     />
-    {/* Floating particles around the image */}
+    {/* Floating particles around the video */}
     {[...Array(6)].map((_, i) => (
       <motion.div
         key={i}
@@ -49,13 +48,19 @@ export const LegacyIllustration = () => (
           animate={{ y: [0, -5, 0] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         >
-          <Image
-            src="/stability.png"
-            alt="LEAP by LLL office in Kowloon, Hong Kong — 40 years of established expertise"
-            height={500}
-            width={500}
-            className="rounded-lg shadow-lg"
-          />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="aspect-square h-[480px] w-[480px] rounded-lg object-cover shadow-lg"
+            aria-label="LEAP by LLL office in Kowloon, Hong Kong — 40 years of established expertise"
+          >
+            <source
+              src="https://tbguskbayvt1d7md.public.blob.vercel-storage.com/lll-office.mp4"
+              type="video/mp4"
+            />
+          </video>
         </motion.div>
         {/* Badge with animation */}
         <motion.div

@@ -100,6 +100,28 @@
     "imageAlt": "About Leap by LLL",
     "featuredIn": "Trusted by businesses across"
   },
+  "aboutTeam": {
+    "badge": "About the Family",
+    "heading": "Meet the Team Behind Leap by LLL",
+    "subheading": "A family-run CPA firm with decades of experience, combining traditional expertise with modern innovation to serve Hong Kong businesses.",
+    "team": {
+      "danny": {
+        "name": "Danny Luk",
+        "title": "Owner & Managing Director",
+        "description": "With decades of experience in Hong Kong accounting and business advisory, Danny leads our firm with a vision of combining traditional CPA excellence with modern, founder-friendly service. He founded Leap by LLL to bring institutional-grade accounting expertise to startups and growing SMEs."
+      },
+      "carmen": {
+        "name": "Carmen Luk",
+        "title": "Partner & CPA",
+        "description": "Carmen brings deep expertise in audit, tax compliance, and financial reporting for Hong Kong businesses. As a practicing CPA, she ensures every client receives meticulous attention to detail and strategic financial guidance that supports sustainable growth."
+      },
+      "natalie": {
+        "name": "Natalie Luk",
+        "title": "Partner & CPA",
+        "description": "Natalie specializes in accounting systems, business advisory, and helping founders navigate Hong Kong's regulatory landscape. As a CPA with a tech-forward approach, she bridges the gap between traditional accounting and the needs of modern digital businesses."
+      }
+    }
+  },
   "aboutFaqs": {
     "badge": "FAQs",
     "heading": "Frequently Asked Questions",

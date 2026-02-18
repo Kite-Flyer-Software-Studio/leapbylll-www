@@ -44,7 +44,7 @@ export const AboutTeam = () => {
         {t("heading")}
       </Heading>
       <Subheading className="text-center">{t("subheading")}</Subheading>
-
+      <Subheading className="text-center mt-1">{t("subheading3")}</Subheading>
       <div className="mt-12 w-full">
         <FocusCards cards={teamMembers} />
       </div>

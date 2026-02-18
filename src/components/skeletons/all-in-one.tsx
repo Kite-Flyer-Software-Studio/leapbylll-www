@@ -23,7 +23,7 @@ export const SkeletonAllInOne = () => {
     >
       <Circle className="flex items-center justify-center border-neutral-200 dark:border-neutral-700 shadow-sm">
         <Image
-          src="/logos/leapbylll-logo.png"
+          src="/logos/leapbylll-logo-1.png"
           alt="LEAP by LLL"
           width={80}
           height={80}
@@ -85,7 +85,7 @@ export const SkeletonAllInOne = () => {
 };
 
 const SkeletonCard = ({
-  icon, 
+  icon,
   title,
   description,
   className,

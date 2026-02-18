@@ -108,7 +108,7 @@ const MiddleCard = () => {
           <div className="absolute inset-0 scale-[1.4] animate-spin rounded-full bg-conic [background-image:conic-gradient(at_center,transparent,rgb(168_85_247)_20%,transparent_30%)] [animation-delay:1s] [animation-duration:2s]"></div>
           <div className="relative z-20 flex h-full w-full items-center justify-center rounded-[5px] bg-white dark:bg-neutral-900">
             <Image
-              src="/logos/leapbylll-logo.png"
+              src="/logos/leapbylll-logo-1.png"
               alt="LEAP by LLL"
               width={32}
               height={32}

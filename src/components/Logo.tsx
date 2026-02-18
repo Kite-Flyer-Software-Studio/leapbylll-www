@@ -19,11 +19,11 @@ export const Logo = ({ logoClassName }: { logoClassName?: string }) => {
       className={"font-normal flex items-center text-sm mr-4 px-2 py-1 relative z-20"}
     >
       <Image
-        src="/logos/leapbylll-logo.png"
+        src="/logos/leapbylll-logo-1.png"
         alt="LEAP by LLL"
         width={120}
         height={40}
-        className={cn("h-16 w-auto", logoClassName)}
+        className={cn("h-12 w-auto", logoClassName)}
         priority
       />
     </Link>

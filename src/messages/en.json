@@ -103,22 +103,24 @@
   "aboutTeam": {
     "badge": "About the Family",
     "heading": "Meet the Team Behind Leap by LLL",
-    "subheading": "A family-run CPA firm with decades of experience, combining traditional expertise with modern innovation to serve Hong Kong businesses.",
+    "subheading": "As a team, our family offers something truly distinct. With Mr. Luk’s decades of experience and tax expertise, Carmen’s rigorous attention to detail, and Natalie’s focus on client relationships and growth; we offer a 360-degree, bird's-eye view of our clients' affairs.",
+    "subheading2": "",
+    "subheading3": "From compliance to strategy, we are your true all-in-one partner—every solution, seamlessly delivered under one roof.",
     "team": {
       "danny": {
         "name": "Danny Luk",
-        "title": "Owner & Managing Director",
-        "description": "With decades of experience in Hong Kong accounting and business advisory, Danny leads our firm with a vision of combining traditional CPA excellence with modern, founder-friendly service. He founded Leap by LLL to bring institutional-grade accounting expertise to startups and growing SMEs."
+        "title": "Founder, 1st generation",
+        "description": "With over 40 years in the profession, Mr. Luk is the founding partner of company. His career is distinguished by 11 years of service as a Tax Assessor with the Hong Kong Inland Revenue Department, a foundation that provides his clients with a distinct advantage. Known for his ability to simplify complexity, Mr. Luk is sought after for his forward-thinking and effective tax and business strategies. However, those who work with him know that his greatest asset is his genuine care for his clients—a value that remains the cornerstone of the firm today."
       },
       "carmen": {
         "name": "Carmen Luk",
-        "title": "Partner & CPA",
-        "description": "Carmen brings deep expertise in audit, tax compliance, and financial reporting for Hong Kong businesses. As a practicing CPA, she ensures every client receives meticulous attention to detail and strategic financial guidance that supports sustainable growth."
+        "title": "2nd generation",
+        "description": "Carmen oversees the Audit Department. A graduate of the London School of Economics and the University of Cambridge, she combines the critical thinking of a top-tier humanities education with the practical demands of professional practice. Colleagues and clients alike know Carmen for her exacting standards and rigorous approach; her meticulous attention to detail guarantees that the firm's work meets the highest standards of accuracy and reliability."
       },
       "natalie": {
         "name": "Natalie Luk",
-        "title": "Partner & CPA",
-        "description": "Natalie specializes in accounting systems, business advisory, and helping founders navigate Hong Kong's regulatory landscape. As a CPA with a tech-forward approach, she bridges the gap between traditional accounting and the needs of modern digital businesses."
+        "title": "2nd generation",
+        "description": "With a Bachelor’s degree in Mathematics and Statistical Science from University College London and a Master’s degree in Management from Imperial College London, Natalie leads the Accounting and Corporate Services Department with her strong quantitative background and strategic business acumen. As a second-generation leader, Natalie is committed to building genuine, long-lasting relationships with clients and helping their businesses grow; maintaining the personalised, trusted service established by her father."
       }
     }
   },

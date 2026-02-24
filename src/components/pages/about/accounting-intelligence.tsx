@@ -11,9 +11,8 @@ import {
   OCRSystemSkeleton,
   ExpertiseSkeleton,
   ReceiptHandlingSkeleton,
-  StrategicAssetSkeleton,
-  AuditReadySkeleton
 } from "@/components/skeletons/accounting-intelligence";
+import Image from "next/image";
 
 export const AccountingIntelligence = () => {
   const t = useTranslations("accountingIntelligence");
@@ -73,35 +72,26 @@ export const AccountingIntelligence = () => {
             </CardSkeleton>
           </div>
 
-          {/* Strategic Asset - Middle Right */}
+          {/* Audit Ready - Middle Right */}
           <div className="border-t border-neutral-200 dark:border-neutral-800">
             <CardContent>
               <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
-                {t("features.strategicAsset.title")}
+                {t("features.auditReady.title")}
               </h2>
               <CardDescription>
-                {t("features.strategicAsset.description")}
+                {t("features.auditReady.description")}
               </CardDescription>
             </CardContent>
             <CardSkeleton>
-              <StrategicAssetSkeleton />
+              <Image
+                src="/yonyou-system.png"
+                alt="Yonyou accounting system interface"
+                width={400}
+                height={250}
+                className="w-full h-48 object-cover object-top"
+              />
             </CardSkeleton>
           </div>
-        </div>
-
-        {/* Audit Ready - Full Width Bottom */}
-        <div className="border-x border-b border-neutral-200 dark:border-neutral-800">
-          <CardContent>
-            <h2 className="text-lg font-bold text-neutral-800 dark:text-neutral-200">
-              {t("features.auditReady.title")}
-            </h2>
-            <CardDescription>
-              {t("features.auditReady.description")}
-            </CardDescription>
-          </CardContent>
-          <CardSkeleton className="h-96">
-            <AuditReadySkeleton />
-          </CardSkeleton>
         </div>
       </Container>
     </div>

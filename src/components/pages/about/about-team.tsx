@@ -38,7 +38,7 @@ export const AboutTeam = () => {
   return (
     <div
       id="why-leap-by-lll"
-      className="relative z-20 py-10 lg:py-20 overflow-hidden flex flex-col items-center"
+      className="relative z-20 py-20 lg:py-28 overflow-hidden flex flex-col items-center"
     >
       <Badge>{tIntro("badge")}</Badge>
       <Heading className="mt-4" as="h2">

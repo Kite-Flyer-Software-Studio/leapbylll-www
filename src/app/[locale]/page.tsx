@@ -18,6 +18,18 @@ export default function Home() {
           <Hero />
           <Features />
           <HowWeSupport />
+          <div className="mt-20 relative w-full">
+            <div className="relative w-full rounded-[32px] overflow-hidden">
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-auto object-cover"
+                src="https://tbguskbayvt1d7md.public.blob.vercel-storage.com/Mr.%20Luk%20Discussion%20.MP4"
+              />
+            </div>
+          </div>
           <CTAWhatsapp />
           <ServicesPricing />
         </Container>

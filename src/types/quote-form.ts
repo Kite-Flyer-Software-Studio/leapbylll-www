@@ -8,11 +8,9 @@ export interface QuoteFormData {
   phone: string;
   services: {
     accountingBookkeeping: boolean;
+    incorporation: boolean;
+    companySecretarial: boolean;
     auditServices: boolean;
-    taxComputationFiling: boolean;
-    employerReturnFiling: boolean;
-    companySecretaryServices: boolean;
-    taxEnquiryCase: boolean;
     other: boolean;
   };
   otherServiceDetails: string;

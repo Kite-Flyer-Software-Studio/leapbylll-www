@@ -30,11 +30,9 @@ export default function QuoteFormSection() {
     phone: "",
     services: {
       accountingBookkeeping: false,
+      incorporation: false,
+      companySecretarial: false,
       auditServices: false,
-      taxComputationFiling: false,
-      employerReturnFiling: false,
-      companySecretaryServices: false,
-      taxEnquiryCase: false,
       other: false,
     },
     otherServiceDetails: "",

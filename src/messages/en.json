@@ -322,9 +322,9 @@
       }
     },
     "calculator": {
-      "title": "Your Investment",
+      "title": "Estimated Fees",
       "selectServices": "Select Services",
-      "selectServicesDescription": "Choose the services you need to see your estimated investment",
+      "selectServicesDescription": "Choose the services you need to see your estimated fees",
       "monthly": "Monthly",
       "yearly": "Yearly",
       "oneTime": "One-time",
@@ -335,7 +335,7 @@
     },
     "cta": {
       "getQuote": "Get Personalized Quote",
-      "scheduleConsultation": "Schedule Consultation",
+      "scheduleConsultation": "Schedule a Consultation",
       "contactForQuote": "Contact us for a personalised quote",
       "message": "We believe in fair pricing that reflects your actual needs"
     },
@@ -608,20 +608,16 @@
       "services": "Services Interested In",
       "servicesLabel": "Services Interested In",
       "servicesList": {
-        "accountingBookkeeping": "Accounting & Bookkeeping",
-        "auditServices": "Audit Services",
-        "taxComputationFiling": "Tax Computation & Filing (Profits Tax)",
-        "employerReturnFiling": "Employer's Return Filing",
-        "companySecretaryServices": "Company Secretary Services",
-        "taxEnquiryCase": "Tax Enquiry Case",
-        "other": "Other (Please specify)"
+        "accountingBookkeeping": "Accounting & Financial Reporting",
+        "incorporation": "Company Incorporation",
+        "companySecretarial": "Company Secretarial Service",
+        "auditServices": "Audit Services & Profits Tax Filing",
+        "other": "Other Services (Please specify)"
       },
       "serviceAccountingBookkeeping": "Accounting & Bookkeeping",
+      "serviceIncorporation": "Company Incorporation",
+      "serviceCompanySecretarial": "Company Secretarial Service",
       "serviceAuditServices": "Audit Services",
-      "serviceTaxComputation": "Tax Computation & Filing (Profits Tax)",
-      "serviceEmployerReturn": "Employer's Return Filing",
-      "serviceCompanySecretary": "Company Secretary Services",
-      "serviceTaxEnquiry": "Tax Enquiry Case",
       "serviceOther": "Other (Please specify)",
       "otherServiceDetails": "Other Service Details",
       "otherServicePlaceholder": "Please specify other services needed",

@@ -15,7 +15,7 @@ export const AboutTeam = () => {
       title: t("team.danny.name"),
       subtitle: t("team.danny.title"),
       description: t("team.danny.description"),
-      src: "/dad-luk.png",
+      src: "/dadluk.png",
       linkedIn: "https://www.linkedin.com/in/danny-luk/",
     },
     {
@@ -29,7 +29,7 @@ export const AboutTeam = () => {
       title: t("team.natalie.name"),
       subtitle: t("team.natalie.title"),
       description: t("team.natalie.description"),
-      src: "/nat-luk.png",
+      src: "/natluk.png",
       linkedIn: "https://www.linkedin.com/in/natalie-luk/",
     },
   ];

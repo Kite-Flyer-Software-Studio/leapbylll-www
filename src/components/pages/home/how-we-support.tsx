@@ -197,7 +197,7 @@ export function HowWeSupport() {
     },
   ];
   return (
-    <div id="how-we-support" className="relative z-20 py-10 lg:py-20 overflow-hidden flex flex-col items-center">
+    <div id="how-we-support" className="relative z-20 py-8 lg:py-16 overflow-hidden flex flex-col items-center">
       <Badge>{t("badge")}</Badge>
       <Heading className="mt-4" as="h2">{t("heading")}</Heading>
       <Subheading as="p" className="mt-6 max-w-3xl">

@@ -88,7 +88,7 @@ export const ServicesPricing = () => {
   const hasIncorporationPackage = selectedServices.has("incorporation-package");
 
   return (
-    <div id="services-pricing" className="py-20">
+    <div id="services-pricing" className="py-10">
       <Container>
         <div className="relative flex flex-col items-center">
           <Badge>{t("badge")}</Badge>

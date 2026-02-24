@@ -57,7 +57,7 @@ export const LegacyIllustration = () => (
             aria-label="LEAP by LLL office in Kowloon, Hong Kong — 40 years of established expertise"
           >
             <source
-              src="https://tbguskbayvt1d7md.public.blob.vercel-storage.com/lll-office.mp4"
+              src="https://tbguskbayvt1d7md.public.blob.vercel-storage.com/3F%20Working%20Area%20%28Landscape%29.MOV"
               type="video/mp4"
             />
           </video>

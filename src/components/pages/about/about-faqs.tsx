@@ -51,14 +51,12 @@ export const AboutFAQs = () => {
 
   const faqs = [
     {
-      question: "Are you a licensed firm in Hong Kong?",
+      question: "Is your team properly licensed?",
       answer: (
         <>
-          Our team holds the <strong>Practising Certificate</strong> issued by the Accounting and Financial Reporting Council to CPA firms in Hong Kong and the <strong>TCSP License</strong> issued by the Companies Registry in Hong Kong.
+          Absolutely. Our CPA firm is registered with the Accounting and Financial Reporting Council as a corporate practice – you can find us on the AFRC’s public register. Our directors are practising Certified Public Accountants, and half of our audit team are also fully qualified and experienced CPAs.
           <br /><br />
-          We are fully licensed, regulated, accountable, and fully qualified to handle every aspect of your business&apos;s financial and corporate compliance.
-          <br /><br />
-          You deal with one integrated team. We handle the regulatory complexity behind the scenes. All you experience is seamless, compliant, expert service.
+          Our company secretarial team is a Trust or Company Service Provider (TCSP) licence holder. You can find us on the Companies Registry’s Registry for Trust and Company Service Providers.
         </>
       ),
     },
@@ -74,11 +72,13 @@ export const AboutFAQs = () => {
       question: "How are you different from other online accounting services?",
       answer: (
         <>
-          Great question. While we do not have the marketing budget of other service providers, our business models are fundamentally different in ways that matter deeply for your business&apos;s security and success.
+          Great question. While we do not have the marketing budget of certain service providers, our business models are fundamentally different in ways that matter deeply for your business&apos;s security and success.
           <br /><br />
           Some service providers are tech platforms that often outsource the actual accounting work. This can mean your financial data is sent to offshore teams or freelance bookkeepers you&apos;ll never meet. You interact with a customer service agent, not your accountant.
           <br /><br />
-          We are a Hong Kong-based, family-run CPA firm. Every piece of work—from a receipt scanned in our system to your annual tax filing—is performed in-house by our own, local team of CPAs and accountants. Your dedicated advisor sits in our Hong Kong office, knows the local market intimately, and is directly accountable for your work.
+          These service providers also most likely do not hold any licenses themselves, and instead they &quot;arrange&quot; your firms’ audit with local CPAs or &quot;partner&quot; with TCSP license holders to provide company secretarial services.
+          <br /><br />
+          In contrast, we are a Hong Kong-based, family-run CPA firm. Every piece of work—from a receipt scanned in our system to your annual tax filing—is performed in-house by our own, local team of CPAs and accountants. Your dedicated advisor sits in our Hong Kong office, knows the local market intimately, and is directly accountable for your work.
           <br /><br />
           In short, we offer a true professional partnership, not a faceless, outsourced service. You get the efficiency of modern technology with the security, accountability, and strategic insight of a local expert partner.
         </>

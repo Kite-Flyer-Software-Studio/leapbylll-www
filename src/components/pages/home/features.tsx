@@ -32,6 +32,8 @@ const features1 = [
       "Fair pricing, no corporate jargon, and a founder-friendly mindset.",
       "Proprietary smart accounting system; tech-enabled, human-delivered.",
     ],
+    linkLabel: "Learn more about our system",
+    linkHref: "/about#accounting-intelligence",
     content: <ModernStartupIllustration />,
   },
 ];

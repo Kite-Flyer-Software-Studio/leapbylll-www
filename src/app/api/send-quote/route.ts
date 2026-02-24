@@ -40,11 +40,9 @@ function formatFormDataForEmail(data: QuoteFormData): string {
     .map(([service, _]) => {
       const serviceNames: Record<string, string> = {
         accountingBookkeeping: 'Accounting & Bookkeeping',
+        incorporation: 'Company Incorporation',
+        companySecretarial: 'Company Secretarial',
         auditServices: 'Audit Services',
-        taxComputationFiling: 'Tax Computation & Filing (Profits Tax)',
-        employerReturnFiling: "Employer's Return Filing",
-        companySecretaryServices: 'Company Secretary Services',
-        taxEnquiryCase: 'Tax Enquiry Case',
         other: `Other: ${data.otherServiceDetails}`,
       };
       return serviceNames[service] || service;

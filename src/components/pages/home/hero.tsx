@@ -13,7 +13,6 @@ import { useInView } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from 'next-intl';
-import { HeroIllustration } from "./hero-illustration";
 
 export const Hero = () => {
   const router = useRouter();
@@ -137,7 +136,16 @@ export const Hero = () => {
         </p>
       </motion.div>
       <div className="mt-20 relative">
-        <HeroIllustration />
+        <div className="relative w-full rounded-[32px] overflow-hidden">
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-auto object-cover"
+            src="https://tbguskbayvt1d7md.public.blob.vercel-storage.com/9F%20Conference%20Room%20%28Landscape%29.MOV"
+          />
+        </div>
         <div className="absolute inset-x-0 bottom-0 h-40 w-full bg-gradient-to-b from-transparent via-white to-white dark:via-black/50 dark:to-black scale-[1.1] pointer-events-none" />
       </div>
     </div >

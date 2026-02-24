@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   description:
     "Leap by LLL provides comprehensive accounting, audit, tax advisory, company incorporation, and secretarial services in Hong Kong. Professional, reliable, and tailored solutions for your business success.",
   openGraph: {
-    images: ["/banner.png"],
+    images: ["/logos/leapbylll-logo-1.png"],
   },
 };
 

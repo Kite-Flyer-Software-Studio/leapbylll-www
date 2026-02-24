@@ -2,7 +2,6 @@ import { Background } from "@/components/background";
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Container } from "@/components/container";
-import { AboutIntro } from "@/components/pages/about/about-intro";
 import { AboutTeam } from "@/components/pages/about/about-team";
 import { AccountingIntelligence } from "@/components/pages/about/accounting-intelligence";
 import { AboutFAQs } from "@/components/pages/about/about-faqs";
@@ -28,7 +27,6 @@ export default function AboutPage() {
         <Background />
       </div>
       <Container className="flex min-h-screen flex-col items-center justify-between relative z-10">
-        <AboutIntro />
         <AboutTeam />
         <AccountingIntelligence />
         <AboutFAQs />

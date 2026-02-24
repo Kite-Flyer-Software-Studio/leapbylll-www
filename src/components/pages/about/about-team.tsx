@@ -8,6 +8,7 @@ import { FocusCards } from "@/components/ui/focus-cards";
 import { useTranslations } from "next-intl";
 
 export const AboutTeam = () => {
+  const tIntro = useTranslations("aboutIntro");
   const t = useTranslations("aboutTeam");
 
   const teamMembers = [
@@ -39,12 +40,23 @@ export const AboutTeam = () => {
       id="team"
       className="relative z-20 py-10 lg:py-20 overflow-hidden flex flex-col items-center"
     >
-      <Badge>{t("badge")}</Badge>
+      <Badge>{tIntro("badge")}</Badge>
       <Heading className="mt-4" as="h2">
-        {t("heading")}
+        {tIntro("heading")}
       </Heading>
-      <Subheading className="text-center">{t("subheading")}</Subheading>
-      <Subheading className="text-center mt-1">{t("subheading3")}</Subheading>
+      <Subheading className="mt-6 mr-auto text-left">
+        {tIntro.rich("description.part1", {
+          strong: (chunks) => <strong className="font-semibold">{chunks}</strong>,
+        })}
+        <br /> <br />
+        {tIntro.rich("description.part2", {
+          strong: (chunks) => <strong className="font-semibold">{chunks}</strong>,
+        })}
+        <br /> <br />
+        {tIntro.rich("description.part3", {
+          strong: (chunks) => <strong className="font-semibold">{chunks}</strong>,
+        })}
+      </Subheading>
       <div className="mt-12 w-full">
         <FocusCards cards={teamMembers} />
       </div>

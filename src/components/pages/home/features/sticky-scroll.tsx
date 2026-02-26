@@ -97,17 +97,6 @@ export const ScrollContent = ({
                   </li>
                 ))}
               </ul>
-              {item.linkLabel && item.linkHref && (
-                <Button
-                  variant="simple"
-                  as={Link}
-                  href={item.linkHref}
-                  className="mt-4 flex space-x-2 items-start group text-start"
-                >
-                  <span>{item.linkLabel}</span>
-                  <HiArrowRight className="text-muted group-hover:translate-x-1 stroke-[1px] h-3 w-3 transition-transform duration-200 dark:text-muted-dark" />
-                </Button>
-              )}
             </motion.div>
           </div>
           <motion.div
@@ -148,17 +137,6 @@ export const ScrollContent = ({
                   </li>
                 ))}
               </ul>
-              {item.linkLabel && item.linkHref && (
-                <Button
-                  variant="simple"
-                  as={Link}
-                  href={item.linkHref}
-                  className="mt-4 flex space-x-2 items-center group text-center"
-                >
-                  <span>{item.linkLabel}</span>
-                  <HiArrowRight className="text-muted group-hover:translate-x-1 stroke-[1px] h-3 w-3 transition-transform duration-200 dark:text-muted-dark" />
-                </Button>
-              )}
             </motion.div>
           </div>
         </>
@@ -205,17 +183,6 @@ export const ScrollContentMobile = ({
               </li>
             ))}
           </ul>
-          {item.linkLabel && item.linkHref && (
-            <Button
-              variant="simple"
-              as={Link}
-              href={item.linkHref}
-              className="mt-4 flex space-x-2 items-center group text-center"
-            >
-              <span>{item.linkLabel}</span>
-              <HiArrowRight className="text-muted group-hover:translate-x-1 stroke-[1px] h-3 w-3 transition-transform duration-200 dark:text-muted-dark" />
-            </Button>
-          )}
         </motion.div>
       </div>
       <motion.div

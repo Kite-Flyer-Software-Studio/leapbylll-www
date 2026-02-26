@@ -3,6 +3,7 @@
 import React from "react";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 import { Badge } from "@/components/badge";
 import { Heading } from "@/components/heading";
@@ -47,21 +48,34 @@ export const Features = () => {
       <Heading className="mt-4" as="h2">{t("heading")}</Heading>
       <Container>
         <div className="mt-2">
-          {/* <CardSkeleton className="[perspective:1200px] w-140">
-            <SkeletonAllInOne />
-          </CardSkeleton> */}
           <StickyScroll content={features1} />
-          <div className="flex items-center gap-4 justify-center relative z-10 px-4">
+          <motion.div
+            initial={{
+              y: 80,
+              opacity: 0,
+            }}
+            animate={{
+              y: 0,
+              opacity: 1,
+            }}
+            transition={{
+              ease: "easeOut",
+              duration: 0.5,
+              delay: 0.4,
+            }}
+            className="flex items-center gap-4 justify-center mt-8 relative z-10 px-4"
+          >
+            <Button as={Link} href="/about" className="text-center">Learn more about us</Button>
             <Button
               variant="simple"
               as={Link}
-              href="/about"
+              href="/about#accounting-intelligence"
               className="flex space-x-2 items-center group text-center"
             >
-              <span>More About Us</span>
+              <span>Learn more about our system</span>
               <HiArrowRight className="text-muted group-hover:translate-x-1 stroke-[1px] h-3 w-3 transition-transform duration-200 dark:text-muted-dark" />
             </Button>
-          </div>
+          </motion.div>
         </div>
       </Container>
     </div>

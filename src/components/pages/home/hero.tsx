@@ -146,7 +146,7 @@ export const Hero = () => {
             src="https://tbguskbayvt1d7md.public.blob.vercel-storage.com/9F%20Conference%20Room%20%28Landscape%29.MOV"
           />
         </div>
-        <div className="absolute inset-x-0 bottom-0 h-40 w-full bg-gradient-to-b from-transparent via-white to-white dark:via-black/50 dark:to-black scale-[1.1] pointer-events-none" />
+        {/* <div className="absolute inset-x-0 bottom-0 h-40 w-full bg-gradient-to-b from-transparent via-white to-white dark:via-black/50 dark:to-black scale-[1.1] pointer-events-none" /> */}
       </div>
     </div >
   );

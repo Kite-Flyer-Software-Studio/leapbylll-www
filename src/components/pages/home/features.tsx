@@ -63,7 +63,7 @@ export const Features = () => {
               duration: 0.5,
               delay: 0.4,
             }}
-            className="flex items-center gap-4 justify-center mt-8 relative z-10 px-4"
+            className="flex items-center gap-10 justify-center mt-8 relative z-10 px-4"
           >
             <Button as={Link} href="/about" className="text-center">Learn more about us</Button>
             <Button

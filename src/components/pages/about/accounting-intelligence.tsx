@@ -84,11 +84,11 @@ export const AccountingIntelligence = () => {
             </CardContent>
             <CardSkeleton>
               <Image
-                src="/yonyou-system.png"
+                src="/audit-ready.png"
                 alt="Yonyou accounting system interface"
                 width={400}
-                height={250}
-                className="w-full h-48 object-cover object-top"
+                height={400}
+                className="w-full h-72 object-cover object-top ml-8"
               />
             </CardSkeleton>
           </div>

@@ -18,7 +18,7 @@ export default function Home() {
           <Hero />
           <Features />
           <HowWeSupport />
-          <div className="mt-20 relative w-full">
+          <div className="mt-10 relative w-full">
             <div className="relative w-full rounded-[32px] overflow-hidden">
               <video
                 autoPlay

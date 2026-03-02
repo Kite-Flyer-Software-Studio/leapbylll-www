@@ -136,7 +136,7 @@ export function HowWeSupport() {
                   <IconCheck className="h-3 w-3 text-green-600 dark:text-green-400" />
                 </div>
                 <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                  <strong>Payroll & MPF Administration: </strong> Take the hassle out of paying your team. We provide <strong>payroll processing in Hong Kong</strong>, including salary calculations, MPF contributions, and the annual filing of <strong>Employers' Returns (IR56B)</strong>.
+                  <strong>Payroll & MPF Administration: </strong> Take the hassle out of paying your team. We provide <strong>payroll processing in Hong Kong</strong>, including salary calculations, MPF contributions, and the annual filing of <strong>{`Employers' Returns (IR56B)`}</strong>.
                 </span>
               </li>
             </ul>
@@ -172,7 +172,7 @@ export function HowWeSupport() {
           </div>
 
           <p className="mb-6 text-sm font-normal text-neutral-600 md:text-base dark:text-neutral-400">
-            The financial year-end can be stressful for small business owners. Between tight deadlines and complex regulations, it's easy to feel overwhelmed. Our team helps you navigate your <strong>annual audit and tax filing requirements</strong>, giving you peace of mind and valuable insights into your financial health.
+            The financial year-end can be stressful for small business owners. Between tight deadlines and complex regulations, {`it's easy to feel overwhelmed`}. Our team helps you navigate your <strong>annual audit and tax filing requirements</strong>, giving you peace of mind and valuable insights into your financial health.
           </p>
 
           <div className="mb-6">
@@ -185,7 +185,7 @@ export function HowWeSupport() {
                   <IconCheck className="h-3 w-3 text-green-600 dark:text-green-400" />
                 </div>
                 <span className="text-sm text-neutral-600 dark:text-neutral-400">
-                  <strong>Hong Kong Statutory Audit:</strong> We provide a thorough <strong>audit of your financial statements</strong> in accordance with Hong Kong Financial Reporting Standards (HKFRS) and the Companies Ordinance. The result is an <strong>Independent Auditor's Report</strong> that satisfies the Inland Revenue Department (IRD) and builds trust with your banks and other stakeholders.
+                  <strong>Hong Kong Statutory Audit:</strong> We provide a thorough <strong>audit of your financial statements</strong> in accordance with Hong Kong Financial Reporting Standards (HKFRS) and the Companies Ordinance. The result is an <strong>{`Independent Auditor's Report`}</strong> that satisfies the Inland Revenue Department (IRD) and builds trust with your banks and other stakeholders.
 
                 </span>
               </li>

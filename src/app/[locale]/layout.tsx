@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "../globals.css";
 import { GeistSans } from "geist/font/sans";
+import { Analytics } from "@vercel/analytics/next"
+
 import { cn } from "@/lib/utils";
 import { ViewTransitions } from "next-view-transitions";
 import { ThemeProvider } from "@/context/theme-provider";
@@ -66,6 +68,7 @@ export default async function RootLayout({
               </main>
             </ThemeProvider>
           </NextIntlClientProvider>
+          <Analytics />
         </body>
       </html>
     </ViewTransitions>
